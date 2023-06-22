@@ -1,2 +1,3 @@
-lỗi xss
-
+1. làm sao để chỉnh màu viền cho ô checkbox
+2. làm sao để chỉnh nền cho ô mũi tên của thẻ select 
+3. # Call To Action dòng best nên dùng thẻ gì cho chuẩn cinimatic
