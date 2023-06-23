@@ -10,9 +10,9 @@
 *,
 input,
 select {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 .form {
 	margin: 10px;
@@ -29,32 +29,32 @@ select {
 	align-items: center;
 }
 
-
+/*Begin input text*/
 input[type="text"],
 input[type="password"] {
-		position: absolute;
-    width: 100%;
-    height: 35px;
-    background: transparent;
-    border: none;
-    outline: none;
-    font-size: 16px;
-    padding-right: 28px;
-    color: #000000;
-		padding: 10px;
-		z-index: 2;
+	position: absolute;
+	width: 100%;
+	height: 35px;
+	background: transparent;
+	border: none;
+	outline: none;
+	font-size: 16px;
+	padding-right: 28px;
+	color: #000000;
+	padding: 10px;
+	z-index: 2;
 }
-.label-input{
+.label-input {
 	border-radius: 3px;
-    position: absolute;
-    width: 100%;
-		height: 35px;
-		border: 2px solid #0361f8;
-		padding: 10px;
-		z-index: 1;
+	position: absolute;
+	width: 100%;
+	height: 35px;
+	border: 2px solid #0361f8;
+	padding: 10px;
+	z-index: 1;
 }
-
-
+/*End input text*/
+/*Begin select*/
 .input-box select {
 	background: transparent;
 	position: absolute;
@@ -75,16 +75,17 @@ input[type="password"] {
 	background: #3a85fc;
 	text-align: center;
 }
-
+/*End Select*/
 
 ul {
 	list-style: none;
 	margin-top: 20px;
 }
-li{
+li {
 	line-height: 30px;
 }
-input[type="radio"]{
+/*Begin input radio and checkbox*/
+input[type="radio"] {
 	display: none;
 }
 input[type="radio"],
@@ -94,21 +95,22 @@ input[type="checkbox"] {
 }
 input[type="checkbox"]:before,
 input[type="radio"] + label:before {
-  font-family: "FontAwesome";
-  font-size: 13px;
-  color: transparent;
-  border: 2px solid blue;
-  background: #fff;
+	font-family: "FontAwesome";
+	font-size: 13px;
+	color: transparent;
+	border: 2px solid blue;
+	background: #fff;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 }
-.label-checkbox, .label-radio{
+.label-checkbox,
+.label-radio {
 	padding: 10px;
 }
 /*Begin input radio*/
 input[type="radio"] + .label-radio:before {
-  content: "\f192";
+	content: "\f192";
 	text-align: center;
 	float: left;
 	border-radius: 50%;
@@ -116,23 +118,25 @@ input[type="radio"] + .label-radio:before {
 	width: 15px;
 }
 input[type="radio"]:checked + label:before {
-  content: "\f111";
-  color: blue;
+	content: "\f111";
+	color: blue;
 }
 /*End input radio*/
 /*Begin input checkbox*/
 input[type="checkbox"]:before {
-  content: "\f00c";
+	content: "\f00c";
 	height: 15px;
 	width: 15px;
 	border-radius: 3px;
 }
 input[type="checkbox"]:checked:before {
-  color: blue;
+	color: blue;
 	height: 15px;
 	width: 15px;
 }
 /*end input checkbox*/
+/*End input radio and checkbox*/
+/*Begin button*/
 .button {
 	height: 50px;
 	width: 100%;
@@ -144,3 +148,4 @@ button {
 	padding: 5px 15px;
 	border-radius: 5px;
 }
+/*End button*/
