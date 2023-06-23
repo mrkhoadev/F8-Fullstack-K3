@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 3</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" />
+</head>
+
+<body>
+    <main class="form">
+        <form action="POST" name="Lesson">
+            <table>
+                <tr>
+                    <td class="text">Username:</td>
+                    <td class="input-box">
+                        <input type="text" id="username" name="username">
+                        <label class="label-input" for="username"></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text">Password:</td>
+                    <td class="input-box"><input type="password" name="pass" id="pass">
+                        <label class="label-input" for="pass"></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text">City of Employment:</td>
+                    <td class="input-box"><input type="text" name="city" id="city">
+                        <label class="label-input" for="city"></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text">Web server:</td>
+                    <td class="input-box">
+                        <select name="server" id="server">
+                            <option value="0" hidden>--Choose a server--</option>
+                            <option value="1">localhost</option>
+                        </select>
+                        <div class="select-box"><i class='bx bx-chevron-down'></i></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text">Please specify your role:</td>
+                    <td class="input-box">
+                        <ul>
+                            <li><input type="radio" name="specify" id="radio1" value="1">
+                                <label class="label-radio" for="radio1">Admin</label>
+                            </li>
+                            <li><input type="radio" name="specify" id="radio2" value="2">
+                                <label class="label-radio" for="radio2">Engineer</label>
+                            </li>
+                            <li><input type="radio" name="specify" id="radio3" value="3">
+                                <label class="label-radio" for="radio3">Manager</label>
+                            </li>
+                            <li><input type="radio" name="specify" id="radio4" value="4">
+                                <label class="label-radio" for="radio4">Guest</label>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text">Sing Sign-on co the following:</td>
+                    <td>
+                        <ul>
+                            <li>
+                                <input type="checkbox" name="sign" id="checkbox1" value="1">
+                                <label class="label-checkbox" for="checkbox1"> Mail</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="sign" id="checkbox2" value="2">
+                                <label class="label-checkbox" for="checkbox2"> Payroll</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="checkbox3" name="sign" value="3">
+                                <label class="label-checkbox" for="checkbox3">Self-service</label>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+            <div class="button">
+                <button type="submit">Login</button>
+                <button type="reset">Reset</button>
+            </div>
+        </form>
+    </main>
+</body>
+
+</html>
