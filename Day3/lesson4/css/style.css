@@ -6,7 +6,7 @@ body {
 	font-family: zh-cn;
 	padding: 50px;
 }
-/*Begin navbar*/
+/*Begin menu*/
 nav {
 	padding: 0;
 	margin: 0;
@@ -27,19 +27,21 @@ li {
 	width: 200px;
 	padding: 10px 20px;
 	background: rgb(255, 255, 255);
-}
-li a {
 	color: #000;
+}
+a {
 	text-decoration: none;
+}
+li:hover{
+	background: #db9705;
+	color: #fff;
 }
 .check {
 	background: #db9705;
 	border: none;
-}
-.check a {
 	color: #fff;
 }
-/*End navbar*/
+/*End menu*/
 /*Begin main*/
 main {
 	background: #eee;
