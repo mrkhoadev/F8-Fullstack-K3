@@ -22,17 +22,15 @@ ul {
 	margin: 0;
 	text-align: center;
 }
-span {
+a {
 	float: left;
 	width: 200px;
 	padding: 10px 20px;
 	background: rgb(255, 255, 255);
 	color: #db9705;
-}
-a {
 	text-decoration: none;
 }
-span:hover {
+a:hover {
 	background: #db9705;
 	color: #fff;
 }
