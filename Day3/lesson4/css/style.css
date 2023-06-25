@@ -22,7 +22,7 @@ ul {
 	margin: 0;
 	text-align: center;
 }
-li {
+span {
 	float: left;
 	width: 200px;
 	padding: 10px 20px;
@@ -32,7 +32,7 @@ li {
 a {
 	text-decoration: none;
 }
-li:hover {
+span:hover {
 	background: #db9705;
 	color: #fff;
 }
