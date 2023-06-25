@@ -22,7 +22,7 @@ ul {
 	margin: 0;
 	text-align: center;
 }
-a {
+ul > li > a {
 	float: left;
 	width: 200px;
 	padding: 10px 20px;
