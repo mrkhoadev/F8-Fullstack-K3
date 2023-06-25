@@ -7,3 +7,6 @@ h1 {
 .title.span {
 	color: rgb(9, 255, 0);
 }
+input {
+	border: 2px solid #ff0000;
+}
