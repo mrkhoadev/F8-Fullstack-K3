@@ -7,6 +7,9 @@
 	font-weight: 1;
 	font-size: 20px;
 }
+td{
+	padding: 10px;
+}
 *,
 input,
 select {
@@ -76,14 +79,6 @@ input[type="password"] {
 	text-align: center;
 }
 /*End Select*/
-
-ul {
-	list-style: none;
-	margin-top: 20px;
-}
-li {
-	line-height: 30px;
-}
 /*Begin input radio and checkbox*/
 input[type="radio"] {
 	display: none;
