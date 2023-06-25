@@ -7,9 +7,7 @@
 	font-weight: 1;
 	font-size: 20px;
 }
-td{
-	padding: 10px;
-}
+
 *,
 input,
 select {
@@ -23,6 +21,9 @@ select {
 .text {
 	min-height: 40px;
 	width: 200px;
+}
+td {
+	padding: 10px 0;
 }
 .input-box {
 	width: 400px;
