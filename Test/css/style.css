@@ -51,6 +51,12 @@ span {
 input{
 	display: none;
 }
+input[type="radio"]:focus + .test{
+	color: red;
+}
 input:nth-of-type(1):checked ~ .content{
+	color: red;
+}
+input:nth-of-type(1):checked + label{
 	color: red;
 }
