@@ -7,27 +7,35 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
+    <video autoplay loop muted>
+        <source src="../images/bgr.mp4" type="video/mp4">
+    </video>
+    <div class="layer"></div>
     <h1>Welcome to my website</h1>
     <main>
+    <input type="radio" name="radio" id="Day-1" checked>
+    <input type="radio" name="radio" id="Day-2">
+    <input type="radio" name="radio" id="Day-3">
+    <input type="radio" name="radio" id="Day-4">
     <aside>
-        <span>
-            <ul>
-                <li>
-                    <label for="Day1">Bài về nhà buổi 1</label>
-                </li>
-                <li>
-                    <label for="Day2">Bài về nhà buổi 2</label>
-                </li>
-                <li>
-                    <label for="Day3">Bài về nhà buổi 3</label>
-                </li>
-            </ul>
-        </span>
+        <ul>
+            <li>
+                <label class="label-1" for="Day-1" tabindex="1"><img src="images/cp.png" alt="">Bài về nhà buổi 1</label>
+            </li>
+            <li>
+                <label class="label-2" for="Day-2" tabindex="2"><img src="images/cp.png" alt="">Bài về nhà buổi 2</label>
+            </li>
+            <li>
+                <label class="label-3" for="Day-3" tabindex="3"><img src="images/cp.png" alt="">Bài về nhà buổi 3</label>
+            </li>
+            <li>
+                <label class="label-4" for="Day-4" tabindex="4"><img src="images/cp.png" alt="">Bài về nhà buổi 4</label>
+            </li>
+        </ul>
     </aside>
-    <input type="radio" name="radio" id="Day1" checked>
-    <input type="radio" name="radio" id="Day2">
-    <input type="radio" name="radio" id="Day3">
+    
     <section>
         <div class="content">
             <div class="Day1">
@@ -51,6 +59,7 @@
                 </ol>
             </div>
         </div>
+
         <div class="content">
             <div class="Day3">
                 <h2>Buổi 3</h2>
@@ -60,6 +69,16 @@
                     <li><a href="Day3/lesson3/index.html">Bài 3</a></li>
                     <li><a href="Day3/lesson4/index.html">Bài 4</a></li>
                     <li><a href="Day3/lesson5/index.html">Bài 5</a></li>
+                </ol>
+            </div>
+        </div>
+        <div class="content">
+            <div class="Day4">
+                <h2>Buổi 4</h2>
+                <ol>
+                    <li><a href="Day4/lesson1/index.html">Bài 1</a></li>
+                    <li><a href="Day4/lesson2/index.html">Bài 2</a></li>
+                    <li><a href="Day4/lesson3/index.html">Bài 3</a></li>
                 </ol>
             </div>
         </div>

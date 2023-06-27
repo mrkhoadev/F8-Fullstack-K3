@@ -1,17 +1,54 @@
+@font-face {
+	font-family: zh-cn;
+	src: url("../fonts/genshin.ttf");
+}
 body {
 	font-family: "Roboto", sans-serif;
+	padding: 0;
+	margin: 0;
+	color: #d6cf4e;
+}
+video {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	backdrop-filter: blur(30px);
+	z-index: -100;
+}
+.layer {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	background-image: linear-gradient(
+		rgba(125, 125, 125, 0.5),
+		rgba(123, 123, 123, 0.5)
+	);
+	/* backdrop-filter: blur(3px); */
+	z-index: -99;
 }
 h1 {
+	font-family: zh-cn;
+	color: #f5e509;
 	text-align: center;
 	font-size: 50px;
 	margin: 15px;
+	z-index: 0;
 }
 main {
 	position: relative;
 	width: 80%;
 	margin: 0 auto;
 	height: 600px;
-	background-image: linear-gradient(rgba(60, 186, 245, 0.7),rgba(253, 57, 57, 0.3));
+	background-image: linear-gradient(
+		rgba(125, 125, 125, 0.3),
+		rgba(123, 123, 123, 0.3)
+	);
 }
 aside {
 	position: absolute;
@@ -19,7 +56,7 @@ aside {
 	height: 600px;
 	overflow-y: auto;
 	left: 0;
-	font-size: 25px;
+	font-size: 20px;
 	font-weight: 500;
 }
 ul {
@@ -27,11 +64,36 @@ ul {
 	padding: 5px;
 	margin: 10px 20px;
 }
-li {
-	padding: 5px;
+aside > ul {
+	width: 250px;
 }
-aside > span > ul > li:hover {
+aside > ul > li {
+	overflow: hidden;
+	margin: 5px;
+	background-image: linear-gradient(
+		to left,
+		rgba(23, 23, 23, 0.2),
+		rgb(0, 0, 0)
+	);
+}
+aside > ul > li:hover {
 	box-shadow: 0 0 5px 2px #f75606;
+}
+aside > ul > li > label {
+	width: 120%;
+	height: 100%;
+	padding: 5px;
+	display: flex;
+	align-items: center;
+	transform: translateX(-32px);
+	transition: 0.5s ease-in-out;
+}
+aside > ul > li > label:hover {
+	transform: translateX(0px);
+}
+aside > ul > li > label > img {
+	margin-right: 10px;
+	height: 30px;
 }
 input {
 	display: none;
@@ -42,11 +104,16 @@ section {
 	right: 0;
 	width: 75%;
 	height: 600px;
+	color: black;
+	background-image: linear-gradient(
+		rgba(125, 125, 125, 0.3),
+		rgba(123, 123, 123, 0.3)
+	);
 }
 .content {
 	margin: 20px;
 }
-a{
+a {
 	text-decoration: none;
 	font-size: 18px;
 	color: black;
@@ -56,26 +123,44 @@ ol {
 	padding: 5px;
 	margin: 10px 20px;
 }
+ol > li {
+	border-bottom: 2px solid #aaa;
+	padding: 5px;
+}
+ol > li > a {
+	padding: 5px 350px 5px 5px;
+}
 section > .content > ol > li {
 	width: 90%;
 	border-bottom: 2px solid #ddd;
 }
 h2 {
+	padding: 5px 15px;
 	font-weight: 450;
 	margin: 0;
+	color: #d6cf4e;
+	background-image: linear-gradient(
+		to left,
+		rgba(23, 23, 23, 0.2),
+		rgb(0, 0, 0)
+	);
 }
-input ~ section > .content > div{
+input ~ section > .content > div {
 	display: none;
 }
 /*Thêm css bài tập mới ở đây*/
-input:nth-of-type(1):checked ~ section > .content > .Day1{
+input:nth-of-type(1):checked ~ section > .content > .Day1,
+input:nth-of-type(2):checked ~ section > .content > .Day2,
+input:nth-of-type(3):checked ~ section > .content > .Day3,
+input:nth-of-type(4):checked ~ section > .content > .Day4 {
 	display: inline;
 }
-input:nth-of-type(2):checked ~ section > .content > .Day2{
-	display: inline;
-}
-input:nth-of-type(3):checked ~ section > .content > .Day3{
-	display: inline;
+
+input:nth-of-type(1):checked ~ aside > ul > li > .label-1,
+input:nth-of-type(2):checked ~ aside > ul > li > .label-2,
+input:nth-of-type(3):checked ~ aside > ul > li > .label-3,
+input:nth-of-type(4):checked ~ aside > ul > li > .label-4 {
+	transform: translateX(0px);
 }
 /*Kết thúc thêm bài tập mới*/
 /*
