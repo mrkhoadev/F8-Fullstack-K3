@@ -1,0 +1,85 @@
+body {
+	font-family: "Roboto", sans-serif;
+}
+h1 {
+	text-align: center;
+	font-size: 50px;
+	margin: 15px;
+}
+main {
+	position: relative;
+	width: 80%;
+	margin: 0 auto;
+	height: 600px;
+	background-image: linear-gradient(rgba(60, 186, 245, 0.7),rgba(253, 57, 57, 0.3));
+}
+aside {
+	position: absolute;
+	width: 25%;
+	height: 600px;
+	overflow-y: auto;
+	left: 0;
+	font-size: 25px;
+	font-weight: 500;
+}
+ul {
+	list-style: none;
+	padding: 5px;
+	margin: 10px 20px;
+}
+li {
+	padding: 5px;
+}
+aside > span > ul > li:hover {
+	box-shadow: 0 0 5px 2px #f75606;
+}
+input {
+	display: none;
+}
+section {
+	position: absolute;
+	overflow-y: auto;
+	right: 0;
+	width: 75%;
+	height: 600px;
+}
+.content {
+	margin: 20px;
+}
+a{
+	text-decoration: none;
+	font-size: 18px;
+	color: black;
+	padding: 5px 50px 5px 5px;
+}
+ol {
+	padding: 5px;
+	margin: 10px 20px;
+}
+section > .content > ol > li {
+	width: 90%;
+	border-bottom: 2px solid #ddd;
+}
+h2 {
+	font-weight: 450;
+	margin: 0;
+}
+input ~ section > .content > div{
+	display: none;
+}
+/*Thêm css bài tập mới ở đây*/
+input:nth-of-type(1):checked ~ section > .content > .Day1{
+	display: inline;
+}
+input:nth-of-type(2):checked ~ section > .content > .Day2{
+	display: inline;
+}
+input:nth-of-type(3):checked ~ section > .content > .Day3{
+	display: inline;
+}
+/*Kết thúc thêm bài tập mới*/
+/*
+Lưu ý khi thêm bài tập:
+1. Sửa lại số ở nth-of-type đúng thứ tự
+2. Sửa lại class .Day
+*/
