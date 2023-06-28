@@ -36,7 +36,8 @@ body {
 }
 h1 {
 	font-family: zh-cn;
-	color: #f5e509;
+	color: #ffffff;
+	text-shadow: 0 0 10px #d6cf4e;
 	text-align: center;
 	font-size: 50px;
 	margin: 15px;
