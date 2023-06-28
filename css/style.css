@@ -74,7 +74,7 @@ aside > ul > li {
 	margin: 5px;
 	background-image: linear-gradient(
 		to left,
-		rgba(23, 23, 23, .2),
+		rgba(23, 23, 23, 0.2),
 		rgb(0, 0, 0)
 	);
 }
@@ -128,6 +128,9 @@ ol {
 ol > li {
 	border-bottom: 2px solid #aaa;
 	padding: 5px;
+}
+ol > li:hover {
+	box-shadow: 0 0 2px 2px inset;
 }
 ol > li > a {
 	padding: 5px 350px 5px 5px;
