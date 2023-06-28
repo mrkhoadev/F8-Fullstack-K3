@@ -4,7 +4,6 @@
 }
 body {
 	font-family: "Roboto", sans-serif;
-	padding: 0;
 	margin: 0;
 	color: #d6cf4e;
 	background-image: url("../images/bg.jpg");
@@ -36,12 +35,15 @@ body {
 }
 h1 {
 	font-family: zh-cn;
-	color: #ffffff;
-	text-shadow: 0 0 10px #d6cf4e;
-	text-align: center;
-	font-size: 50px;
-	margin: 15px;
+	color: #000000;
+	text-shadow: 0 0 7px #d6cf4e;
+	font-size: 45px;
+	margin-top: 15px;
+	margin-left: 280px;
 	z-index: 0;
+}
+span {
+	color: #fff;
 }
 main {
 	position: relative;
@@ -61,6 +63,7 @@ aside {
 	left: 0;
 	font-size: 20px;
 	font-weight: 500;
+	overflow-x: hidden;
 }
 ul {
 	list-style: none;
@@ -153,6 +156,24 @@ h2 {
 }
 input ~ section > .content > div {
 	display: none;
+}
+.scrollbar::-webkit-scrollbar {
+	width: 10px;
+	height: 10px;
+	background-color: #ffffff;
+	border-radius: 50px;
+}
+.scrollbar::-webkit-scrollbar-thumb {
+	background-color: #363636;
+	background-image: linear-gradient(
+		rgba(0, 0, 0, 0.4),
+		rgba(123, 123, 123, 0.4)
+	);
+	border-radius: 50px;
+}
+.scrollbar::-webkit-scrollbar-track {
+	background-color: #ffffff;
+	border-radius: 50px;
 }
 /*Thêm css bài tập mới ở đây*/
 input:nth-of-type(1):checked ~ section > .content > .Day1,
