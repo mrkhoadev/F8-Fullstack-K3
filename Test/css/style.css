@@ -57,6 +57,6 @@ input[type="radio"]:focus + .test{
 input:nth-of-type(1):checked ~ .content{
 	color: red;
 }
-input:nth-of-type(1):checked + nav > ul > li > label{
+input:nth-of-type(1):checked + nav > span > ul > li > label{
 	color: red;
 }
