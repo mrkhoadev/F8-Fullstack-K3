@@ -74,7 +74,7 @@ aside > ul > li {
 	margin: 5px;
 	background-image: linear-gradient(
 		to left,
-		rgba(23, 23, 23, 0.2),
+		rgba(23, 23, 23, .2),
 		rgb(0, 0, 0)
 	);
 }
@@ -106,7 +106,7 @@ section {
 	right: 0;
 	width: 75%;
 	height: 600px;
-	color: black;
+	color: rgb(255, 255, 255);
 	background-image: linear-gradient(
 		rgba(125, 125, 125, 0.3),
 		rgba(123, 123, 123, 0.3)
@@ -118,7 +118,7 @@ section {
 a {
 	text-decoration: none;
 	font-size: 18px;
-	color: black;
+	color: rgb(255, 255, 255);
 	padding: 5px 50px 5px 5px;
 }
 ol {
