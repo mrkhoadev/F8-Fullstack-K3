@@ -7,7 +7,7 @@ body {
 	padding: 0;
 	margin: 0;
 	color: #d6cf4e;
-	background-image: url('../images/bg.jpg');
+	background-image: url("../images/bg.jpg");
 	background-size: cover;
 }
 /* video {
