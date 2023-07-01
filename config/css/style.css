@@ -42,7 +42,7 @@ h1 {
 	margin-left: 280px;
 	z-index: 0;
 }
-span {
+h1 > span {
 	color: #fff;
 }
 main {
@@ -83,7 +83,7 @@ aside > ul > li {
 	);
 }
 aside > ul > li:hover {
-	box-shadow: 0 0 5px 2px #f75606;
+	box-shadow: 0 0 5px 2px #d6cf4e;
 }
 aside > ul > li > label {
 	width: 120%;
@@ -123,7 +123,6 @@ a {
 	text-decoration: none;
 	font-size: 18px;
 	color: rgb(255, 255, 255);
-	padding: 5px 50px 5px 5px;
 }
 ol {
 	padding: 5px;
@@ -131,13 +130,14 @@ ol {
 }
 ol > li {
 	border-bottom: 2px solid #aaa;
-	padding: 5px;
 }
 ol > li:hover {
 	box-shadow: 0 0 2px 2px inset;
 }
 ol > li > a {
-	padding: 5px 350px 5px 5px;
+	display: block;
+	padding: 8px;
+	cursor: pointer;
 }
 section > .content > ol > li {
 	width: 90%;
@@ -179,14 +179,16 @@ input ~ section > .content > div {
 input:nth-of-type(1):checked ~ section > .content > .Day1,
 input:nth-of-type(2):checked ~ section > .content > .Day2,
 input:nth-of-type(3):checked ~ section > .content > .Day3,
-input:nth-of-type(4):checked ~ section > .content > .Day4 {
+input:nth-of-type(4):checked ~ section > .content > .Day4,
+input:nth-of-type(5):checked ~ section > .content > .Day5 {
 	display: inline;
 }
 
 input:nth-of-type(1):checked ~ aside > ul > li > .label-1,
 input:nth-of-type(2):checked ~ aside > ul > li > .label-2,
 input:nth-of-type(3):checked ~ aside > ul > li > .label-3,
-input:nth-of-type(4):checked ~ aside > ul > li > .label-4 {
+input:nth-of-type(4):checked ~ aside > ul > li > .label-4,
+input:nth-of-type(5):checked ~ aside > ul > li > .label-5 {
 	transform: translateX(0px);
 }
 /*Kết thúc thêm bài tập mới*/

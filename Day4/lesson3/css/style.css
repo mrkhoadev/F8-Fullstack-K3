@@ -35,30 +35,30 @@ input {
 }
 /*end menu*/
 /*Begin function menu*/
-section > div {
+.content > div {
 	display: none;
 }
 
-input:nth-of-type(1):checked ~ section > .page1,
-input:nth-of-type(1):checked ~ header > nav > ul > li > .label-1,
+input:nth-of-type(1):checked ~ .content > .page1,
+input:nth-of-type(1):checked ~ nav > ul > li > .label-1,
 
-input:nth-of-type(2):checked ~ section > .page2,
-input:nth-of-type(2):checked ~ header > nav > ul > li > .label-2,
+input:nth-of-type(2):checked ~ .content > .page2,
+input:nth-of-type(2):checked ~ nav > ul > li > .label-2,
 
-input:nth-of-type(3):checked ~ section > .page3,
-input:nth-of-type(3):checked ~ header > nav > ul > li > .label-3,
+input:nth-of-type(3):checked ~ .content > .page3,
+input:nth-of-type(3):checked ~ nav > ul > li > .label-3,
 
-input:nth-of-type(4):checked ~ section > .page4,
-input:nth-of-type(4):checked ~ header > nav > ul > li > .label-4,
+input:nth-of-type(4):checked ~ .content > .page4,
+input:nth-of-type(4):checked ~ nav > ul > li > .label-4,
 
-input:nth-of-type(5):checked ~ section > .page5,
-input:nth-of-type(5):checked ~ header > nav > ul > li > .label-5{
+input:nth-of-type(5):checked ~ .content > .page5,
+input:nth-of-type(5):checked ~ nav > ul > li > .label-5{
 	background: rgb(61, 61, 248);
 	display: inline;
 	color: #fff;
 }
 /*End function menu*/
-section {
+.content {
 	width: 64%;
 	margin: 10px auto;
 	height: 500px;
