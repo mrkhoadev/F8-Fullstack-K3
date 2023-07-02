@@ -2,7 +2,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Lobster&display=swap");
 body {
 	font-family: "Lato", sans-serif;
-	font-weight: 900;
 }
 section {
 	width: 800px;
@@ -62,7 +61,8 @@ p span {
 	padding: 18px;
 }
 .input-box > .text-icon,
-.input-box > .select-icon,
+.input-box > .select-icon-1,
+.input-box > .select-icon-2,
 .textarea-box > .text-icon {
 	right: 0;
 	top: 0;
@@ -80,17 +80,23 @@ p span {
 	align-items: baseline;
 	font-size: 20px;
 }
-.input-box > .select-icon {
+.input-box > .select-icon-1 {
 	display: grid;
 	padding-top: 18px;
 	padding-bottom: 18px;
 	font-size: 15px;
+}
+.input-box > .select-icon-2 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 .textarea-box > span > .bxs-star,
 .input-box > span > .bxs-star {
 	font-size: 15px;
 }
 .textarea-box > span > .bx-x,
+.input-box > .select-icon-2,
 .input-box > span > .bx-x {
 	font-size: 20px;
 	font-weight: 600;
@@ -121,6 +127,10 @@ textarea {
 	outline: none;
 	font-size: 22px;
 	z-index: 0;
+}
+input[type="number"]::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	display: none;
 }
 select {
 	color: #aaa;
@@ -178,11 +188,13 @@ textarea:focus ~ label {
 }
 
 input:focus ~ span > .bx-x,
+select:focus ~ .select-icon-2,
 textarea:focus ~ span > .bx-x {
-	display: inline;
+	display: initial;
 }
 
 input:focus ~ span > .bxs-star,
+select:focus ~ .select-icon-1,
 textarea:focus ~ span > .bxs-star {
 	display: none;
 }
