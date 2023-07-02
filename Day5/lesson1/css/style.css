@@ -183,7 +183,7 @@ textarea:focus ~ span > .bx-x {
 }
 
 input:focus ~ span > .bxs-star,
-textarea:focus ~ span > .bns-star {
+textarea:focus ~ span > .bxs-star {
 	display: none;
 }
 input:focus + .popup,
