@@ -111,12 +111,13 @@ section {
 }
 section > h2 {
 	font-size: 28px;
-	margin-bottom: 35px;
+	margin-bottom: 45px;
 }
 section > h2 > span {
 	color: #ff574d;
 }
 section > h2 > span > span {
+	padding-bottom: 10px;
 	border-bottom: 3px solid #ff574d;
 }
 
