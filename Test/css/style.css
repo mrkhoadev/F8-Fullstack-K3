@@ -1,0 +1,27 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+.box {
+	width: 400px;
+	border: 1px solid red;
+	padding: 25px;
+	margin: auto;
+	box-sizing: border-box;
+}
+.banner {
+	background: green;
+	color: #fff;
+}
+.banner h1 {
+	margin: 30px 0;
+}
+.products {
+}
+.products .product {
+	display: block;
+	border: 1px solid #ccc;
+	width: calc(100% / 4);
+	padding: 50px;
+}

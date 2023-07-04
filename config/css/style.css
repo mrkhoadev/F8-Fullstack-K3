@@ -186,7 +186,8 @@ input:nth-of-type(1):checked ~ section > .content > .Day1,
 input:nth-of-type(2):checked ~ section > .content > .Day2,
 input:nth-of-type(3):checked ~ section > .content > .Day3,
 input:nth-of-type(4):checked ~ section > .content > .Day4,
-input:nth-of-type(5):checked ~ section > .content > .Day5 {
+input:nth-of-type(5):checked ~ section > .content > .Day5,
+input:nth-of-type(6):checked ~ section > .content > .Day6 {
 	display: inline;
 }
 
@@ -194,7 +195,8 @@ input:nth-of-type(1):checked ~ aside > ul > li > .label-1,
 input:nth-of-type(2):checked ~ aside > ul > li > .label-2,
 input:nth-of-type(3):checked ~ aside > ul > li > .label-3,
 input:nth-of-type(4):checked ~ aside > ul > li > .label-4,
-input:nth-of-type(5):checked ~ aside > ul > li > .label-5 {
+input:nth-of-type(5):checked ~ aside > ul > li > .label-5,
+input:nth-of-type(6):checked ~ aside > ul > li > .label-6 {
 	transform: translateX(0px);
 }
 /*Kết thúc thêm bài tập mới*/

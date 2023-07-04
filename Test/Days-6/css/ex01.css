@@ -1,0 +1,25 @@
+/* .btn-wrap {
+	text-align: center;
+}
+.btn {
+	border: none;
+	background: green;
+	color: #fff;
+	height: 30px;
+	border-radius: 10px;
+} */
+.box {
+	width: 50%;
+	height: 100px;
+	background: green;
+}
+/* span {
+	width: 200px;
+	height: 200px;
+	border: 2px solid #aaa;
+	display: block;
+} */
+.container {
+	border: 1px solid red;
+	width: 400px;
+}
