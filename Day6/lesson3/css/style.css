@@ -1,0 +1,204 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Lobster&family=Nunito:wght@500&family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Lobster&family=Nunito:wght@300&family=Open+Sans&display=swap");
+
+* {
+	font-family: "Nunito", sans-serif;
+	padding: 0;
+	margin: 0;
+}
+a {
+	text-decoration: none;
+	color: #000;
+}
+body {
+	background-image: url("http://uiwebsoft.com/justlog/login-one/images/login-bg2.jpg");
+	background-size: 100% 167%;
+	background-position: 15% 66.5%;
+	/* padding-top: 50px; */
+}
+
+main {
+	z-index: 0;
+	margin: auto;
+	margin-top: 130px;
+	width: 800px;
+	height: 500px;
+	display: flex;
+	align-items: center;
+	background: rgb(255, 255, 255);
+	border-radius: 10px;
+	overflow: hidden;
+	position: relative;
+}
+
+aside {
+	background: #ff574d;
+	color: #fff;
+	text-align: center;
+	width: 330px;
+	height: 100%;
+	box-sizing: border-box;
+	padding: 100px 15px 80px 15px;
+	z-index: 2;
+	transition: 0.5s ease-in-out;
+	position: absolute;
+	left: 0;
+}
+aside > h2 {
+	font-size: 35px;
+	margin-bottom: 20px;
+	font-weight: 600;
+}
+aside > h2 > span {
+	background-color: #fff;
+	color: #ff574d;
+	padding: 0px 7px;
+	border-radius: 5px;
+}
+aside > p {
+	font-size: 20px;
+	margin-bottom: 40px;
+}
+aside > button {
+	margin: auto;
+	font-size: 20px;
+	padding: 10px 30px;
+	color: #ff574d;
+	background-color: #fff;
+	margin-bottom: 50px;
+}
+aside > a {
+	color: #fff;
+	font-size: 20px;
+	padding: 10px 12px;
+	border-radius: 3px;
+	margin: 2px;
+	background-color: #d14038;
+}
+.icon {
+	position: absolute;
+	font-size: 25px;
+	padding: 10px;
+	background-color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	top: 45%;
+	right: 447px;
+	color: #ff574d;
+	box-shadow: 0 0 5px 1px #a2a2a2;
+	z-index: 3;
+	transition: 0.5s ease-in-out;
+}
+.icon i {
+	font-weight: 900;
+	transition: 0.5s ease-in-out;
+}
+button {
+	display: block;
+	border-radius: 5px;
+	border: none;
+	font-weight: 600;
+}
+
+section {
+	position: absolute;
+	right: 0;
+	width: 470px;
+	z-index: 0;
+	text-align: center;
+	transition: 0.5s ease-in-out;
+}
+section > h2 {
+	font-size: 28px;
+	margin-bottom: 45px;
+}
+section > h2 > span {
+	color: #ff574d;
+}
+section > h2 > span > span {
+	padding-bottom: 10px;
+	border-bottom: 3px solid #ff574d;
+}
+
+form {
+	width: 350px;
+	margin: auto;
+	color: #717171;
+}
+form > div {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 25px;
+}
+form > button {
+	width: 100%;
+	height: 50px;
+	background-color: #ff574d;
+	color: #fff;
+	font-weight: 600;
+	font-size: 18px;
+	margin-bottom: 25px;
+}
+input:not([type="checkbox"]) {
+	width: 100%;
+	height: 50px;
+	margin-bottom: 25px;
+	padding: 20px;
+	box-sizing: border-box;
+	border: none;
+	box-shadow: 0 0 3px 1px #aaa;
+	outline: none;
+	font-size: 20px;
+}
+input[type="checkbox"] {
+	display: none;
+}
+
+form > div > label {
+	position: relative;
+	display: flex;
+	align-items: center;
+	z-index: 0;
+}
+form > div > label::before {
+	content: "";
+	display: inline-block;
+	width: 13px;
+	height: 13px;
+	border: 2px solid #717171;
+	margin-right: 5px;
+	border-radius: 3px;
+	z-index: 0;
+}
+form > div > label > i {
+	position: absolute;
+	left: 0;
+	opacity: 0;
+	color: #000;
+}
+
+input[type="checkbox"]:checked + label > i {
+	opacity: 1;
+}
+#home:checked + label {
+	transform: translateX(467px);
+	transition: 0.5s ease-in-out;
+}
+#home:checked + label > i {
+	transform: rotate(180deg);
+	transition: 0.5s ease-in-out;
+}
+#home:checked ~ aside {
+	padding-top: 120px;
+	width: 800px;
+	transition: 0.5s ease-in-out;
+}
+#home:checked ~ section {
+	transform: translateX(450px);
+}
+input:not([type="checkbox"]):focus {
+	box-shadow: 0 0 2px 2px #ff574d;
+}
