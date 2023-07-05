@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Lobster&family=Open+Sans&family=Roboto:wght@300;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Lobster&family=Open+Sans&family=Roboto:wght@300;500&display=swap");
 * {
-	font-family: 'Open Sans', sans-serif;
+	font-family: "Open Sans", sans-serif;
 	font-weight: 500;
 	padding: 0;
 }
@@ -28,7 +28,7 @@ i {
 	display: inline-block;
 	border: 1px solid #aaa;
 	margin-left: -1px;
-  margin-top: -1px;
+	margin-top: -1px;
 	margin-bottom: -1px;
 	position: relative;
 	background-color: inherit;
@@ -45,7 +45,6 @@ i {
 	float: right;
 }
 
-
 .select-box {
 	background-color: inherit;
 	position: absolute;
@@ -58,7 +57,7 @@ i {
 	z-index: 0;
 }
 .select-box::before {
-	content: '';
+	content: "";
 	position: absolute;
 	width: 0px;
 	height: 0px;
@@ -71,28 +70,30 @@ i {
 	top: -9px;
 	left: 20px;
 }
+.select-box::after {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 12px;
+	background: transparent;
+	top: -12px;
+}
 .select-box > li > a {
 	display: flex;
 	justify-content: flex-start;
 	padding: 17px;
 	background-color: inherit;
 	border-bottom: 1px solid #ddd;
-	z-index: 1	;
+	z-index: 1;
 }
 .select-box > li > a > span {
 	margin-left: 10px;
 }
 /*Begin event*/
-.navbar > li > a:focus + .select-box {
+.navbar > li:hover > .select-box {
 	display: initial;
 }
-.navbar > li > a:focus {
-	background-color: #3694d3;
-	color: #fff;
-}
-
-
-.navbar > li > a:hover{
+.navbar > li:hover > a {
 	background-color: #3694d3;
 	color: #fff;
 }
