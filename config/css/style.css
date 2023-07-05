@@ -52,6 +52,7 @@ h1 > span {
 	color: #fff;
 }
 main {
+	overflow: hidden;
 	position: relative;
 	width: 80%;
 	margin: 0 auto;
@@ -112,7 +113,7 @@ input {
 }
 section {
 	position: absolute;
-	overflow-y: auto;
+	overflow: hidden;
 	right: 0;
 	width: 75%;
 	height: 600px;
@@ -124,6 +125,7 @@ section {
 }
 .content {
 	margin: 20px;
+	position: relative;
 }
 a {
 	text-decoration: none;
@@ -161,7 +163,11 @@ h2 {
 	);
 }
 input ~ section > .content > div {
-	display: none;
+	position: absolute;
+	width: 100%;
+	transform: translateY(600px);
+	transition: .5s ease-in-out;
+	opacity: 0;
 }
 .scrollbar::-webkit-scrollbar {
 	width: 10px;
@@ -188,7 +194,8 @@ input:nth-of-type(3):checked ~ section > .content > .Day3,
 input:nth-of-type(4):checked ~ section > .content > .Day4,
 input:nth-of-type(5):checked ~ section > .content > .Day5,
 input:nth-of-type(6):checked ~ section > .content > .Day6 {
-	display: inline;
+	transform: translateY(0);
+	opacity: 1;
 }
 
 input:nth-of-type(1):checked ~ aside > ul > li > .label-1,
