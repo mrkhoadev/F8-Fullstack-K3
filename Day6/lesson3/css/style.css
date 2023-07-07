@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Lobster&family=Nunito:wght@500&family=Open+Sans&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Lobster&family=Nunito:wght@300&family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,500;1,300&display=swap");
 
 * {
 	font-family: "Nunito", sans-serif;
@@ -10,11 +9,17 @@ a {
 	text-decoration: none;
 	color: #000;
 }
+htnl,
+body {
+	overflow: hidden;
+}
 body {
 	background-image: url("http://uiwebsoft.com/justlog/login-one/images/login-bg2.jpg");
-	background-size: 100% 167%;
-	background-position: 15% 66.5%;
-	/* padding-top: 50px; */
+	background-size: 100% 120%;
+	background-position: 15% 160%;
+	background-repeat: no-repeat;
+	height: 100vh;
+	overflow: hidden;
 }
 
 main {
@@ -73,7 +78,7 @@ aside > a {
 	padding: 10px 12px;
 	border-radius: 3px;
 	margin: 2px;
-	background-color: #d14038;
+	background-color: #e7524a;
 }
 .icon {
 	position: absolute;
@@ -121,7 +126,6 @@ section > h2 > span > span {
 	padding-bottom: 10px;
 	border-bottom: 3px solid #ff574d;
 }
-
 form {
 	width: 350px;
 	margin: auto;
@@ -132,6 +136,10 @@ form > div {
 	display: flex;
 	justify-content: space-between;
 	margin-bottom: 25px;
+}
+form > div > a,
+form > span > a {
+	color: #717171;
 }
 form > button {
 	width: 100%;
@@ -149,9 +157,10 @@ input:not([type="checkbox"]) {
 	padding: 20px;
 	box-sizing: border-box;
 	border: none;
-	box-shadow: 0 0 3px 1px #aaa;
+	border-radius: 2px;
+	box-shadow: 0 0 1px 1px #aaa;
 	outline: none;
-	font-size: 20px;
+	font-size: 18px;
 }
 input[type="checkbox"] {
 	display: none;
@@ -166,15 +175,16 @@ form > div > label {
 form > div > label::before {
 	content: "";
 	display: inline-block;
-	width: 13px;
-	height: 13px;
-	border: 2px solid #717171;
+	width: 15px;
+	height: 15px;
+	border: 2px solid #ddd;
 	margin-right: 5px;
 	border-radius: 3px;
 	z-index: 0;
 }
 form > div > label > i {
 	position: absolute;
+	font-size: 18px;
 	left: 0;
 	opacity: 0;
 	color: #000;
@@ -200,5 +210,5 @@ input[type="checkbox"]:checked + label > i {
 	transform: translateX(450px);
 }
 input:not([type="checkbox"]):focus {
-	box-shadow: 0 0 2px 2px #ff574d;
+	box-shadow: 0 0 1px 1px #ff574d;
 }
