@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Asap:wght@100;200;300;400;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Asap:wght@100;200;300;400;500;600&display=swap");
 * {
-	font-family: 'Asap', sans-serif;
+	font-family: "Asap", sans-serif;
 	margin: 0;
 	padding: 0;
 }
@@ -26,7 +26,7 @@ div > h2 {
 	padding-right: 20px;
 }
 div > h2::after {
-	content: '';
+	content: "";
 	border: 1px solid #ddd;
 	top: 50%;
 	position: absolute;
@@ -69,6 +69,10 @@ input[type="radio"]:nth-child(8):checked ~ main > nav > ul > li > .label-8 {
 	background-color: #c1903d;
 	color: #fff;
 }
+main > nav > ul > li:hover > label {
+	background-color: #c1903d;
+	color: #fff;
+}
 /*End Menu*/
 /*Begin container*/
 .container {
@@ -87,7 +91,7 @@ article {
 	z-index: -2;
 }
 article::after {
-	content: '';
+	content: "";
 	position: absolute;
 	inset: 0;
 	background-color: #0000003a;
