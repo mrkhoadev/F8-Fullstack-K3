@@ -14,12 +14,13 @@ main {
 	width: 80%;
 	margin: auto;
 	margin-top: 10px;
-	color: #252525;
+	color: #3c3c3c;
 }
 main > div {
 	width: 100%;
 	position: relative;
 	overflow: hidden;
+	padding: 5px 0;
 }
 div > h2 {
 	display: inline-block;
