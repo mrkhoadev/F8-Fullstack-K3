@@ -151,6 +151,7 @@ section > .content > ol > li {
 	width: 90%;
 	border-bottom: 2px solid #ddd;
 }
+
 h2 {
 	padding: 5px 15px;
 	font-weight: 450;
@@ -162,11 +163,30 @@ h2 {
 		rgb(0, 0, 0)
 	);
 }
+h2 a {
+	font-weight: 500;
+	cursor: pointer;
+}
+@keyframes link {
+	0% {
+		color: rgb(255, 255, 255);
+	}
+	50% {
+		color: #d64e4e;
+	}
+	100% {
+		color: rgb(255, 255, 255);
+	}
+}
+.link {
+	animation: link 1s infinite;
+}
+
 input ~ section > .content > div {
 	position: absolute;
 	width: 100%;
 	transform: translateY(600px);
-	transition: .5s ease-in-out;
+	transition: 0.5s ease-in-out;
 	opacity: 0;
 }
 .scrollbar::-webkit-scrollbar {
