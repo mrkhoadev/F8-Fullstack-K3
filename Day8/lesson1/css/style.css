@@ -17,7 +17,7 @@ html {
 	scroll-behavior: smooth;
 }
 body {
-	width: 1535px;
+	width: 100%;
 	min-height: 100vh;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -36,7 +36,7 @@ p {
 a {
 	text-decoration: none;
 	color: inherit;
-	display: inline-block;
+	display: block;
 }
 ul,
 ol,
@@ -127,6 +127,9 @@ nav > ul > li:hover > span {
 	line-height: 35px;
 	font-size: 16px;
 }
+.nav__content > div > div > a:hover {
+	color: #aaa;
+}
 /*Begin nav__content--left */
 .margin__bottom {
 	margin-bottom: 37px;
@@ -135,9 +138,6 @@ nav > ul > li:hover > span {
 	width: 100%;
 	column-count: 2;
 	column-gap: 80px;
-}
-.nav__content--left-link a {
-	width: 100%;
 }
 /*End nav__content--left */
 /*Begin nav__content--right */
@@ -148,9 +148,6 @@ nav > ul > li:hover > span {
 	width: 100%;
 	column-count: 3;
 	column-gap: 90px;
-}
-.nav__content--right-link a {
-	width: 100%;
 }
 /*End nav__content--right */
 /*End nav__content */
