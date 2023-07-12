@@ -1,8 +1,0 @@
-.box:hover img {
-	filter: saturate(738%);
-	-webkit-filter: saturate(738%);
-	-moz-filter: saturate(738%);
-}
-.map{
-	filter: grayscale(1);
-}
