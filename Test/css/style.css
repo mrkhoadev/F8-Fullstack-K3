@@ -49,3 +49,36 @@ img {
 	border: 1px solid red;
 	margin: 30px auto;
 }
+.book {
+  width: 200px;
+  height: 300px;
+  perspective: 1000px; /* Tạo hiệu ứng perspective */
+  position: relative;
+}
+
+.front, .back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden; /* Ẩn mặt sau của sách */
+  transition: transform 0.6s ease;
+}
+
+.front {
+  /* CSS cho mặt trước của sách */
+}
+
+.back {
+  /* CSS cho mặt sau của sách */
+  transform: rotateY(180deg); /* Xoay mặt sau 180 độ */
+}
+
+.book:hover .front {
+  transform: rotateY(180deg); /* Xoay mặt trước 180 độ */
+}
+
+.book:hover .back {
+  transform: rotateY(0deg); /* Xoay mặt sau về gốc */
+}

@@ -185,9 +185,10 @@ h2 a {
 input ~ section > .content > div {
 	position: absolute;
 	width: 100%;
-	transform: translateY(600px);
+	transform: rotateY(180deg);
 	transition: 0.5s ease-in-out;
-	opacity: 0;
+	transform-origin: right center;
+	backface-visibility: hidden;
 }
 .scrollbar::-webkit-scrollbar {
 	width: 10px;
@@ -216,8 +217,7 @@ input:nth-of-type(5):checked ~ section > .content > .Day5,
 input:nth-of-type(6):checked ~ section > .content > .Day6,
 input:nth-of-type(7):checked ~ section > .content > .Day7,
 input:nth-of-type(8):checked ~ section > .content > .Day8 {
-	transform: translateY(0);
-	opacity: 1;
+	transform: rotateY(0deg);
 }
 
 input:nth-of-type(1):checked ~ aside > ul > li > .label-1,
