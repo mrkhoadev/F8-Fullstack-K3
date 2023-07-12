@@ -67,7 +67,7 @@ main {
 article {
 	padding: 20px;
 	width: 320px;
-	min-height: 303px;
+	padding-bottom: 49px;
 	position: relative;
 }
 .image {
