@@ -88,6 +88,23 @@ img {
 form {
 	background-color: #fff;
 }
+/*Begin scrollbar*/
+.cart-box {
+	height: 320px;
+	overflow-y: auto;
+	scrollbar-width: thin;
+  scrollbar-color: #888 #f1f1f1;
+}
+.cart-box::-webkit-scrollbar {
+  width: 9px;
+  background-color: #ffffff;
+}
+.cart-box::-webkit-scrollbar-thumb {
+  background-color: #dadada;
+	border-radius: 50px;
+}
+/*End scrollbar*/
+/*Begin product*/
 .cart__product {
 	padding: 35px;
 	width: 100%;
@@ -104,8 +121,8 @@ form {
 	font-family: "boxicons";
 	font-size: 32px;
 	position: absolute;
-	top: 26.5px;
-	right: 30.5px;
+	top: 27px;
+	right: 23px;
 	color: rgb(155, 155, 155);
 }
 .cart__product--left {
@@ -175,6 +192,7 @@ form {
 	margin-right: 14px;
 	color: #353535;
 }
+/*End product*/
 
 .cart__toggle {
 	width: 100%;
