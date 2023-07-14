@@ -15,7 +15,7 @@ html {
 body {
 	width: 100vw;
 	min-height: 100vh;
-	font-family: 'Open Sans', sans-serif;
+	font-family: "Open Sans", sans-serif;
 }
 h1,
 h2,
@@ -68,7 +68,7 @@ form {
 	gap: 20px 20px;
 }
 .input-box {
-	width: calc(100%/2 - 20px);
+	width: calc(100% / 2 - 20px);
 	border-radius: 10px;
 	overflow: hidden;
 	background-color: #fff;
@@ -83,7 +83,7 @@ form {
 	top: 50%;
 	translate: 0 -50%;
 	color: #aaa;
-	transition-duration: .2s;
+	transition-duration: 0.2s;
 	transition-property: top, font-size;
 	transition-timing-function: ease-in-out;
 }
@@ -101,6 +101,7 @@ form {
 	height: 100%;
 	font-size: 20px;
 	color: #aaa;
+	border: none;
 }
 option {
 	color: #000;
@@ -120,7 +121,7 @@ option {
 	font-size: 20px;
 	color: #aaa;
 	top: 10px;
-	transition-duration: .2s;
+	transition-duration: 0.2s;
 	transition-property: top, font-size;
 	transition-timing-function: ease-in-out;
 }
