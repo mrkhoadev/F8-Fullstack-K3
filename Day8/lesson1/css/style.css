@@ -10,7 +10,7 @@
 }
 * {
 	font-family: "Manrope", sans-serif;
-	color: rgb(97, 104, 118);
+	color: rgb(30, 30, 30);
 }
 html {
 	font-size: 62.5%;
@@ -50,7 +50,8 @@ nav {
 	background-color: rgb(247, 247, 249);
 	display: flex;
 	flex-direction: row;
-	justify-content: space-between;
+	justify-content: center;
+	column-gap: 410px;
 	align-items: center;
 }
 .logo {
