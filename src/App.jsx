@@ -1,9 +1,8 @@
-import { useState } from "react";
+import React from "react";
 import Header from "./components/header/Header";
 import Body from "./components/body/Body";
 import "./assets/css/alertify.css";
 import "./assets/scss/style.scss";
-import { Routes, Route } from "react-router-dom";
 
 function App() {
     return (
