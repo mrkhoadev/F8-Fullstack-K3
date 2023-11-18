@@ -1,0 +1,35 @@
+.pagination {
+    margin-top: 30px;
+    ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+
+        li {
+            padding: 0 15px;
+            cursor: pointer;
+            &.selected {
+                a {
+                    color: #ffffff;
+                    background-color: #ee4d2d;
+                }
+            }
+            a {
+                display: block;
+                text-decoration: none;
+                font-size: 1rem;
+                color: #999;
+                height: 30px;
+                text-align: center;
+                line-height: 30px;
+                min-width: 45px;
+                padding: 0 5px;
+                border-radius: 3px;
+            }
+            i {
+                font-size: 2rem;
+            }
+        }
+    }
+}

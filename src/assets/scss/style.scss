@@ -1,0 +1,107 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-size: 16px;
+    font-family: sans-serif;
+    font-weight: 400;
+    background-color: #f5f5f5;
+}
+input:not([class^="ajs-"]),
+button:not([class^="ajs-"]) {
+    color: inherit;
+    outline: none;
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: inherit;
+}
+button {
+    outline: none;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+ul, li {
+    list-style: none;
+}
+img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+}
+:root {
+    --container-width: 1200px;
+    --column-space: 15px;
+    --container-padding: 15px;
+}
+
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 calc(-1 * var(--column-space) / 2);
+
+    [class^="col-"] {
+    --column-number: calc(12 / var(--column-size));
+    --column-width: calc(100% / var(--column-number));
+    flex-basis: var(--column-width);
+    max-width: var(--column-width);
+    padding: 0 calc(var(--column-space) / 2);
+}
+}
+
+@mixin column($name: "") {
+    @for $i from 1 through 12 {
+        $prefix: ".col-";
+
+        @if ($name != "") {
+            $prefix: $prefix + $name + "-";
+        }
+
+        #{$prefix + $i} {
+            --column-size: #{$i};
+        }
+    }
+}
+
+@include column();
+
+.justify-content-start {
+  justify-content: flex-start;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.justify-content-end {
+  justify-content: flex-end;
+}
+
+.align-items-start {
+  align-items: flex-start;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.align-items-end {
+  align-items: flex-end;
+}
