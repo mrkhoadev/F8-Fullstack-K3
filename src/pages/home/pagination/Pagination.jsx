@@ -11,40 +11,37 @@ const { PAGE_LIMIT } = config;
 export default function Pagination() {
   const dispatch = useDispatch();
   const totalPage = useSelector((state) => state.products.totalPage);
-  let { page } = useParams();
+  const { page } = useParams();
   const navigate = useNavigate();
   const validCurrentPage = useRef(
     Math.min(!isNaN(+page) ? +page : 1, totalPage)
   );
+  const getData = async (pageParams) => {
+    const data = await dispatch(
+      getProducts({
+        limit: PAGE_LIMIT,
+        page: pageParams,
+      })
+    );
+    return data;
+  };
 
-  useLayoutEffect(() => {
-    const pageParams = +page;
-    if (!isNaN(pageParams) && pageParams > 0 && pageParams <= totalPage) {
-      (async () => {
-        await dispatch(
-          getProducts({
-            limit: PAGE_LIMIT,
-            page: +page,
-          })
-        );
-      })();
-    } else {
-      page = 1;
-      navigate(`/product/1`);
-      (async () => {
-        await dispatch(
-          getProducts({
-            limit: PAGE_LIMIT,
-            page: 1,
-          })
-        );
-      })();
-    }
+  useEffect(() => {
+    const fetchData = async () => {
+      const pageParams = +page;
+      if (!isNaN(pageParams) && pageParams > 0 && pageParams <= totalPage) {
+        await getData(pageParams);
+      } else {
+        navigate(`/product/1`);
+        await getData(1);
+      }
+    };
+
+    fetchData();
   }, [page]);
   validCurrentPage.current = Math.min(!isNaN(+page) ? +page : 1, totalPage);
   const handlePageClick = (event) => {
     navigate(`/product/${event.selected + 1}`);
-    page = event.selected + 1;
   };
   return (
     <div className="pagination">
