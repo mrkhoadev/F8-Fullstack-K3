@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "start": "vite --port=8888 --host=127.0.0.1 --open",
-    "build": "vite build",
+    "build": "rm -rf ./build && vite build --outDir=./build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
