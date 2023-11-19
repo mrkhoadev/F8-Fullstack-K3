@@ -1,0 +1,84 @@
+.header {
+    color: #fff;
+
+    &-inner {
+        z-index: 1;
+        background: #f53d2d;
+        background: linear-gradient(-180deg, #f53d2d, #f63);
+        position: fixed;
+        width: 100%;
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 5px;
+
+            &-left,
+            &-right {
+                ul {
+                    display: flex;
+                    gap: 10px;
+                    font-size: 0.9rem;
+                }
+            }
+            &-left {
+                ul {
+                    li:not(:first-child) {
+                        border-left: 2px solid;
+                        border-color: inherit;
+                        padding-left: 8px;
+                    }
+                }
+            }
+            &-right {
+                ul {
+                    li {
+                        span {
+                            margin-right: 5px;
+                        }
+                    }
+                }
+            }
+        }
+        .search {
+            margin-top: 10px;
+            margin-bottom: 12px;
+
+            .logo {
+                max-width: 250px;
+                margin-top: 10px;
+            }
+            &-form {
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-top: 15px;
+                border-radius: 8px;
+                background-color: #fff;
+
+                .input-box {
+                    width: 100%;
+                    border-radius: inherit;
+
+                    input {
+                        width: 100%;
+                        border: none;
+                        padding: 12px 10px;
+                        border-radius: inherit;
+                        color: #000;
+                    }
+                }
+                button {
+                    background-color: #f53d2d;
+                    margin-right: 5px;
+                    border-radius: 5px;
+                    padding: 7.5px 17px;
+                    font-size: 18px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,25 @@
+.cart {
+    margin-top: 20px;
+    margin-left: 40px;
+
+    &-btn {
+        position: relative;
+        i {
+            font-size: 2rem;
+        }
+        span {
+            border: 1.5px solid #ee4d2d;
+            display: inline-block;
+            position: absolute;
+            background-color: #ffffff;
+            border-radius: 10px;
+            min-width: 25px;
+            font-size: 0.8rem;
+            padding: 2.5px 5px;
+            color: #ee4d2d;
+            top: 0;
+            right: 0px;
+            transform: translate(50%, -20%);
+        }
+    }
+}
