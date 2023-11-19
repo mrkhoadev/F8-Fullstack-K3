@@ -21,7 +21,7 @@ export default function Cart() {
           alt=""
         />
         <p>Giỏ hàng của bạn còn trống</p>
-        <Link to="/product/1">Mua ngay</Link>
+        <Link to="./product/1">Mua ngay</Link>
       </div>
     );
   }
