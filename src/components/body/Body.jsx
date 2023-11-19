@@ -9,8 +9,8 @@ export default function Body() {
   return (
     <main className="app" style={{ paddingTop: "3px" }}>
       <Routes>
-        <Route path="/product" element={<Home />}>
-          <Route path=":page" element={<Home />} />
+        <Route path="./" element={<Home />}>
+          <Route path="product:page" element={<Home />} />
         </Route>
         <Route path="/details">
           <Route path=":slug/:id" element={<ProductDetails />} />
