@@ -58,7 +58,7 @@ export default function Header() {
               <div className={clsx(style.search)}>
                 <div className="row justify-content-between">
                   <div className="col-3">
-                    <Link to={"/product/1"}>
+                    <Link to={"./product/1"}>
                       <div className={clsx(style.logo)}>
                         <img src={logo} alt="logo" />
                       </div>
