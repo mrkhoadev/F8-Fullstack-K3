@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập 1</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <section>
+        <h2>Hey there</h2>
+        <p>
+            <span>We'd like to hear form you.</span> Send us your message or just say hy with our contact form or
+            directly via phone, we
+            love to chat.
+        </p>
+        <form action="#!" method="POST">
+            <div class="input-box">
+                <input type="text" name="name" id="name" placeholder="Your name" autocomplete="off">
+                <div class="popup">
+                    <span class="text">Enter your name</span>
+                    <span class="text-border"></span>
+                </div>
+                <label for="name"></label>
+                <div class="input-icon">
+                    <i class='bx bxs-user'></i>
+                </div>
+                <span class="text-icon">
+                    <i class='bx bxs-star'></i>
+                </span>
+                <span class="text-icon">
+                    <i class='bx bx-x'></i>
+                </span>
+            </div>
+
+            <div class="input-box">
+                <input type="email" name="email" id="email" placeholder="your@domain.com" autocomplete="off">
+                <div class="popup">
+                    <span class="text">Enter your email</span>
+                    <span class="text-border"></span>
+                </div>
+                <label for="email"></label>
+                <div class="input-icon">
+                    <i class='bx bx-envelope'></i>
+                </div>
+                <span class="text-icon">
+                    <i class='bx bxs-star'></i>
+                </span>
+                <span class="text-icon">
+                    <i class='bx bx-x'></i>
+                </span>
+            </div>
+
+            <div class="input-box">
+                <input type="number" name="number" id="number" placeholder="+44 00 123" autocomplete="off">
+                <div class="popup">
+                    <span class="text">Enter your phone</span>
+                    <span class="text-border"></span>
+                </div>
+                <label for="number"></label>
+                <div class="input-icon">
+                    <i class='bx bx-mobile-alt'></i>
+                </div>
+            </div>
+
+            <div class="input-box">
+                <select name="subject" id="subject" >
+                    <option value="" disabled selected hidden class="select-col">Subject</option>
+                    <option value="1">Happy</option>
+                    <option value="2">Or</option>
+                    <option value="3">Sad</option>
+                </select>
+                <div class="popup">
+                    <span class="text">Enter your email</span>
+                    <span class="text-border"></span>
+                </div>
+                <label for="subject"></label>
+                <div class="input-icon">
+                    <i class='bx bx-blanket'></i>
+                </div>
+                <span class="select-icon-1">
+                    <i class='bx bxs-up-arrow'></i>
+                    <i class='bx bxs-down-arrow'></i>
+                </span>
+                <span class="select-icon-2">
+                    <i class='bx bxs-down-arrow'></i>
+                </span>
+            </div>
+
+            <div class="textarea-box">
+                <textarea name="message" id="message" placeholder="Message"></textarea>
+                <div class="popup">
+                    <span class="text">Enter your message</span>
+                    <span class="text-border"></span>
+                </div>
+                <label for="message"></label>
+                <div class="input-icon">
+                    <i class='bx bxs-message'></i>
+                </div>
+                <span class="text-icon">
+                    <i class='bx bxs-star'></i>
+                </span>
+                <span class="text-icon">
+                    <i class='bx bx-x'></i>
+                </span>
+            </div>
+            <div class="button-box">
+                <div class="checkbox">
+                    <input type="checkbox" name="checkbox" id="checkbox" checked>
+                    <label for="checkbox">Send me a copy of this message</label>
+                    <span>
+                        <i class='bx bx-check'></i>
+                    </span>
+                </div>
+                <button type="button">SEND</button>
+            </div>
+        </form>
+    </section>
+
+</body>
+
+</html>

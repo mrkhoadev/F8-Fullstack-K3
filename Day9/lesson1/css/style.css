@@ -1,0 +1,223 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
+*,
+*:before,
+*:after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	outline: none;
+	border: none;
+}
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+}
+body {
+	width: 100vw;
+	min-height: 100vh;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	font-size: 1.6rem;
+	font-weight: 500;
+}
+a {
+	text-decoration: none;
+	color: inherit;
+}
+ul,
+ol,
+li {
+	list-style: none;
+}
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+:root {
+	--caption-font-family: "Space Grotesk", sans-serif;
+	--text-font-family: "Inter", sans-serif;
+}
+body {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: flex-start;
+	padding-top: 20px;
+	font-family: var(--text-font-family);
+}
+.text-box {
+	width: 700px;
+	height: 700px;
+}
+
+aside {
+	position: relative;
+}
+aside::before {
+	content: "\ed47";
+	font-family: "boxicons";
+	position: absolute;
+	top: 3px;
+	left: 50%;
+	transform: translateX(-50%);
+	font-size: 13px;
+	margin: 0;
+	border-radius: 50%;
+	padding: 7px;
+	color: #50b0a0;
+	background-color: #2ad56927;
+	text-align: center;
+}
+aside::after {
+	content: "";
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: 0;
+	height: 135px;
+	width: 0px;
+	border: 1px solid #cecece;
+}
+.layer {
+	width: 700px;
+	height: 173px;
+	position: relative;
+	margin-bottom: 10px;
+	transition: 0.5s linear;
+}
+.text__left {
+	width: 50%;
+	position: absolute;
+	left: 0;
+	text-align: right;
+	padding: 0px 30px;
+	box-sizing: border-box;
+	transition-duration: all;
+	transition-delay: 0.25s;
+	transition-duration: 0.1s;
+}
+.text__left h2 {
+	font-family: var(--caption-font-family);
+	font-size: 26px;
+	font-weight: 600;
+	right: 20px;
+}
+.text__left p {
+	font-size: 14px;
+	line-height: 28px;
+	font-weight: 400;
+	color: #696969;
+	margin: 8px 0;
+}
+.text__left a {
+	display: inline-block;
+	border-radius: 50px;
+	background-color: #dfdada;
+	padding: 5px 10px;
+	font-size: 15px;
+	font-weight: 600;
+	color: #424242;
+	margin: 10px 0;
+	cursor: pointer;
+	transition-duration: all;
+	transition-duration: 0.5s;
+	transition-timing-function: ease;
+}
+.text__right {
+	position: absolute;
+	padding: 10px 30px;
+	width: 50%;
+	height: 100%;
+	right: 0;
+	text-align: left;
+	transition-delay: 0.4s;
+	transition: 0s;
+}
+.text__right--time {
+	left: 0;
+	top: 5px;
+	position: absolute;
+	width: 115px;
+	display: flex;
+	font-size: 18px;
+	flex-direction: row-reverse;
+}
+/*Begin text hover*/
+aside:hover > .layer {
+	transform: rotateY(180deg);
+}
+aside:hover > .layer > .text__left {
+	text-align: left;
+	transform: rotateY(180deg);
+}
+aside:hover > .layer > .text__left a {
+	color: #fff;
+	background-color: #945b16e1;
+}
+aside:hover > .layer > .text__right > .text__right--time {
+	flex-direction: row;
+	transform: rotateY(180deg);
+}
+/*End text hover*/
+
+.image {
+	min-width: 520px;
+	height: 550px;
+	position: relative;
+}
+.image > img {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 350px;
+	height: 350px;
+}
+.layout {
+	width: 250px;
+	height: 400px;
+	position: relative;
+	background-size: 100% 100%;
+	margin-top: 100%;
+	transform: translateY(-100%);
+	box-sizing: border-box;
+	filter: blur(0.5px);
+	background-image: url("../images/img-2.jpg");
+}
+.layout__color {
+	position: absolute;
+	background-color: rgba(47, 83, 215, 0.978);
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 87%;
+	height: 90%;
+}
+.layout > .backdrop {
+	font-family: var(--caption-font-family);
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	font-size: 60px;
+	font-weight: 900;
+	background-image: inherit;
+	background-size: 100% 100%;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: flex-end;
+	padding-bottom: 20%;
+	padding-right: 14%;
+}
+.backdrop > span {
+	color: inherit;
+	font-size: 20px;
+}

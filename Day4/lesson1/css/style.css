@@ -1,0 +1,49 @@
+body {
+	font-family: "Roboto", sans-serif;
+	color: #fff;
+}
+h2 {
+	margin: 0px;
+	font-weight: 500;
+}
+span {
+	color: #f7a713;
+}
+p {
+	margin: 5px 0;
+}
+.content {
+	border-radius: 10px;
+	width: 70%;
+	background: #434f5e;
+	padding: 20px;
+}
+form {
+	margin: 0;
+}
+input, button {
+	border-radius: 3px;
+}
+input {
+	height: 30px;
+	width: 275px;
+	color: #f7a713;
+}
+button {
+	border: none;
+	font-weight: 550;
+	height: 32px;
+	width: 240px;
+	background: #ffe600;
+	box-shadow: 2px 2px 0px 0px #ffb700;
+}
+.content:hover input,
+.content:hover input::placeholder {
+	background: #ddd;
+	color: #f7a713;
+}
+.content:hover button{
+	background: #f7a713;
+	color: #fff;
+	box-shadow: 2px 2px 0px 0px #eaa422;
+}

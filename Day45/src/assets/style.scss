@@ -1,0 +1,380 @@
+html {
+    scroll-behavior: smooth;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-size: 16px;
+    font-family: sans-serif;
+    font-weight: 400;
+}
+input:not([class^="ajs-"]),
+button:not([class^="ajs-"]) {
+    color: inherit;
+    outline: none;
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: inherit;
+}
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+:root {
+    --green-colors-50: #e6fffa;
+    --green-colors-100: #b2f5ea;
+    --green-colors-200: #81e6d9;
+    --green-colors-300: #4fd1c5;
+    --green-colors-400: #38b2ac;
+    --green-colors-500: #319795;
+    --green-colors-600: #2c7a7b;
+    --green-colors-700: #285e61;
+    --green-colors-800: #234e52;
+    --green-colors-900: #1d4044;
+}
+@for $i from 1 through 10 {
+    $index: $i * 100;
+    .green-colors-#{$index} {
+        color: var(--green-colors-#{$index});
+        /* Thêm các thuộc tính CSS khác nếu cần */
+    }
+}
+.game {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background-color: #fff;
+    z-index: 0;
+    overflow: hidden;
+    padding: 0 20px;
+
+    .overlay {
+        background-color: #1a202c;
+        width: calc(3 * 100vw);
+        height: calc(3 * 100vh);
+        z-index: -1;
+        position: absolute;
+        right: 40px;
+        top: 40px;
+        transform: translate(50%, -50%);
+        clip-path: circle(0% at 50% 50%);
+        transition: clip-path 0.5s ease;
+    }
+
+    &-header {
+        width: 100%;
+        padding: 30px 0px 0;
+        user-select: none;
+
+        .theme-btn {
+            position: absolute;
+            top: 25px;
+            right: 15px;
+            border: 2px solid #e2e8f0;
+            text-align: center;
+            color: var(--green-colors-500);
+            border-radius: 10px;
+            width: 40px;
+            height: 40px;
+            transition: color 0.2s ease;
+
+            i {
+                vertical-align: middle;
+                font-size: 20px;
+            }
+        }
+        .theme-btn.active {
+            color: #fff;
+        }
+
+        &__blood {
+            height: 10px;
+            background-color: var(--green-colors-500);
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        h2 {
+            font-size: 2.25rem;
+            line-height: 1.2;
+            user-select: none;
+        }
+
+        &__progressWrap {
+            position: relative;
+        }
+        &__progressBar {
+            background-color: #e2e8f0;
+            width: 100%;
+            height: 4px;
+            margin-top: 20px;
+            position: relative;
+
+            > span {
+                background-color: var(--green-colors-500);
+                color: #fff;
+                padding: 5px;
+                border-radius: 5px;
+                position: absolute;
+                font-size: 0.9rem;
+                font-weight: 600;
+                top: -15px;
+                transform: translateY(-100%) translateX(-50%);
+                visibility: hidden;
+                opacity: 0;
+                transition: opacity 0.3s ease;
+                pointer-events: none;
+
+                &::after {
+                    content: "";
+                    display: inline-block;
+                    position: absolute;
+                    top: 90%;
+                    left: 50%;
+                    width: 0;
+                    height: 0;
+                    transform: translateX(-48%);
+                    border-top: 8px solid var(--green-colors-500);
+                    border-bottom: 8px solid transparent;
+                    border-left: 8px solid transparent;
+                    border-right: 8px solid transparent;
+                }
+
+                &.active {
+                    visibility: visible;
+                    opacity: 1;
+                }
+            }
+            &:hover {
+                > span {
+                    visibility: visible;
+                    opacity: 1;
+                }
+            }
+        }
+        &__progress {
+            position: absolute;
+            height: 100%;
+            background-color: var(--green-colors-500);
+            transition: background-color 0.5s ease;
+
+            span {
+                display: inline-block;
+                width: 15px;
+                height: 15px;
+                background-color: #fff;
+                border: 1px solid #aaa;
+                border-radius: 50%;
+                position: absolute;
+                top: 50%;
+                right: 0;
+                transform: translate(50%, -50%);
+
+                &:active {
+                    width: 17px;
+                    height: 17px;
+                    box-shadow: 0 0 2px 3px var(--green-colors-300);
+                }
+            }
+            span.active {
+                width: 17px;
+                height: 17px;
+                box-shadow: 0 0 2px 3px var(--green-colors-300);
+            }
+        }
+        &__value {
+            position: absolute;
+            width: fit-content;
+            margin-top: 12px;
+            font-size: 1.2rem;
+            transform: translateX(-50%);
+            top: 0;
+            z-index: -1;
+            user-select: none;
+
+            &::before {
+                content: "";
+                display: inline-block;
+                background-color: #000000;
+                width: 2.5px;
+                height: 12px;
+                position: absolute;
+                top: -70%;
+                z-index: -1;
+                left: 50%;
+            }
+        }
+        &__value:last-child {
+            transform: translateX(-100%);
+
+            &::before {
+                content: "";
+                display: inline-block;
+                background-color: #000000;
+                width: 2.5px;
+                height: 12px;
+                position: absolute;
+                top: -70%;
+                z-index: -1;
+                left: 100%;
+            }
+        }
+    }
+    &-content {
+        position: relative;
+        margin-top: 40px;
+        &__form {
+            display: flex;
+            gap: 10px;
+            align-items: flex-end;
+            .input-box {
+                width: 100%;
+                label {
+                    color: var(--green-colors-500);
+                    display: block;
+                    text-align: start;
+                }
+                input {
+                    width: 100%;
+                    padding: 0.6rem;
+                    border-radius: 5px;
+                    border: 1px solid #aaa;
+                    margin-top: 10px;
+                    background-color: transparent;
+                }
+            }
+
+            .random-btn,
+            .reset-btn {
+                padding: 10px 20px;
+                border: 1px solid transparent;
+                border-radius: 5px;
+                background-color: var(--green-colors-500);
+                color: #fff;
+            }
+            .reset-btn {
+                margin-top: 28px;
+            }
+        }
+        .delete-btn {
+            position: absolute;
+            right: 0;
+            top: 90px;
+            padding: 8px 10px;
+            background-color: var(--green-colors-500);
+            color: #fff;
+            font-size: 20px;
+            border-radius: 10px;
+            z-index: 1;
+        }
+        &__table {
+            z-index: 0;
+            margin-top: 20px;
+            position: relative;
+            overflow-x: hidden;
+            display: flex;
+            width: 100%;
+            scroll-snap-type: x mandatory;
+            gap: 50px;
+            padding-bottom: 5px;
+            outline: none;
+            &:hover {
+                overflow-x: auto;
+            }
+            &::-webkit-scrollbar {
+                height: 10px;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background-color: var(--green-colors-500);
+                border-radius: 6px;
+            }
+
+            &::-webkit-scrollbar-track {
+                border-radius: 6px; 
+                background-color: #f1f1f1;
+            }
+
+            table {
+                min-width: 100%;
+                scroll-snap-align: start;
+                border: 3px solid var(--green-colors-500);
+                border-radius: 10px;
+                width: 100%;
+                text-align: center;
+                tr {
+                    th {
+                        line-height: 2;
+                        width: 50%;
+                    }
+                    border-bottom: 1px solid #000000;
+                }
+                tbody {
+                    tr {
+                        td {
+                            vertical-align: top;
+                            p {
+                                display: block;
+                                padding-bottom: 5px;
+                                border-bottom: 1px solid #e2e8f0;
+                            }
+                        }
+                    }
+                }
+                tfoot {
+                    tr {
+                        td {
+                            padding-top: 10px;
+                            padding-bottom: 5px;
+                            font-weight: 600;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.overlay.active {
+    transition: clip-path 0.5s ease;
+    clip-path: circle(100% at 50% 50%);
+}
+.game {
+    &.active {
+        .game-header {
+            &__progressBar {
+                transition: background-color 0.5s ease;
+                background-color: #ffffff54;
+            }
+            &__progress {
+                transition: background-color 0.5s ease;
+                background-color: var(--green-colors-200);
+            }
+            &__value {
+                color: #fff;
+
+                &::before {
+                    background-color: #ffffff69;
+                }
+            }
+        }
+        .game-content {
+            &__form {
+                .input-box {
+                    input {
+                        color: #fff;
+                    }
+                }
+            }
+            &__table {
+                table {
+                    color: #ffffffd8;
+                }
+            }
+        }
+    }
+}

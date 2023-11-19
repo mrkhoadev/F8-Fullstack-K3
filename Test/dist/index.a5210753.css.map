@@ -1,0 +1,1 @@
+{"mappings":"AAAA;;;;ACAA","sources":["src/assets/style.css","src/assets/style.scss"],"sourcesContent":["h1 {\r\n\tcolor: red;\r\n}","h2 {\r\n    color: blue;\r\n}"],"names":[],"version":3,"file":"index.a5210753.css.map","sourceRoot":"/__parcel_source_root/"}

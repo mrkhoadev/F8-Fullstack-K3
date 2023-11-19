@@ -1,0 +1,119 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+	font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";;
+}
+.container {
+	width: 80vw;
+	margin: auto;
+}
+.title {
+	font-size: 25px;
+	font-weight: 500;
+	padding: 8px 0;
+	border-bottom: 2px solid #ccc;
+}
+.controls {
+	display: flex;
+	justify-content: space-between;
+	padding-top: 10px;
+}
+.main-controls {
+	display: inline-block;
+}
+.dropdown {
+	display: flex;
+	column-gap: 3px;
+	position: relative;
+	background-color: #fff;
+}
+.dropdown .btn {
+	padding: 7px 12px;
+	font-size: 18px;
+	border-radius: 5px;
+	border: none;
+	color: #fff;
+	background-color: #0d6efd;
+	cursor: pointer;
+}
+.dropdown .btn.active {
+	background-color: #0a58ca;
+}
+.dropdown .btn i {
+	font-size: 12px;
+	vertical-align: middle;
+}
+.dropdown input {
+	padding: 7px;
+}
+.dropdown-menu {
+	position: absolute;
+	background-color: inherit;
+	display: flex;
+	flex-direction: column;
+	min-width: 150px;
+	top: calc(100% + 5px);
+	border-radius: 5px;
+	border: 1px solid #ccc;
+	padding: 1px;
+	visibility: hidden;
+}
+.dropdown-menu.active {
+	visibility: visible;
+}
+.dropdown-menu button {
+	background-color: #fff;
+	border: none;
+	padding: 8px 15px;
+	text-align: left;
+	cursor: pointer;
+}
+.dropdown-menu button:hover {
+	background-color: #dfdfdf;
+}
+.control-btn-container {
+	display: flex;
+	column-gap: 5px;
+}
+.control-btn-container button {
+	background-color: black;
+	color: #fff;
+	cursor: pointer;
+	border: none;
+	border-radius: 6px;
+	height: 100%;
+	width: 50px;
+	vertical-align: middle;
+}
+.control-btn-container button.active {
+	background-color: rgb(94, 94, 94);
+}
+.control-btn-container button > * {
+	font-weight: 600;
+}
+.control-btn-container input {
+	height: 100%;
+	width: 50px;
+	vertical-align: middle;
+	cursor: pointer;
+}
+
+#content {
+	min-height: 300px;
+	width: 100%;
+	border: 1px solid #ccc;
+	box-shadow: 0 0 2px 2px #ddd;
+	margin-top: 20px;
+	padding: 10px 15px;
+	outline: none;
+}
+.counter {
+	display: flex;
+	margin-left: auto;
+	margin-right: 0;
+	margin-top: 20px;
+	justify-content: flex-end;
+	column-gap: 20px;
+}

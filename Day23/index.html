@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form login/register dân trí</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <button class="btn" type="button">Đăng nhập</button>
+    <div class="overlay"></div>
+    <div class="popup">
+        <div class="btn-title">
+            <button class="btn-login active-title">Đăng nhập</button>
+            <button class="btn-register">Đăng ký</button>
+        </div>
+        <div class="form-box form--login form-active">
+            <div class="form-txt">
+                <p class="form-text">với các tài khoản mạng xã hội</p>
+            </div>
+            <div class="form-icon">
+                <div class="icon-link">
+                    <a href="#!" class="link-google">Google</a>
+                </div>
+                <div class="icon-link">
+                    <a href="#!" class="link-facebook">Facebook</a>
+                </div>
+            </div>
+            <div class="or-box">
+                <p class="or">hoặc</p>
+            </div>
+            <form action="#!" method="post" class="form-login">
+                <span class="error">Ô kê rồi đấy :v</span>
+                <div class="input-box">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Email">
+                    <span class="error">Vui lòng nhập thông tin</span>
+                </div>
+                <div class="input-box">
+                    <label for="password">Mật khẩu</label>
+                    <input class="password" type="password" id="password" placeholder="Mật khẩu">
+                    <button class="btn-input" type="button">
+                        <svg class="show-pass active-icon" aria-hidden="true" width="24" height="24" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M6 15.9977C6 15.9977 9.63636 8.72501 16 8.72501C22.3636 8.72501 26 15.9977 26 15.9977C26 15.9977 22.3636 23.2705 16 23.2705C9.63636 23.2705 6 15.9977 6 15.9977Z"
+                                stroke="#808080" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path
+                                d="M16 18.725C17.5062 18.725 18.7273 17.504 18.7273 15.9977C18.7273 14.4915 17.5062 13.2704 16 13.2704C14.4937 13.2704 13.2727 14.4915 13.2727 15.9977C13.2727 17.504 14.4937 18.725 16 18.725Z"
+                                stroke="#808080" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                        <svg class="hidden-pass" aria-hidden="true" width="24" height="24" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M14.0909 8.94544C14.7167 8.79897 15.3573 8.72575 16 8.72726C22.3636 8.72726 26 16 26 16C25.4482 17.0324 24.7901 18.0043 24.0364 18.9M17.9273 17.9273C17.6776 18.1952 17.3765 18.4101 17.042 18.5592C16.7074 18.7082 16.3463 18.7884 15.9801 18.7949C15.6139 18.8013 15.2501 18.734 14.9106 18.5968C14.571 18.4596 14.2625 18.2555 14.0035 17.9965C13.7445 17.7375 13.5404 17.429 13.4032 17.0894C13.266 16.7498 13.1987 16.3861 13.2051 16.0199C13.2116 15.6537 13.2917 15.2926 13.4408 14.958C13.5899 14.6235 13.8048 14.3224 14.0727 14.0727M21.4 21.4C19.846 22.5845 17.9537 23.2408 16 23.2727C9.63636 23.2727 6 16 6 16C7.13081 13.8926 8.69921 12.0514 10.6 10.6L21.4 21.4Z"
+                                stroke="#808080" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M6 6L26 26" stroke="#808080" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </button>
+                    <span class="error">Vui lòng nhập thông tin</span>
+                </div>
+                <div class="forgot-password">
+                    <a href="#!">Quên mật khẩu?</a>
+                </div>
+                <button class="btn-form" type="button">Đăng nhập</button>
+            </form>
+        </div>
+        <div class="form-box form--register">
+            <div class="form-txt">
+                <p class="form-text__register">Hoàn thành đăng ký, và bắt đầu trải nghiệm ngay!</p>
+            </div>
+            <form action="#!" method="post" class="form-register">
+                <span class="error">Ô kê rồi đấy :v</span>
+                <div class="input-box">
+                    <label for="name-register">Họ và tên</label>
+                    <input type="text" id="name-register" placeholder="Họ và tên">
+                    <span class="error">Vui lòng nhập thông tin</span>
+                </div>
+                <div class="input-box">
+                    <label for="email-register">Email</label>
+                    <input type="email" id="email-register" placeholder="Email">
+                    <span class="error">Vui lòng nhập thông tin</span>
+                </div>
+                <div class="input-box">
+                    <label for="password-register">Mật khẩu</label>
+                    <input class="password" type="password" id="password-register" placeholder="Mật khẩu">
+                    <button class="btn-input" type="button">
+                        <svg class="show-pass active-icon" aria-hidden="true" width="24" height="24" viewBox="0 0 32 32" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M6 15.9977C6 15.9977 9.63636 8.72501 16 8.72501C22.3636 8.72501 26 15.9977 26 15.9977C26 15.9977 22.3636 23.2705 16 23.2705C9.63636 23.2705 6 15.9977 6 15.9977Z"
+                                stroke="#808080" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path
+                                d="M16 18.725C17.5062 18.725 18.7273 17.504 18.7273 15.9977C18.7273 14.4915 17.5062 13.2704 16 13.2704C14.4937 13.2704 13.2727 14.4915 13.2727 15.9977C13.2727 17.504 14.4937 18.725 16 18.725Z"
+                                stroke="#808080" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                        <svg class="hidden-pass" aria-hidden="true" width="24" height="24" viewBox="0 0 32 32" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M14.0909 8.94544C14.7167 8.79897 15.3573 8.72575 16 8.72726C22.3636 8.72726 26 16 26 16C25.4482 17.0324 24.7901 18.0043 24.0364 18.9M17.9273 17.9273C17.6776 18.1952 17.3765 18.4101 17.042 18.5592C16.7074 18.7082 16.3463 18.7884 15.9801 18.7949C15.6139 18.8013 15.2501 18.734 14.9106 18.5968C14.571 18.4596 14.2625 18.2555 14.0035 17.9965C13.7445 17.7375 13.5404 17.429 13.4032 17.0894C13.266 16.7498 13.1987 16.3861 13.2051 16.0199C13.2116 15.6537 13.2917 15.2926 13.4408 14.958C13.5899 14.6235 13.8048 14.3224 14.0727 14.0727M21.4 21.4C19.846 22.5845 17.9537 23.2408 16 23.2727C9.63636 23.2727 6 16 6 16C7.13081 13.8926 8.69921 12.0514 10.6 10.6L21.4 21.4Z"
+                                stroke="#808080" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M6 6L26 26" stroke="#808080" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            </path>
+                        </svg>
+                    </button>
+                    <span class="error">Vui lòng nhập thông tin</span>
+                </div>
+                <div class="text-form">
+                    <p>
+                        Bằng cách đăng ký tài khoản, bạn cũng đồng thời chấp nhận mọi 
+                        <a href="#!">điều kiện về qui định và chính sách của Dân trí</a>
+                    </p>
+                </div>
+                <button class="btn-form" type="button">Đăng ký</button>
+            </form>
+            
+        </div>
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+</html>

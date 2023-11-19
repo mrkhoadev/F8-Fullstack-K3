@@ -1,0 +1,47 @@
+* {
+	padding: 0;
+	/* margin: 0; */
+	box-sizing: border-box;
+}
+table, th, td {
+    border: 1px solid #2b2b2b; /* Đường viền 1px đen */
+}
+th:first-child,
+td:first-child {
+    width: 5%;
+}
+
+.product-table,
+#cart-table {
+	width: 100%;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+.product-table th:nth-last-child(2),
+.product-table td:nth-last-child(2) {
+    width: 10%;
+}
+.product-table th:last-child,
+.product-table td:last-child{
+    width: 10%;
+}
+.product-table td input {
+	width: 100%;
+}
+
+#cart-table th:last-child,
+#cart-table td:last-child {
+    width: 6%;
+}
+#cart-table th:nth-last-child(2),
+#cart-table td:nth-last-child(2) {
+    width: 18%;
+}
+#cart-table th:nth-last-child(3),
+#cart-table td:nth-last-child(3) {
+    width: 12%;
+}
+#cart-table th:nth-last-child(4),
+#cart-table td:nth-last-child(4) {
+    width: 18%;
+}

@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Lobster&family=Open+Sans&family=Roboto:wght@300;500&display=swap");
+* {
+	font-family: "Open Sans", sans-serif;
+	font-weight: 500;
+	padding: 0;
+}
+ul {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #666;
+}
+i {
+	font-size: 27px;
+}
+
+.navbar {
+	border: 1px solid #aaa;
+	max-width: 100%;
+	font-size: 0;
+	background: #fff;
+}
+.navbar > li {
+	display: inline-block;
+	border: 1px solid #aaa;
+	margin-left: -1px;
+	margin-top: -1px;
+	margin-bottom: -1px;
+	position: relative;
+	background-color: inherit;
+}
+.navbar > li > a {
+	font-size: 20px;
+	padding: 15px;
+	margin: 5px;
+}
+.navbar > li > a > span {
+	padding: 0px 8px;
+}
+.navbar__right {
+	float: right;
+}
+
+.select-box {
+	background-color: inherit;
+	position: absolute;
+	top: 80px;
+	width: 280px;
+	font-size: 20px;
+	padding: 0px;
+	box-shadow: 0 0 10px 2px #aaa;
+	display: none;
+	z-index: 0;
+}
+.select-box::before {
+	content: "";
+	position: absolute;
+	width: 0px;
+	height: 0px;
+	border-top: 0px;
+	border-right: 10px;
+	border-bottom: 10px;
+	border-left: 10px;
+	border-style: solid;
+	border-color: transparent transparent #ffffff transparent;
+	top: -9px;
+	left: 20px;
+}
+.select-box::after {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 12px;
+	background: transparent;
+	top: -12px;
+}
+.select-box > li > a {
+	display: flex;
+	justify-content: flex-start;
+	padding: 17px;
+	background-color: inherit;
+	border-bottom: 1px solid #ddd;
+	z-index: 1;
+}
+.select-box > li > a > span {
+	margin-left: 10px;
+}
+/*Begin event*/
+.navbar > li:hover > .select-box {
+	display: initial;
+}
+.navbar > li:hover > a {
+	background-color: #2da5da;
+	color: #fff;
+}
+/*End event*/

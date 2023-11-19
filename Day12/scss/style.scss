@@ -1,0 +1,52 @@
+@import "https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Titillium+Web:wght@200;300;400;600;700;900&display=swap";
+@import "module/config/reset";
+@import "module/config/variable";
+@import "./gird/center";
+body {
+    width: 100%;
+    max-width: 100%;
+    font-family: "Rajdhani", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: $color1;
+}
+.container {
+    width: 100%;
+    padding: 80px 1.5rem 100px 1.5rem;
+    min-height: 100vh;
+    background: url('../image/landing-background.jpg') no-repeat 0;
+    position: static;
+    background-size: cover;
+    inset: 0;
+    z-index: -2;
+}
+.layer {
+    display: none;
+    position: absolute;
+    width: 64%;
+    height: 140%;
+    border-radius: 50%;
+    background-image: url("../image/dot-texture.png");
+    background-color: #fff;
+    right: -32%;
+    z-index: -1;
+}
+:root {
+    --column-space: 20px;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    > [class*="col-"] {
+        --column-number: calc(12 / var(--column-size));
+        --column-width: calc(100% / var(--column-number));
+        flex-basis: var(--column-width);
+        max-width: var(--column-width);
+    }
+}
+@import "module/header";
+@import "module/main";
+@import "module/function";
+@import "./gird/toggle";

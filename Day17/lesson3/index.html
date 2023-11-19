@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 3</title>
+</head>
+
+<body>
+    <h1>Tính giá trị biểu thức</h1>
+    <input type="number" id="number" placeholder="Nhập n">
+    <button id="btn">Tính</button>
+    <div>
+        <span>
+            Kết quả là: <span id="kq"></span>
+        </span>
+    </div>
+    <script>
+        var btn = document.getElementById("btn");
+        var kq = document.getElementById("kq");
+        btn.addEventListener("click", () => {
+            var n = document.getElementById("number").value;
+            var s = 0
+            if (n > 0) {
+                for (var i = 1; i <= n; i++) {
+                    s += i * (i + 1)
+                }
+                kq.innerText = s
+            } else {
+                kq.innerText = "Số nhập vào sai rồi kìa!"
+            }
+            
+        })
+    </script>
+</body>
+
+</html>

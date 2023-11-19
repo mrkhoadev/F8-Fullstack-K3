@@ -1,0 +1,155 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-size: 16px;
+    font-family: sans-serif;
+}
+@mixin input-common-styles {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    outline: none;
+    font-size: inherit;
+    font-weight: initial;
+    font-family: inherit;
+    border: 1.5px solid #ddd;
+
+    &:focus {
+        border: 1.5px solid rgb(16, 214, 20);
+    }
+    &:focus + label,
+    &:not(:placeholder-shown) + label {
+        top: -10px;
+        background-color: #fff;
+        font-size: 0.8rem;
+    }
+}
+.MuiCardContent-root {
+    margin: 50px auto 0;
+    border: 1px solid #ddd;
+    width: 400px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-direction: column;
+    padding: 1rem;
+    line-height: 1.5;
+    border-radius: 4px;
+
+    .title {
+        font-size: inherit;
+        font-weight: inherit;
+    }
+    .button {
+        background-color: rgb(255, 87, 34);
+        padding: 6px 16px;
+        border-radius: 4px;
+        color: #fff;
+        font-size: inherit;
+        font-family: inherit;
+        font-weight: inherit;
+        border: none;
+        line-height: 1.75;
+        cursor: pointer;
+
+        &:hover {
+            background-color: rgb(178, 60, 23);
+        }
+    }
+
+    .profile {
+        width: 100%;
+        border: 1px solid #ddd;
+        border-radius: inherit;
+        padding: 1.5rem 2.5rem;
+        .images {
+            border-radius: 50%;
+            overflow: hidden;
+            height: 100px;
+            width: 100px;
+            margin: auto;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+        h6 {
+            font-size: 1rem;
+            margin-bottom: 8px;
+            font-weight: 500;
+            font-size: 1.25rem;
+            line-height: 1.6;
+            letter-spacing: 0.0075em;
+            margin-top: 10px;
+        }
+        form {
+            .input-box {
+                margin-top: 20px;
+                position: relative;
+
+                input {
+                    @include input-common-styles;
+                }
+                textarea {
+                    @include input-common-styles;
+                    height: 100px;
+                    resize: none;
+                }
+
+                label {
+                    position: absolute;
+                    left: 10px;
+                    top: 10px;
+                    padding: 0 5px;
+                    font-size: 1rem;
+                    transition: top 0.3s ease, font-size 0.3s ease;
+                }
+            }
+            button {
+                font-size: inherit;
+                font-weight: initial;
+                font-family: inherit;
+                width: 100%;
+                line-height: 1.75;
+                margin-top: 10px;
+                border: none;
+                background-color: rgb(76, 175, 80);
+                border-radius: 4px;
+                padding: 4px;
+                color: #fff;
+
+                &:hover {
+                    background-color: rgb(53, 122, 56);
+                }
+            }
+        }
+    }
+}
+
+.loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+[class^="ajs-"] {
+    color: #fff;
+}
+.ajs-success span {
+    font-weight: 600;
+    color: #feef6e;
+}
+.ajs-error span {
+    font-weight: 600;
+    color: #d9d9d9;
+}
+.ajs-message:not(.ajs-success, .ajs-error) {
+    color: #000000;
+    background-color: #ffffff;
+}

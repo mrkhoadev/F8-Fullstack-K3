@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập buổi 11</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Header Begin  -->
+    <header class="header">
+        <!-- Navbar Begin  -->
+        <input type="checkbox" name="checkbox" id="btn-menu" hidden>
+        <nav class="navbar">
+            <div class="container">
+                <!-- Navbar Logo Begin -->
+                <div class="navbar-logo">
+                    <a href="#" class="navbar-logo__link">
+                        <img src="./images/logo.svg" alt="logo">
+                    </a>
+                </div>
+                <!-- Navbar Logo End -->
+                <!-- Navbar Button Begin -->
+                <label for="btn-menu" class="btn-menu">
+                    <i class='bx bx-menu'></i>
+                </label>
+                <!-- Navbar Button End -->
+                <div class="navbar-collapse collapse--show">
+                    <!-- Navbar Menu List Begin -->
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a href="#!" class="nav-link actives">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#!" class="nav-link">Menu</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#!" class="nav-link">Service</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#!" class="nav-link">Shop</a>
+                        </li>
+                    </ul>
+                    <!-- Navbar Menu List End -->
+                    <!-- Navbar Search Begin -->
+                    <ul class="navbar-search">
+                        <li class="search-list">
+                            <form action="#!" method="get" class="form-search">
+                                <div class="search-icon search--left">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-search" viewBox="0 0 16 16">
+                                        <path
+                                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                                    </svg>
+                                </div>
+                                <input type="text" name="search" class="search-input" placeholder="Search">
+                                <div class="search-icon search--right">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-basket2-fill" viewBox="0 0 16 16">
+                                        <path
+                                            d="M5.929 1.757a.5.5 0 1 0-.858-.514L2.217 6H.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h.623l1.844 6.456A.75.75 0 0 0 3.69 15h8.622a.75.75 0 0 0 .722-.544L14.877 8h.623a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1.717L10.93 1.243a.5.5 0 1 0-.858.514L12.617 6H3.383L5.93 1.757zM4 10a1 1 0 0 1 2 0v2a1 1 0 1 1-2 0v-2zm3 0a1 1 0 0 1 2 0v2a1 1 0 1 1-2 0v-2zm4-1a1 1 0 0 1 1 1v2a1 1 0 1 1-2 0v-2a1 1 0 0 1 1-1z" />
+                                    </svg>
+                                </div>
+
+                            </form>
+                        </li>
+                    </ul>
+                    <!-- Navbar Search End -->
+                </div>
+
+            </div>
+        </nav>
+        <!-- Navbar End -->
+        <!-- Header Content Begin -->
+        <div class="header__wrap">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-lg-6">
+                        <div class="header-content">
+                            <!-- Header Content Top Begin -->
+                            <div class="header-content__top">
+                                <h3 class="header-content__top-txt">
+                                    More than Faster
+                                </h3>
+                                <span class="header-content__top-img">
+                                    <img src="./images/strawberry.svg" alt="ảnh quả dâu">
+                                </span>
+                            </div>
+                            <!-- Header Content Top End -->
+                            <!-- Header Content Center Begin -->
+                            <div class="header-content__center">
+                                <h1 class="header-content__center-title">
+                                    Groceries delivered in as little as
+                                    <span>2 hours</span>
+                                </h1>
+                                <p class="header-content__center-txt">
+                                    Grocen atssures fresh grocery every morning to your family without getting out in
+                                    this pandemic.
+                                </p>
+                            </div>
+                            <!-- Header Content Center End -->
+                            <!-- Header Content Bottom Begin -->
+                            <div class="header-btn">
+                                <div class="row">
+                                    <div class="col-4 col-md-3 col-lg-4 mgl--auto">
+                                        <div class="header-btn__wrap ">
+                                            <a href="#!" class="now-btn btn--linkred">Oder Now</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-5 mgr--auto">
+                                        <div class="header-btn__wrap">
+                                            <button class="process-btn">
+                                                <span class="play-ic">
+                                                    <img src="./images/button-play.svg" alt="ảnh nút play">
+                                                </span>
+                                                Order Process
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Header Content Bottom End -->
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <!-- Header Image Begin -->
+                        <div class="header__img">
+                            <img src="./images/header-img.png" alt="Ảnh tiêu đề">
+                        </div>
+                        <!-- Header Image End -->
+                    </div>
+                </div>
+            </div>
+            <!-- Header Content End -->
+        </div>
+    </header>
+    <!-- Header End  -->
+    <!-- Section Begin  -->
+    <!-- Section service Begin  -->
+    <section class="service">
+        <div class="service-inner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-xxl-6">
+                        <div class="service-heading">
+                            <h5 class="service-heading__title">
+                                What we Serve
+                            </h5>
+                            <h2 class="service-heading__title2">
+                                Fruit And Vegetable Delivered To Your Home
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-wrap">
+                    <div class="row">
+                        <div class="col-12 col-xl-10 mx--auto">
+                            <div class="row">
+                                <div class="col-12 col-md-4 col-lg-4">
+                                    <div class="service-content">
+                                        <div class="service-content__layout" tabindex="1">
+                                            <div class="service-content__img">
+                                                <img src="./images/service-ic1.svg" alt="image">
+                                            </div>
+                                            <div class="service-content__heading">
+                                                <h3 class="service-content__title">
+                                                    Free shipping
+                                                </h3>
+                                                <p class="service-content__txt">
+                                                    Enjoy Order in a hand using the fresness of groceries
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="service-content__layer layer--rotate"></div>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-12 col-md-4 col-lg-4">
+                                    <div class="service-content">
+                                        <div class="service-content__layout" tabindex="2">
+                                            <div class="service-content__img">
+                                                <img src="./images/service-ic2.svg" alt="image">
+                                            </div>
+                                            <div class="service-content__heading">
+                                                <h3 class="service-content__title">
+                                                    15 days returns
+                                                </h3>
+                                                <p class="service-content__txt">
+                                                    Order in a handy way using the freshness of the groceries.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="service-content__layer layer--rotate"></div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-md-4 col-lg-4">
+                                    <div class="service-content">
+                                        <div class="service-content__layout" tabindex="3">
+                                            <div class="service-content__img">
+                                                <img src="./images/service-ic3.svg" alt="image">
+                                            </div>
+                                            <div class="service-content__heading">
+                                                <h3 class="service-content__title">
+                                                    Secure checkout
+                                                </h3>
+                                                <p class="service-content__txt">
+                                                    If you get rotten items - return immediately to us.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="service-content__layer layer--rotate"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Section service End  -->
+
+    <!-- Section discover 1 Begin  -->
+    <section class="discover">
+        <div class="discover__inner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-lg-6 col-xl-7">
+                        <div class="discover-img">
+                            <img src="./images/feat.png" alt="discover">
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 col-xl-5">
+                        <div class="discover-content">
+                            <div class="discover-txt">
+                                <h5 class="discover-txt__top">
+                                    WHY CHOOSE US
+                                </h5>
+                                <h2 class="discover-txt__center">
+                                    Find Favorites And Discover New Ones
+                                </h2>
+                                <p class="discover-txt__bottom">
+                                    At vero eos et accusamus et iusto odio dignissimos ducimus blanditiis praesen
+                                    voluptatum deleniti.
+                                </p>
+                            </div>
+                            <div class="discover-btn">
+                                <a href="#!" class="discover-btn__link btn--linkred">
+                                    Explore Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Section discover 1 End  -->
+    <!-- Section discover 2 Begin  -->
+    <section class="discover">
+        <div class="discover__inner">
+            <div class="container">
+                <div class="row discover--2">
+                    <div class="col-12 col-lg-6 col-xl-6">
+                        <div class="discover-img">
+                            <img src="./images/feat2.png" alt="discover">
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 col-xl-6">
+                        <div class="discover-content">
+                            <div class="discover-txt">
+                                <h5 class="discover-txt__top color--yellow">
+                                    HOME DELIVERY
+                                </h5>
+                                <h2 class="discover-txt__center">
+                                    Sit At Home We Will Take Care Your Order
+                                </h2>
+                                <p class="discover-txt__bottom">
+                                    At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
+                                    praesentium voluptatum deleniti atque corrupti
+                                    quos
+                                </p>
+                            </div>
+                            <div class="discover-btn">
+                                <a href="#!" class="discover-btn__link btn--linkred">
+                                    Explore Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Section discover 2 End  -->
+    <!-- Section download Begin  -->
+    <section class="download">
+        <div class="download__inner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-lg-6">
+                        <div class="download-img">
+                            <img src="./images/mobile.svg" alt="download">
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 col-xxl-5">
+                        <div class="download-content">
+                            <div class="download-txt">
+                                <h5 class="download-txt__top">
+                                    Download our app
+                                </h5>
+                                <h2 class="download-txt__center">
+                                    Get The Groceries App Order More Easily.
+                                </h2>
+                                <p class="download-txt__bottom">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut.
+                                </p>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="download-btn">
+                                        <a href="#!" class="appstore-btn">
+                                            <span class="appstore-img">
+                                                <img src="./images/apple.svg" alt="appStore">
+                                            </span>
+                                            App Store
+                                        </a>
+                                        <a href="#!" class="playStore-btn">
+                                            <span class="playstore-img">
+                                                <img src="./images/playstore.svg" alt="playStore">
+                                            </span>
+                                            Play Store
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Section download End  -->
+    <footer class="footer">
+        <div class="footer__inner">
+            <div class="container">
+                <div class="footer-top">
+                    <div class="row">
+                        <div class="col-12 col-lg-4">
+                            <div class="footer-title">
+                                <div class="footer-logo">
+                                    <img src="./images/logo.svg" alt="logo">
+                                </div>
+                                <div class="footer-title__txt">
+                                    <p class="footer-title__txt-item">
+                                        Fast delivery, which is active all over the world, serves with many
+                                        transportation vehicles.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-8">
+                            <div class="footer-content">
+                                <div class="row">
+                                    <div class="col-12 col-lg-4">
+                                        <div class="footer-content__wrap">
+                                            <h4 class="footer-content__title">
+                                                Company
+                                            </h4>
+                                            <div class="footer-list">
+                                                <ul class="footer-list__wrap">
+                                                    <li class="footer-list__item">
+                                                        <a href="#!" class="footer-list__link color--linkblack">
+                                                            About Us
+                                                        </a>
+                                                    </li>
+                                                    <li class="footer-list__item">
+                                                        <a href="#!" class="footer-list__link color--linkblack">
+                                                            Blog
+                                                        </a>
+                                                    </li>
+                                                    <li class="footer-list__item">
+                                                        <a href="#!" class="footer-list__link color--linkblack">
+                                                            All Products
+                                                        </a>
+                                                    </li>
+                                                    <li class="footer-list__item">
+                                                        <a href="#!" class="footer-list__link color--linkblack">
+                                                            Locations
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 col-lg-4">
+                                        <div class="footer-content__wrap">
+                                            <h4 class="footer-content__title">
+                                                Services
+                                            </h4>
+                                            <div class="footer-list">
+                                                <ul class="footer-list__wrap">
+                                                    <li class="footer-list__item">
+                                                        <a href="#!" class="footer-list__link color--linkblack">
+                                                            Order tracking
+                                                        </a>
+                                                    </li>
+                                                    <li class="footer-list__item">
+                                                        <a href="#!" class="footer-list__link color--linkblack">
+                                                            Wish List
+                                                        </a>
+                                                    </li>
+                                                    <li class="footer-list__item">
+                                                        <a href="#!" class="footer-list__link color--linkblack">
+                                                            My account
+                                                        </a>
+                                                    </li>
+                                                    <li class="footer-list__item">
+                                                        <a href="#!" class="footer-list__link color--linkblack">
+                                                            Terms & Conditions
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 col-lg-4">
+                                        <div class="footer-content__wrap">
+                                            <h4 class="footer-content__title">
+                                                Get in Touch
+                                            </h4>
+                                            <div class="footer-list">
+                                                <p class="footer-list__txt">
+                                                    Subscribe to our weekly Newsletter and receive updates via email.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <hr class="footer-divider">
+                    <div class="row">
+                        <div class="col-12 col-md-6">
+                            <div class="footer-copyright">
+                                <p class="footer-copyright__txt">
+                                    All Rights Reserved @ BESNIK 2021
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class="footer-condition">
+                                <p class="footer-condition__txt">
+                                    <a href="#!" class="footer-condition__link color--linkblack">
+                                        Terms & Conditions
+                                    </a>
+                                </p>
+                                <p class="footer-condition__txt">
+                                    <a href="#!" class="footer-condition__link color--linkblack">
+                                        Privacy & Policy
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>

@@ -1,0 +1,201 @@
+.main {
+    margin: auto;
+    margin-top: 60px;
+    z-index: 0;
+    position: relative;
+}
+.form-box {
+    display: none;
+    width: 100%;
+    padding: 40px 32px;
+    border-radius: 12px;
+    background-color: $bgClr;
+    box-shadow: 0 0 60px rgba(94, 92, 154, 0.12);
+    position: static;
+    > img {
+        position: absolute;
+        height: 156px;
+        width: 160px;
+        display: none;
+    }
+}
+.form-login__img {
+    top: -70px;
+    left: -75px;
+}
+.form-register__img {
+    top: -10px;
+    left: -75px;
+}
+.form-title {
+    display: block;
+    @include center(text);
+    font-weight: 700;
+    font-size: 26px;
+    color: $color2;
+}
+.form {
+    margin-top: 76px;
+    width: 100%;
+}
+
+.input-box {
+    position: relative;
+    font-size: 1rem;
+    font-weight: 700;
+    width: 100%;
+    margin-bottom: 28px;
+}
+.input-text {
+    font-family: "Rajdhani", sans-serif;
+    padding: 0 18px;
+    height: 54px;
+    color: $color2;
+    font-weight: 700;
+    border-radius: 12px;
+    border: 1px solid #dedeea;
+    width: 100%;
+    font-size: 1rem;
+    transition: border-color .2s ease-in-out;
+}
+.label-text {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 15px;
+    color: #adafca;
+    font-weight: 600;
+    background-color: $bgClr;
+    padding: 5px;
+    transition-property: transform, font-size;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+}
+.box--between  {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 5px;
+}
+.label-checkbox {
+    color: $color2;
+    font-size: 14px;
+    position: relative;
+    cursor: pointer;
+}
+.label-checkbox::before,
+.label-checkbox::after {
+    display: inline-block;
+    height: 22px;
+    width: 22px;
+    vertical-align: middle;
+    margin-right: 15px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.label-checkbox::before {
+    content: '';
+    border: 1px solid #dedeea;
+    z-index: -1;
+}
+.label-checkbox::after {
+    content: "\ec8d";
+    font-family: 'boxicons';
+    font-size: 24px;
+    position: absolute;
+    background-color: $bgCheckBox;
+    border: 1px solid $bgCheckBox;
+    left: 0;
+    top: 0;
+    color: $color1;
+    @include center(display);
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+.input-link {
+    font-size: 14px;
+    > a {
+        color: #adafca;
+    }
+}
+.button {
+    font-family: "Rajdhani", sans-serif;
+    width: 100%;
+    height: 54px;
+    background-color: #615dfa;
+    box-shadow: 4px 7px 12px 0 rgba(97,93,250,.2);
+    font-size: 14px;
+    font-weight: 700;
+    color: $color1;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+}
+.submit--register {
+    background-color: $bgCheckBox;
+    box-shadow: 4px 7px 12px 0 rgba(35,210,226,.2);
+}
+.form-txt {
+    margin-top: 40px;
+    font-size: 14px;
+    color: $color2;
+    font-weight: 700;
+    @include center(display);
+    position: relative;
+}
+.txt-register {
+    margin-top: 30px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 24px;
+    > a {
+        color: $bgCheckBox;
+        font-weight: 600;
+    }
+}
+.form-txt::after,
+.form-txt::before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    width: 70px;
+    height: 1px;
+    background-color: #eaeaf5;
+    vertical-align: middle;
+}
+.form-txt::before {
+    left: 0;
+    margin-right: auto;
+}
+.form-txt::after {
+    right: 0;
+    margin-left: auto;
+}
+.form-link {
+    margin-top: 30px;
+    @extend .row;
+    column-gap: 12px;
+    > a {
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
+        vertical-align: middle;
+        @include center(display);
+        > i {
+            color: $color1;
+        }
+    }
+}
+
+$link-icon: 4;
+$iconColor: $bgClrIc1, $bgClrIc2, $bgClrIc3, $bgClrIc4;
+@mixin icon-color {
+    @for $i from 1 through $link-icon {
+        .link-icon:nth-child(#{$i}) {
+            background-color: nth($iconColor, $i);
+        }
+    }
+}
+@include icon-color;

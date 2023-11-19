@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&family=Rajdhani:wght@300;400;500;600;700&family=Titillium+Web:wght@200;300;400;600;700;900&display=swap');
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Nunito', sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+}
+.container {
+	max-width: 100%;
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #f9fafb;
+}
+.todo {
+	max-width: 48rem;
+	width: 100%;
+	padding: 1.5rem 1rem;
+}
+.todo-title {
+	text-align: center;
+	font-weight: 700;
+	font-size: 2.25rem;
+	line-height: 2.5rem;
+	padding-bottom: 0.75rem;
+	padding-top: 0.75rem;
+}
+.todo-title span {
+	font-size: inherit;
+	font-weight: inherit;
+	color: transparent;
+	background-clip: text;
+	-webkit-background-clip: text;
+	background-image: linear-gradient(to left, #059669, #60a5fa );
+}
+.todo-wrap {
+	padding-top: 1.25rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	column-gap: 10px;
+}
+.todo-wrap .search-box {
+	position: relative;
+	width: 100%;
+}
+.todo-wrap .search-box input {
+	width: inherit;
+	padding: 1rem;
+	border-width: 1px;
+	border-radius: 0.5rem;
+	font-family: inherit;
+}
+.todo-wrap .search-box button {
+	padding: 1rem 0.8rem;
+	border-radius: 0.5rem;
+	top: 0.5rem;
+	right: 0.5rem;
+	bottom: 0.5rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	border: 0 solid #e5e7eb;
+	background-color: #0567df;
+	cursor: pointer;
+	outline: none;
+}
+.todo-wrap .search-box button:hover {
+	filter: brightness(0.8);
+}
+.todo-wrap .search-box button i {
+	font-size: 20px;
+	color: #fff;
+}
+.todo-wrap .todo-add {
+	font-weight: 500;
+	color: #fff;
+	padding: 0.625rem 1rem;
+	border-radius: 0.5rem;
+	cursor: pointer;
+	text-transform: none;
+	font-family: inherit;
+	border: 0 solid #e5e7eb;
+	background-color: #059669;
+	min-width: fit-content;
+	font-size: 17px;
+}
+.todo-wrap .todo-add:hover {
+	filter: brightness(0.8);
+}
+.todo-tasks {
+	padding-bottom: 0.75rem;
+	padding-top: 0.75rem;
+}
+.task-box {
+	padding: 1rem;
+	border-width: 1px;
+	border-radius: 0.5rem;
+	margin-top: 0.625rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	box-shadow: 0 0 #0000, 0 0 #0000, 0 0 #0000,0 1px 3px 0 rgba(0,0,0,.1),0 1px 2px -1px rgba(0,0,0,.1);
+	background-color: #fff;
+	column-gap: 10px;
+}
+.task-box .text-task {
+	max-width: 550px;
+	min-width: 50px;
+	word-wrap: break-word;
+}
+.task-box .task-btn {
+	display: flex;
+	justify-content: flex-end;
+	column-gap: 10px;
+	row-gap: 10px;
+	flex-wrap: wrap;
+	width: 140px;
+
+}
+.task-box .task-btn button {
+	border-radius: 0.5rem;
+	flex: 1 0 2.5rem;
+	height: 2.5rem;
+	cursor: pointer;
+	border: 0 solid #e5e7eb;
+	color: #fff;
+}
+.task-box .task-btn button:not(.btn-checkbox):hover {
+	filter: brightness(0.8);
+}
+.task-box .task-btn button i {
+	font-size: 20px;
+}
+.task-box .task-btn button:nth-child(1) {
+	background-color: rgb(201, 9, 9);
+}
+
+.task-box .task-btn button:nth-child(2) {
+	background-color: #0567df;
+}
+
+.task-box .task-btn button:nth-child(3) {
+	background-color: #9ca3af;
+}
+.task-box .task-btn button.btn-checkbox:hover,
+.task-box .task-btn button.btn-checkbox.active {
+	background-color: #059669;
+}
+.todo-tasks .todo-completed__btn {
+	padding: 0.625rem 1rem;
+	margin-top: 0.625rem;
+	border-radius: 0.5rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-family: inherit;
+	font-weight: 600;
+	gap: 0.5rem;
+	border: 0 solid #e5e7eb;
+	font-size: inherit;
+	color: #fff;
+	background-color: #9ca3af;
+	position: relative;
+	z-index: 0;
+}
+.todo-tasks .todo-completed__btn:hover {
+	background-color: #026146;
+}
+.todo-tasks .todo-completed__btn.active:focus {
+  box-shadow: 0 0 0px 5px #2af1b9d8;
+}
+.todo-tasks .todo-completed__btn.active {
+	background-color: #047857;
+}
+.todo-tasks .todo-completed__btn.active i {
+	transform: rotate(90deg);
+}
+.todo-tasks .todo-completed__btn span {
+	font-family: inherit;
+	font-weight: inherit;
+	color: inherit;
+	font-size: inherit;
+}
+
+.popup {
+	position: fixed;
+	background-color: #00000048;
+	inset: 0;
+	z-index: 999;
+	opacity: 0;
+	visibility: hidden;
+	transition: visibility .3s ease-in-out;
+	user-select: none;
+}
+.popup.active {
+	opacity: 1;
+	visibility: visible;
+}
+
+.popup .popup-wrap {
+	background-color: #fff;
+	border-radius: 0.5rem;
+	position: absolute;
+	top: -50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	transition: top .3s ease-in-out;
+}
+.popup .popup-wrap.active {
+	top: 50%;
+}
+.popup .popup-wrap .input-box {
+	padding: 1.5rem;
+}
+.popup .popup-wrap .input-box input {
+	padding: 1rem;
+	font-size: inherit;
+	border-radius: 0.5rem;
+	border: 1px solid #e5e7eb;
+	width: 400px;
+	font-weight: 500;
+	font-family: inherit;
+}
+.popup .popup-wrap .button-box {
+	border-top: 1px solid #e5e7eb;
+	padding: 1rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	column-gap: 30px;
+}
+.popup .popup-wrap .button-box button {
+	border-radius: 0.5rem;
+	font-family: inherit;
+	font-size: inherit;
+	font-weight: 600;
+	padding: 0.625rem 1rem;
+}
+.popup .popup-wrap .button-box button.save-btn {
+	border: 1px solid #026146;
+	background-color: #026146;
+	color: #fff;
+}
+.popup .popup-wrap .button-box button.save-btn:hover {
+	background-color: #03513b;
+}
+.popup .popup-wrap .button-box button.cancel-btn {
+	border: 1px solid #e5e7eb;
+	background-color: transparent;
+	color: #aaa;
+}
+.popup .popup-wrap .button-box button.cancel-btn:hover {
+	background-color: #e5e7eb;
+	color: #272626;
+}
+button {
+	user-select: none;
+}

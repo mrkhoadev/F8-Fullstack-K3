@@ -1,0 +1,73 @@
+h1, h2 {
+	text-align: center;
+}
+h1 {
+	font-family: 'Bebas Neue', sans-serif;
+	margin-top: 50px;
+	color: #3b2b2b;
+}
+h2 {
+	font-family: 'Alfa Slab One', cursive;
+	font-size: 60px;
+	margin: 20px;
+	color: #3b2b2b;
+}
+form {
+	width: 670px;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 20px;
+}
+input {
+	padding: 10px;
+	width: 300px;
+	height: 20px;
+	font-size: 20px;
+}
+input:not([type="date"]&&[type="time"])::placeholder {
+	font-family: 'Bebas Neue', sans-serif;
+	font-weight: 600;
+	font-size: 20px;
+	color: #3b2b2b;
+}
+label {
+	position: relative;
+	width: 300px;
+	height: 40px;
+	background: rgb(255, 255, 255);
+	display: flex;
+	align-items: center;
+	z-index: 3;
+}
+span {
+	position: absolute;
+	font-family: 'Bebas Neue', sans-serif;
+	font-weight: 600;
+	width: 300px;
+	font-size: 20px;
+	color: #3b2b2b;
+	background: inherit;
+	border-radius: 2px;
+	padding: 8px;
+	left: 2px;
+	z-index: 2;
+}
+input[type="date"],
+input[type="time"] {
+	position: absolute;
+	z-index: 1;
+}
+label:focus-within span {
+	display: none;
+}
+button {
+	font-family: 'Alfa Slab One', cursive;
+	font-size: 15px;
+	color: aliceblue;
+	background: #b70f0f;
+	border: none;
+	width: 322px;
+	border-radius: 3px;
+	cursor: pointer;
+}

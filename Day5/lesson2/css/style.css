@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Lobster&family=Open+Sans:wght@300&family=Roboto:wght@300&display=swap");
+body {
+	font-family: "Roboto", sans-serif;
+	font-size: 20px;
+	font-weight: 900;
+}
+input[type="checkbox"] {
+	display: none;
+}
+label {
+	display: flex;
+	align-items: center;
+	font-size: 15px;
+	background: #f15f04;
+	width: 100%;
+	height: auto;
+	color: #fff;
+	padding: 0;
+	margin-top: 20px;
+}
+h2 {
+	font-weight: 500;
+	margin: 0;
+}
+span > i {
+	font-size: 25px;
+	margin: 10px;
+}
+article {
+	padding: 0 15px;
+	margin: 0;
+	font-weight: 300;
+	display: none;
+}
+.icon-remove {
+	display: none;
+}
+input:checked ~ article {
+	display: inherit;
+}
+input:checked + label > .icon-add {
+	display: none;
+}
+input:checked + label > .icon-remove {
+	display: inherit;
+}

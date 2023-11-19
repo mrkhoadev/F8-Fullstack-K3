@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Asap:wght@100;200;300;400;500;600&display=swap");
+* {
+	font-family: "Asap", sans-serif;
+	margin: 0;
+	padding: 0;
+}
+input[type="radio"] {
+	display: none;
+}
+ul {
+	list-style: none;
+}
+main {
+	width: 1220px;
+	margin: auto;
+	margin-top: 10px;
+	color: #3c3c3c;
+}
+main > div {
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+	padding: 5px 0;
+}
+div > h2 {
+	display: inline-block;
+	padding-right: 20px;
+}
+div > h2::after {
+	content: "";
+	border: 1px solid #ddd;
+	top: 50%;
+	position: absolute;
+	margin-left: 20px;
+	width: 100%;
+	height: 0px;
+}
+/*Begin Menu*/
+nav {
+	padding: 20px 0;
+}
+nav > ul {
+	width: 100%;
+	font-size: 0;
+}
+nav > ul > li {
+	font-size: 18px;
+	margin-right: 15px;
+	display: inline-block;
+}
+nav > ul > li > label {
+	padding: 10px 15px;
+	background-color: #eee;
+	display: inline-block;
+	text-align: center;
+	border-radius: 30px;
+	font-weight: 600;
+}
+label > span {
+	display: block;
+	font-size: 12px;
+}
+input[type="radio"]:nth-child(1):checked ~ main > nav > ul > li > .label-1,
+input[type="radio"]:nth-child(2):checked ~ main > nav > ul > li > .label-2,
+input[type="radio"]:nth-child(3):checked ~ main > nav > ul > li > .label-3,
+input[type="radio"]:nth-child(4):checked ~ main > nav > ul > li > .label-4,
+input[type="radio"]:nth-child(5):checked ~ main > nav > ul > li > .label-5,
+input[type="radio"]:nth-child(6):checked ~ main > nav > ul > li > .label-6,
+input[type="radio"]:nth-child(7):checked ~ main > nav > ul > li > .label-7,
+input[type="radio"]:nth-child(8):checked ~ main > nav > ul > li > .label-8 {
+	background-color: #c1903d;
+	color: #fff;
+}
+main > nav > ul > li:hover > label {
+	background-color: #c1903d;
+	color: #fff;
+}
+/*End Menu*/
+/*Begin container*/
+.container {
+	width: 100%;
+	color: #fff;
+	display: flex;
+	flex-direction: row;
+	flex-flow: wrap;
+	justify-content: space-between;
+	row-gap: 18px;
+}
+article {
+	width: 395px;
+	height: 250px;
+	position: relative;
+	border-radius: 10px;
+	overflow: hidden;
+	z-index: -2;
+}
+article::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background-color: #0000003a;
+	z-index: -1;
+}
+article img {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+}
+article h3 {
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	font-size: 25px;
+}
+article p {
+	position: absolute;
+	bottom: 30px;
+	left: 20px;
+}
+article > p > span {
+	font-weight: 600;
+}
+/*End container*/

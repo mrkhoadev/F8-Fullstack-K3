@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập 3</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2>Drop Us a Line</h2>
+        <p>Reach out to from our contact form and we will get back to you shortly</p>
+        <form action="#!" method="post">
+            <div class="input-box">
+                <input type="text" name="first_name" id="first_name" autocomplete="off" placeholder=" " required>
+                <label for="first_name">First Name *</label>
+            </div>
+            <div class="input-box">
+                <input type="text" name="last_name" id="last_name" autocomplete="off" placeholder=" " required>
+                <label for="last_name">Last Name *</label>
+            </div>
+            <div class="input-box">
+                <input type="email" name="email" id="email" autocomplete="off" placeholder=" " required>
+                <label for="email">Email *</label>
+            </div>
+            <div class="input-box">
+                <select name="select" id="select">
+                    <option value="" hidden="">Sales</option>
+                    <option value="1">Happy</option>
+                    <option value="2">Or</option>
+                    <option value="3">Sad</option>
+                </select>
+            </div>
+            <div class="input-box textarea">
+                <textarea name="textarea" id="textarea"  placeholder=" " required></textarea>
+                <label for="textarea">Message *</label>
+            </div>
+            <button type="button">Send message</button>
+        </form>
+    </div>
+</body>
+
+</html>

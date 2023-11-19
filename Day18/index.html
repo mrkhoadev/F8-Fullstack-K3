@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập buổi 18</title>
+</head>
+<body>
+    <div id="text"></div>
+    <script>
+        var text = `Đây là bài tập dành cho dân hát karaoke. Và tôi cóc phải`;
+        var textArr = text.split(" ");
+        var count = 0;
+        var output = document.getElementById("text");
+
+        function changeColor() {
+            if (count < textArr.length) {
+                var result = "";
+                for (var i = 0; i < textArr.length; i++) {
+                    if (i === count) {
+                        result += `<span style="color: red">${textArr[i]}</span> `;
+                    } else {
+                        result += textArr[i] + " ";
+                    }
+                }
+                output.innerHTML = result;
+                count = (count + 1) % textArr.length;
+            }
+            setTimeout(changeColor, 700);
+        }
+        changeColor();
+    </script>
+</body>
+</html>

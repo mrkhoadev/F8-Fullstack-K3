@@ -1,0 +1,133 @@
+@mixin column($name: "") {
+    @for $i from 1 through 12 {
+        $prefix: ".col-";
+
+        @if ($name != "") {
+            $prefix: $prefix + $name + "-";
+        }
+
+        #{$prefix + $i} {
+            --column-size: #{$i};
+        }
+    }
+}
+
+@include column();
+
+$breakpoints: (
+    sm: 501,
+    md: 601,
+    lg: 1365,
+    xl: 1501,
+    xxl: 2560,
+);
+@each $name, $breakpoint in $breakpoints {
+  @media screen and (min-width: #{$breakpoint}px) {
+    @include column($name);
+  }
+}
+@media screen and (max-height: 899.8px) {
+    .header {
+        top: -2.4%;
+    }
+}
+@media screen and (min-height: 900px) and (min-width: #{map-get($breakpoints, 'lg')}px) {
+    .header {
+        top: -15.5%;
+    }
+}
+@media screen and (min-width: #{map-get($breakpoints, 'sm')}px) {
+    .title {
+        > span {
+            font-size: 104px;
+        }
+    }
+    .navbar {
+        margin-top: 40px;
+    }
+    .navbar-list {
+        width: 360px;
+    }
+    .main {
+        margin-top: 80px;
+    } 
+    .form-box {
+        padding: 65px;
+    }
+    .box--between {
+        padding-top: 2.4px;
+    }
+}
+
+
+@media screen and (min-width: #{map-get($breakpoints, 'md')}px) {
+    .main {
+        margin-top: 80px;
+        width: 484px;
+    }
+}
+
+
+@media screen and (min-width: #{map-get($breakpoints, 'lg')}px) {
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0;
+        position: fixed;
+    }
+    .header {
+        width: 584px;
+        display: inline-block;
+        position: relative;
+        left: 5%;
+    }
+    .form-box {
+        position: absolute;
+        > img {
+            display: block;
+        }
+    }
+    .title-text {
+        display: inline-block;
+    }
+    .main {
+        margin: 0;
+        display: flex;
+        align-items: center;
+        height: 100%;
+        right: 80px;
+    }
+    .form-box__img {
+        display: inline-block;
+    }
+}
+
+
+@media screen and (min-width: #{map-get($breakpoints, 'xl')}px) {
+    .layer {
+        display: inline-block;
+    }
+    .header {
+        left: 13%;
+    }
+    .main {
+        right: 12%;
+    }
+    .title-text {
+        margin-top: 30px;
+    }
+    .navbar {
+        margin-top: 90px;
+    }
+}
+
+
+@media screen and (min-width: #{map-get($breakpoints, 'xxl')}px) {
+    .header {
+        top: 0;
+    }
+    .main {
+        right: 20%;
+    }
+}

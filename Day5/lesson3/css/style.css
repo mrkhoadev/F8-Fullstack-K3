@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Lobster&family=Open+Sans:wght@300&family=Roboto:wght@300&display=swap");
+body {
+	font-family: "Open Sans", sans-serif;
+	text-align: center;
+}
+main {
+	padding-top: 100px;
+	display: flex;
+	justify-content: center;
+}
+section {
+	box-shadow: 0 0 5px 3px #ddd;
+	width: 300px;
+	padding: 30px;
+	margin: 20px;
+}
+section > span {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 10px auto;
+	height: 120px;
+	width: 120px;
+	border-radius: 50%;
+	border: 2px solid #f2a93b;
+	font-size: 80px;
+	color: #f2a93b;
+}
+h2 {
+	font-size: 30px;
+}
+p {
+	color: #aaa;
+	margin: 30px 0;
+}
+button {
+	font-size: 20px;
+	color: #fff;
+	font-weight: 600;
+	background: #f2a93b;
+	padding: 10px 30px;
+	border: none;
+	margin-bottom: 20px;
+}

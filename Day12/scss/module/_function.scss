@@ -1,0 +1,63 @@
+// Navbar
+.list-item {
+    transition-property: background-color, color;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+}
+#login:checked ~ header > nav > ul > li > .btn--login,
+#register:checked ~ header > nav > ul > li > .btn--register {
+    background-color: $bgClr;
+    color: $color2;
+}
+
+// Main
+.input-text:focus {
+    border-color: #651dfa;
+}
+.link-icon {
+    transition: transform 0.25s ease-in-out;
+}
+.link-icon:hover,
+.link-icon:focus {
+    transform: translateY(-5px);
+}
+.input-text:focus + .label-text,
+input:not(:placeholder-shown) + .label-text {
+    font-size: 0.75rem;
+    transform: translateY(-170%);
+}
+
+#remember:checked + .label-checkbox::after,
+#send:checked + .label-checkbox::after {
+    visibility: visible;
+    opacity: 1;
+}
+// => form
+.form--register,
+.form--login {
+    transition-property: opacity, transform, visibility;
+    transition-duration: 0.6s, 0.6s, 1s;
+    transition-timing-function: ease-in-out;
+}
+#register:checked ~ .main > .form--register,
+#login:checked ~ .main > .form--login {
+    display: block;
+}
+$breakpoints: (
+    lg: 1365,
+);
+@media screen and (min-width: #{map-get($breakpoints, 'lg')}px) { 
+    .form-box {
+        display: block;
+        transform: translateX(50%);
+        opacity: 0;
+        visibility: hidden;
+    }
+    #register:checked ~ .main > .form--register,
+    #login:checked ~ .main > .form--login {
+        right: 0%;
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(0px);
+    }
+}

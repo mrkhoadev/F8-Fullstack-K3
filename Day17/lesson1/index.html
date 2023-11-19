@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 1</title>
+</head>
+
+<body>
+    <h1>Tính tiền taxi</h1>
+    <input type="number" id="soKm" placeholder="Nhập số kilomet cần đi">
+    <button id="btn">Tính</button>
+    <div>
+        <span>Tiền cước Taxi là: <span id="kq"></span></span>
+    </div>
+    <script>
+        var btn = document.getElementById("btn");
+        var kq = document.getElementById("kq");
+        btn.addEventListener("click", () => {
+            const soKm = document.getElementById("soKm").value;
+            var tienCuoc, giamGia = 0.1;
+            if (soKm > 0) {
+                if (soKm <= 1) {
+                    tienCuoc = soKm * 15000;
+                } else if (soKm > 1 && soKm <= 5) {
+                    tienCuoc = 15000 + ((soKm - 1) * 13500);
+                } else if (soKm > 5 && soKm <= 120) {
+                    tienCuoc = 15000 + ((soKm - 1) * 13500) + ((soKm - 5) * 11000);
+                } else if (soKm > 120) {
+                    tienCuoc = 15000 + ((soKm - 1) * 13500) + ((soKm - 5) * 11000) - (11000 * giamGia);
+                }
+                var tienCuocStr = tienCuoc.toString();
+                var space = "";
+                for (var i = tienCuocStr.length - 1; i >= 0; i--) {
+                    space = tienCuocStr.charAt(i) + space;
+                    if ((tienCuocStr.length - i) % 3 === 0 && i !== 0) {
+                        space = "." + space;
+                    }
+                    var ketQua = space
+                }
+                kq.innerText = ketQua.concat("đ");
+            } else {
+                kq.innerText = "Số nhập vào sai rồi kìa!"
+            }
+
+        })
+    </script>
+</body>
+
+</html>

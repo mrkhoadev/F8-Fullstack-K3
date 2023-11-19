@@ -1,0 +1,228 @@
+.header {
+    padding: 40px 0;
+    display: block;
+}
+.navbar {
+    background: none;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    .container {
+        display: flex;
+        flex-wrap: inherit;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+    }
+}
+
+.navbar-logo__link {
+    width: 255px;
+    height: 42px;
+    > img {
+        width: 155px;
+        height: 42px;
+    }
+}
+.btn-menu {
+    padding: 0.15rem 0.65rem;
+    font-size: 1.25rem;
+    background-color: transparent;
+    border: 1px solid $borderColor3;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    > i {
+        font-size: 35px;
+        color: $color3;
+    }
+}
+.collapse--show {
+    opacity: 0;
+    transition: opacity 0s 0s, z-index 0s 0.35s;
+}
+.navbar-collapse {
+    position: absolute;
+    width: 95%;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: 500;
+    z-index: -1;
+}
+ul {
+    margin: 0;
+    padding: 0;
+}
+.navbar-nav {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5rem;
+    color: $color4;
+}
+.nav-item {
+    text-align: center;
+    margin: 12px 16px;
+}
+.nav-link {
+    display: block;
+    font-size: 14px;
+    line-height: 16px;
+    padding: 8px 0;
+}
+.navbar-search {
+    display: block;
+}
+.search-list {
+    display: block;
+}
+.form-search {
+    display: block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: fit-content;
+    &::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 25px;
+        top: 50%;
+        right: 18%;
+        translate: 50% -50%;
+        border: 1px solid #eee;
+    }
+    &::before {
+        content: "2";
+        position: absolute;
+        background-color: #f54848;
+        box-shadow: -6px 9px 24px -6px rgba(238, 67, 67, 0.68);
+        font-family: $fontFamily;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 14px;
+        letter-spacing: 0.005em;
+        color: #fffdfd;
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: -18px;
+        right: -10px;
+    }
+}
+.search-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    > svg {
+        width: 17px;
+        height: 17px;
+    }
+}
+.search-input {
+    outline: none;
+    padding: 12px 66px 12px 44px;
+    border-radius: 8px;
+    box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.04);
+    background-color: $bg;
+    width: 288px;
+    border: none;
+    &::placeholder {
+        color: $color4;
+    }
+}
+.search--left {
+    left: 6.5%;
+}
+.search--right {
+    cursor: pointer;
+    right: 5.5%;
+    > svg {
+        width: 22px;
+        height: 22px;
+    }
+}
+.header__wrap {
+    background-color: $bg;
+    transition: margin-top 0.35s ease;
+    padding: 60px 0 10px 0;
+}
+.header-content {
+    text-align: center;
+}
+.header-content__top {
+    background-color: #ffcdcd56;
+    margin: 0 auto 20px auto;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    border-radius: 50px;
+}
+.header-content__top-txt {
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 500;
+    color: #f55253;
+}
+.header-content__top-img {
+    margin: 0 8px;
+    > img {
+        width: 26px;
+        height: 24px;
+    }
+}
+.header-content__center-title {
+    font-size: 38px;
+    line-height: 58px;
+    font-weight: 700;
+    color: $color2;
+    > span {
+        font-weight: 500;
+        color: #f54748;
+    }
+}
+.header-content__center-txt {
+    font-weight: 400;
+    line-height: 30px;
+    color: $color3;
+    margin: 22px 0;
+}
+.header-btn {
+    cursor: pointer;
+    margin: 50px 0 10px 0;
+}
+.header-btn__wrap {
+    font-weight: 500;
+    font-size: 12px;
+}
+.now-btn {
+    width: 100%;
+    border-radius: 12px;
+    padding: 20px 12px;
+    margin: 0;
+    text-align: center;
+}
+.process-btn {
+    width: 100%;
+    display: flex;
+    line-height: 20px;
+    align-items: center;
+    color: $color2;
+    background: none;
+    border: none;
+    justify-content: space-evenly;
+}
+.play-ic {
+    border-radius: 50%;
+    box-shadow: 0 20px 49px -10px rgba(0, 0, 0, 0.08);
+    > img {
+        width: 46px;
+    }
+}

@@ -1,0 +1,25 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.list {
+	  background: #4286f4;
+    width: 500px;
+    padding: 1rem;
+		position: relative;
+}
+.list-item {
+	background: #8bb3f4;
+	border: 1px solid #fff;
+	margin: 1px 0;
+	padding: 0.5rem;
+	user-select: none;
+	width: 100%;
+}
+.list-item.active {
+    background: #ff6f00;
+}
+.ghost {
+	opacity: 0.5;
+}

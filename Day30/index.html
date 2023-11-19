@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+        integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="root">
+        <div class="container">
+            <h4 class="title">
+                Doc Editor
+            </h4>
+            <div class="controls">
+                <div class="main-controls">
+                    <div class="dropdown">
+                        <button class="btn">
+                            File
+                            <i class='bx bxs-down-arrow'></i>
+                        </button>
+                        <div class="dropdown-menu">
+                            <button id="new-btn" class="dropdown-item">New</button>
+                            <button id="txt-btn" class="dropdown-item">Save as TXT</button>
+                            <button id="pdf-btn" class="dropdown-item">Save as PDF</button>
+                        </div>
+                        <input type="text" id="filename" value="untitled" spellcheck="false">
+                    </div>
+                </div>
+                <div class="control-btn-container">
+                    <button id="bold-btn"><b>b</b></button>
+                    <button id="underline-btn"><u>u</u></button>
+                    <button id="italic-btn"><i>i</i></button>
+                    <input type="color" class="color-btn" id="color-btn">
+                </div>
+            </div>
+            <div id="content" contenteditable="true" spellcheck="false"></div>
+            <div class="counter">
+                <span>Số kí tự : <span id="char-count">0</span></span>
+                <span>Số từ : <span id="word-count">0</span></span>
+            </div>
+        </div>
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+</html>

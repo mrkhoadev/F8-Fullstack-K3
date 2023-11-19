@@ -1,0 +1,33 @@
+// input:checked ~ section > .content > div {
+//     transform: rotateY(180deg);
+// }
+
+// $page: 25;
+
+// @mixin column($name: "") {
+//     @for $i from 1 through $page {
+//         $prefix: "input:nth-of-type(" +
+//             $i +
+//             "):checked ~ section > .content > .Day";
+//         #{$prefix + $i} {
+//             transform: rotateY(0deg);
+//         }
+//     }
+//     @for $i from 1 through $page {
+//         $prefix: "input:nth-of-type(" +
+//             $i +
+//             "):checked ~ aside > ul > li > .label-";
+//         #{$prefix + $i} {
+//             transform: rotateY(0deg);
+//         }
+//     }
+// }
+
+// @include column();
+
+/*Kết thúc thêm bài tập mới*/
+/*
+Lưu ý khi thêm bài tập:
+1. Sửa lại số ở nth-of-type đúng thứ tự
+2. Sửa lại class .Day
+*/

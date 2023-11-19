@@ -1,0 +1,29 @@
+@import "https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap";
+@import "module/style/reset";
+@import "module/style/variable";//chứa các biến
+
+
+
+.container {
+    width: 100%;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body {
+    width: 100%;
+    max-width: 100%;
+    font-family: $fontFamily;
+    background-color: $bg !important;
+    font-size: 1rem;
+    font-weight: 400;
+    color: $bsDark;
+}    
+@import "module/header";
+@import "module/section";
+@import "module/footer";
+
+@import "module/style/toggle";
+@import "module/style/function";

@@ -1,0 +1,42 @@
+body {
+	font-family: 'Roboto', sans-serif;
+	background: #eee;
+}
+h1 {
+	text-align: center;
+}
+h1 span {
+	border-bottom: 5px solid #087dea;
+}
+footer {
+	margin-top: 100px;
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 10px;
+}
+article {
+	width: 450px;
+	height: 210px;
+	float: left;
+}
+article > div {
+	width: 450px;
+	height: 150px;
+}
+article > div > img {
+	width: 150px;
+	height: auto;
+	border-radius: 50%;
+	margin-right: 10px;
+	float: left;
+}
+article > div > p {
+	display: inline;
+}
+h2 {
+	margin: 0;
+	display: inline;
+	padding: 5px 10px 5px 170px;
+	float: left;
+}

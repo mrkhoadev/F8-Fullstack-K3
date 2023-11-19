@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 3</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" />
+</head>
+
+<body>
+    <main class="form">
+        <form action="#!" method="post" name="Lesson">
+            <table>
+                <!-- Begin input text -->
+                <tr>
+                    <td class="text"><label for="username">Username:</label></td>
+                    <td class="input-box">
+                        <input type="text" id="username" name="username">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text"><label for="pass">Password:</label></td>
+                    <td class="input-box">
+                        <input type="password" name="pass" id="pass">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text"><label for="city">City of Employment:</label></td>
+                    <td class="input-box">
+                        <input type="text" name="city" id="city">
+                    </td>
+                </tr>
+                <!-- End input text -->
+                <!-- Begin select -->
+                <tr>
+                    <td class="text">Web server:</td>
+                    <td class="input-box">
+                        <select name="server" id="server">
+                            <option value="0" hidden>--Choose a server--</option>
+                            <option value="1">localhost</option>
+                        </select>
+                        <div class="select-box"><i class='bx bx-chevron-down'></i></div>
+                    </td>
+                </tr>
+                <!-- End select -->
+                <!-- Begin input radio -->
+                <tr>
+                    <td class="text">Please specify your role:</td>
+                    <td>
+                        <div>
+                            <input type="radio" name="specify" id="radio1" value="1">
+                            <label class="label-radio" for="radio1">Admin</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="specify" id="radio2" value="2">
+                            <label class="label-radio" for="radio2">Engineer</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="specify" id="radio3" value="3">
+                            <label class="label-radio" for="radio3">Manager</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="specify" id="radio4" value="4">
+                            <label class="label-radio" for="radio4">Guest</label>
+                        </div>
+                    </td>
+                </tr>
+                <!-- End input radio -->
+                <!-- Begin input checkbox -->
+                <tr>
+                    <td class="text">Sing Sign-on co the following:</td>
+                    <td>
+                        <div>
+                            <input type="checkbox" name="sign" id="checkbox1" value="1">
+                            <label class="label-checkbox" for="checkbox1"> Mail</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="sign" id="checkbox2" value="2">
+                            <label class="label-checkbox" for="checkbox2"> Payroll</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="checkbox3" name="sign" value="3">
+                            <label class="label-checkbox" for="checkbox3">Self-service</label>
+                        </div>
+                    </td>
+                </tr>
+                <!-- End input checkbox -->
+            </table>
+            <!-- Begin Button -->
+            <div class="button">
+                <button type="submit">Login</button>
+                <button type="reset">Reset</button>
+            </div>
+            <!-- End Button -->
+        </form>
+    </main>
+</body>
+
+</html>

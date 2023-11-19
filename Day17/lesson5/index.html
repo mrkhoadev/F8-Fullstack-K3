@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 5</title>
+</head>
+
+<body>
+    <h1>Tam giác số</h1>
+    <input type="number" id="number" placeholder="Nhập n dòng(số nguyên)">
+    <button id="btn">Tính</button>
+    <div>
+        <span>
+            Kết quả là: <br>
+            <span id="kq"></span>
+        </span>
+    </div>
+    <script>
+        var btn = document.getElementById("btn");
+        var kq = document.getElementById("kq");
+        btn.addEventListener("click", () => {
+            var n = document.getElementById("number").value;
+            var count = 1, row = ""
+            if (n % 1 === 0 && n >= 1) {
+                for (var i = 1; i <= n; i++) {
+                    for (var j = 1; j <= i; j++) {
+                        row += count + " "
+                        count++
+                    }
+                    row += "<br>";
+                }
+                kq.innerHTML = row
+            } else {
+                kq.innerText = "Số nhập vào sai rồi kìa!"
+            }
+        })
+    </script>
+</body>
+
+</html>

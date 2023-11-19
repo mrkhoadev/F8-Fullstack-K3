@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smatyx Todos App</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/AlertifyJS/1.13.1/css/alertify.min.css" />
+    <!-- Link to AlertifyJS Default Theme CSS (Optional) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/AlertifyJS/1.13.1/css/themes/default.min.css" />
+    <!-- Link to AlertifyJS JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/AlertifyJS/1.13.1/alertify.min.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="container" id="root">
+        <div class="popup">
+            <div class="popup-wrap"></div>
+        </div>
+        <div class="todo" id="todo">
+            <h1 class="todo-title"><span>Smatyx</span> Todos App</h1>
+            <div class="todo-wrap">
+                <div class="search-box">
+                    <input type="text" placeholder="Search Todos">
+                    <button type="button" class="search-btn" id="search-btn"><i class='bx bx-search'></i></button>
+                </div>
+                <button type="button" class="todo-add" id="todo-add">Add Todos</button>
+            </div>
+            <div class="todo-tasks">
+                <button type="button" class="todo-completed__btn" id="todo-completed__btn">
+                    <span>Completed Todos 0</span>
+                    <i class='bx bx-right-arrow-circle'></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="./js/index.js"></script>
+</body>
+</html>

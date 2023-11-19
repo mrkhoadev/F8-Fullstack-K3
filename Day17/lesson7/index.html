@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 7</title>
+    <style>
+        .wrap {
+            width: fit-content;
+            margin: 100px auto;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .table {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            height: 490px;
+            gap: 15px;
+            width: 900px;
+        }
+
+        .text {
+            text-align: center;
+            width: 100px;
+            height: 30px;
+            border: 1px solid #aaa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .text:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <h1>Bảng cửu chương</h1>
+        <div class="table" id="table"></div>
+    </div>
+    <script>
+        var table = document.getElementById("table")
+        for (var i = 2; i <= 9; i++) {
+            for (var j = 1; j <= 10; j++) {
+                var span = document.createElement('span')
+                span.className = "text"
+                span.classList.add("text")
+                span.innerText = `${i} x ${j} = ${i * j}`;
+                table.appendChild(span);
+            }
+        }
+    </script>
+</body>
+
+</html>

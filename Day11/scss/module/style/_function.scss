@@ -1,0 +1,59 @@
+.btn--linkred {
+    border: 1px solid transparent;
+    background-color: $bg3;
+    color: #fffafa;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+        border-color 0.15s ease-in-out;
+}
+.btn--linkred:focus {
+    background-color: $bg2;
+    border-color: #f55253;
+    color: #f55253;
+}
+
+.btn--linkred:hover {
+    background-color: $bg2;
+    border-color: #f55253;
+    color: #f55253;
+}
+
+.actives {
+    color: #f55253;
+}
+// Header Function
+input:checked ~ .navbar > .container > .collapse--show {
+    opacity: 1;
+    z-index: 0;
+}
+input:checked ~ .header__wrap {
+    margin-top: 280px;
+}
+.nav-link:focus {
+    color: #f55253;
+}
+// Section Function
+.layer--rotate {
+    opacity: 0;
+    transform-origin: top left;
+    transform: rotate(0deg);
+    transition: opacity 0.35s ease, transform 0.35s ease;
+}
+.service-content__layout:focus + .layer--rotate {
+    transform: rotate(-2deg);
+    opacity: 1;
+}
+.service-content__layout:hover + .layer--rotate {
+    transform: rotate(-2deg);
+    opacity: 1;
+}
+// Footer function
+.color--linkblack {
+    color: $color3;
+    transition: color 0.35s ease;
+}
+.color--linkblack:focus {
+    color: $color;
+}
+.color--linkblack:hover {
+    color: $color;
+}

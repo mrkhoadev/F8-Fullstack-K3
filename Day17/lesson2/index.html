@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 2</title>
+</head>
+
+<body>
+    <h1>Tính tiền điện</h1>
+    <input type="number" id="soDien" placeholder="Nhập số điện tiêu thụ hàng tháng">
+    <button id="btn">Tính</button>
+    <div>
+        <span>
+            Số điện phải đóng là: <span id="kq"></span>
+        </span>
+    </div>
+    <script>
+        var btn = document.getElementById("btn");
+        var kq = document.getElementById("kq");
+        btn.addEventListener("click", () => {
+            const soDien = document.getElementById("soDien").value;
+            var tienDien
+            if (soDien > 0) {
+                if (soDien > 0 && soDien <= 50) {
+                    tienDien = soDien * 1.678
+                } else if (soDien > 50 && soDien <= 100) {
+                    tienDien = (50 * 1.678) + ((soDien - 50) * 1.734)
+                } else if (soDien > 100 && soDien <= 200) {
+                    tienDien = (50 * 1.678) + ((soDien - 50) * 1.734) + ((soDien - 100) * 2.014)
+                } else if (soDien > 200 && soDien <= 300) {
+                    tienDien = (50 * 1.678) + ((soDien - 50) * 1.734) + ((soDien - 100) * 2.014) + ((soDien - 200) * 2.536)
+                } else if (soDien > 300 && soDien <= 400) {
+                    tienDien = (50 * 1.678) + ((soDien - 50) * 1.734) + ((soDien - 100) * 2.014) + ((soDien - 200) * 2.536) + ((soDien - 300) * 2.834)
+                } else if (soDien > 400) {
+                    tienDien = (50 * 1.678) + ((soDien - 50) * 1.734) + ((soDien - 100) * 2.014) + ((soDien - 200) * 2.536) + ((soDien - 300) * 2.834) + ((soDien - 400) * 2.927)
+                }
+                var tienDienStr = tienDien.toFixed(3).toString()
+                var tienDienStart = tienDienStr.substring(0, tienDienStr.lastIndexOf("."))
+                var tienDienEnd = tienDienStr.substring(tienDienStr.lastIndexOf("."), tienDienStr)
+                var space = "";
+                for (var i = tienDienStart.length - 1; i >= 0; i--) {
+                    space = tienDienStart.charAt(i) + space;
+                    if ((tienDienStart.length - i) % 3 === 0 && i !== 0 && tienDienStart.charAt(i - 1) !== ".") {
+                        space = "." + space;
+                    }
+                    var ketQua = space + tienDienEnd
+                }
+                kq.innerText = ketQua.concat("đ");
+            } else {
+                kq.innerText = "Số nhập vào sai rồi kìa!"
+            }
+        })
+    </script>
+</body>
+
+</html>

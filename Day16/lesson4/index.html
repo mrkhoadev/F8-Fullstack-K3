@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 4</title>
+</head>
+
+<body>
+    <script>
+        var kiemTra = function (a, b) {
+            if ((a >= 0 && b >= 0) || (a < 0 && b < 0)) {
+                return "cùng dấu";
+            } else {
+                return "khác dấu";
+            }
+        }
+        var a = 10, b = -20;
+        document.write("a = " + a + ", " + " b = " + b + "</br>");
+        var ketQua = kiemTra(a, b);
+        document.write("Hai số trên: ", ketQua);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,140 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+.container {
+	width: 80%;
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	translate: -50% -50%;
+	user-select: none;
+}
+.player {
+	text-align: center;
+}
+.play-btn {
+	font-size: 60px;
+	display: inline-block;
+	cursor: pointer;
+}
+.play-inner {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 20px;
+	gap: 20px;
+}
+.progress-bar {
+	background: gray;
+	height: 12px;
+	flex: 1;
+	position: relative;
+	cursor: pointer;
+}
+.progress {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	cursor: pointer;
+	background-color: red;
+}
+.progress span {
+	background-color: blueviolet;
+	position: absolute;
+	right: 0;
+	top: 50%;
+	display: block;
+	height: 23px;
+	width: 23px;
+	border-radius: 50%;
+	translate: 50% -50%;
+	cursor: pointer;
+}
+.time-popup {
+	background-color: gray;
+	color: #fff;
+	padding: 5px;
+	position: absolute;
+	top: -20px;
+	transform: translateY(-100%) translateX(-50%);
+	border-radius: 2px;
+	backface-visibility: hidden;
+	opacity: 0;
+	transition: opacity 0.3s ease-in-out;
+	pointer-events: none;
+}
+.time-popup::after {
+	content: '';
+	height: 0;
+	width: 0;
+	bottom: 0;
+	left: 50%;
+	transform: translateY(100%) translateX(-50%);
+	position: absolute;
+	display: block;
+	border-top: 8px solid gray;
+	border-right: 10px solid transparent;
+	border-left: 10px solid transparent;
+	border-bottom: 0px solid transparent;
+}
+.open-karaoke {
+	text-align: center;
+	margin-top: 20px;
+}
+.open-karaoke button {
+	padding: 5px 15px;
+	border: none;
+	background: #8a2be2;
+	cursor: pointer;
+	color: #fff;
+}
+
+.karaoke {
+	color: #fff;
+	background: #892be2;
+	padding: 15px;
+	transition: translate .4s;
+	position: fixed;
+	inset: 0;
+	translate: 0 100vh;
+}
+.karaoke-header {
+	justify-content: space-between;
+	align-items: center;
+	display: flex;
+	padding-top: 50px;
+}
+.karaoke-header h2,
+.karaoke-header span {
+    font-size: 3rem;
+}
+.karaoke-inner {
+	text-align: center;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 80vh;
+	font-size: 3rem;
+	font-weight: 700;
+	display: flex;
+}
+.show {
+	translate: 0 0;
+}
+.move-karaoke {
+	color: red;
+  position: absolute;
+  left: 100%;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  transition: left 4s ease;
+  overflow: hidden;
+}
+.move-karaoke > span {
+  position: absolute;
+  right: 0;
+}

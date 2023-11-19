@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khoa Speed</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" href="./assets/images/logo/k-logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/css/loading.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <div class="loading-home" id="loading-home">
+        <div class="dash first"></div>
+        <div class="dash seconde"></div>
+        <div class="dash third"></div>
+        <div class="dash fourth"></div>
+    </div>
+    <!-- main -->
+    <div class="app">
+        <!-- header -->
+        <header class="header">
+            <div class="grid wide">
+                <!-- navbar -->
+                <nav class="header__navbar hide-on-mobile-tablet">
+                    <ul class="header__nav-list">
+                        <li class="header__nav-item header__nav-item--hover header__nav-item--separate">Kênh Người Bán</li>
+                        <li class="header__nav-item header__nav-item--hover header__nav-item--separate">Trở thành Người bán
+                            Shopee</li>
+                        <li class="header__nav-item header__nav-item--hover header__nav-item--separate header__show-qr">
+                            Tải ứng dụng
+                        </li>
+                        <!-- qr code -->
+                        <div class="header__qrcode">
+                            <img src="./assets/images/qr/qr-code.png" class="header__qr">
+                            <div class="header__apps">
+                                <a href="#" class="header__app-link">
+                                    <img src="./assets/images/qr/app-store.png" class="header__app-img">
+                                </a>
+                                <a href="#" class="header__app-link">
+                                    <img src="./assets/images/qr/gg-play.png" class="header__app-img">
+                                </a>
+                                <a href="#" class="header__app-link">
+                                    <img src="./assets/images/qr/app-gallery.png" class="header__app-img">
+                                </a>
+                                <a href="#" class="header__app-link">
+                                    <img src="./assets/images/qr/ltp-img.png" class="header__app-img">
+                                </a>
+                            </div>
+                        </div>
+                        <li class="header__nav-item">
+                            Kết nối
+                            <a href="#" class="header__nav-icon-link">
+                                <i class='bx bxl-facebook-circle'></i>
+                            </a>
+                            <a href="#" class="header__nav-icon-link">
+                                <i class='bx bxl-instagram'></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="header__nav-list">
+                        <li class="header__nav-item header__show-note">
+                            <a href="#" class="header__nav-item-link">
+                                <i class='bx bx-bell'></i>
+                                Thông báo
+                            </a>
+                        </li>
+                        <li class="header__nav-item">
+                            <a href="#" class="header__nav-item-link">
+                                <i class='bx bx-question-mark'></i>
+                                Hỗ trợ
+                            </a>
+                        </li>
+    
+                        <li class="header__nav-item header__nav-item--bold header__nav-item--separate">
+                            <a href="#" class="header__nav-item-link">Đăng ký</a>
+                        </li>
+                        <li class="header__nav-item header__nav-item--bold">
+                            <a href="#" class="header__nav-item-link">Đăng nhập</a>
+                        </li>
+
+                    </ul>
+                </nav>
+                <!-- search -->
+                <div class="header__contain">
+                    <label for="mobile-search" class="header__mobile-search">
+                        <i class="header__mobile-search-icon fas fa-search"></i>
+                    </label>
+                    <div class="header__logo">
+                        <a href="#" class="header__logo-link">
+                            <img src="./assets/images/logo/logo-full.png" class="header__logo-img">
+                        </a>
+                    </div>
+                    <input type="checkbox" id="mobile-search" class="header__search-check" hidden>
+                    <div class="header__search">
+                        
+                            <div class="header__search-input-wrap" id="header-search">
+                                <form method="post">
+                                    <input type="text" class="header__search-input" placeholder="Tìm kiếm trên Shoppee">
+                                </form>
+                            </div>
+                            <button class="btn header__search-btn">
+                                <i class='bx bx-search'></i>
+                            </button>
+                        
+                        
+                    </div>
+                    <!-- header__cart--no-cart --><!-- header__cart--has-cart -->
+                    <div class="header__cart header__cart--has-cart">
+                        <i class='bx bx-cart-alt'></i>
+                        <div class="header__cart-count">4</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <ul class="header__sort-bar">
+                <li class="header__sort-item">
+                    <a href="#" class="header__sort-link">Liên quan</a>
+                </li>
+                <li class="header__sort-item header__sort-item--active">
+                    <a href="#" class="header__sort-link">Mới nhất</a>
+                </li>
+                <li class="header__sort-item">
+                    <a href="#" class="header__sort-link">Bán chạy</a>
+                </li>
+                <li class="header__sort-item">
+                    <a href="#" class="header__sort-link">Giá</a>
+                </li>
+            </ul>
+        </header>
+        <!-- container -->
+        <div class="container">
+            <div class="grid wide">
+                <div class="row sm-gutter">
+                    <div class="col l-2 m-0 c-0">
+                        <!-- category -->
+                        <nav class="category">
+                            <h3 class="category-heading">
+                                <i class='bx bx-list-ul'></i>
+                                Bộ lọc tìm kiếm
+                            </h3>
+                            <div class="category-group">
+                                <div class="category-group-title">Theo Danh Mục</div>
+                                <ul class="category-group-list">
+                                    <li class="category-group-item">
+                                        <input type="checkbox" class="category-group-item-check">
+                                        Thiết bị mạng
+                                    </li>
+                                    <li class="category-group-item">
+                                        <input type="checkbox" class="category-group-item-check">
+                                        Chuột và bàn phím
+                                    </li>
+                                    <li class="category-group-item">
+                                        <input type="checkbox" class="category-group-item-check">
+                                        USB
+                                    </li>
+                                    <li class="category-group-item">
+                                        <input type="checkbox" class="category-group-item-check">
+                                        Link kiện máy tính
+                                    </li>
+                                    <li class="category-group-item">
+                                        <input type="checkbox" class="category-group-item-check">
+                                        Wifi
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="category-group">
+                                <div class="category-group-title">Đơn Vị Vận Chuyển</div>
+                                <ul class="category-group-list">
+                                    <li class="category-group-item">
+                                        <input type="checkbox" class="category-group-item-check">
+                                        Hoả tốc
+                                    </li>
+                                    <li class="category-group-item">
+                                        <input type="checkbox" class="category-group-item-check">
+                                        Nhanh
+                                    </li>
+                                    <li class="category-group-item">
+                                        <input type="checkbox" class="category-group-item-check">
+                                        Tiết kiệm
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="category-group">
+                                <div class="category-group-title">Thương Hiệu</div>
+                                <ul class="category-group-list">
+                                    <li class="category-group-item">
+                                        <input type="checkbox" class="category-group-item-check">
+                                        Kingston
+                                    </li>
+                                    <li class="category-group-item">
+                                        <input type="checkbox" class="category-group-item-check">
+                                        Sandisk
+                                    </li>
+                                    <li class="category-group-item">
+                                        <input type="checkbox" class="category-group-item-check">
+                                        Seagate
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="category-group">
+                                <div class="category-group-title">Dịch Vụ & Khuyến Mãi</div>
+                                <ul class="category-group-list">
+                                    <li class="category-group-item">
+                                        <input type="checkbox" class="category-group-item-check">
+                                        Freeship Xtra
+                                    </li>
+                                    <li class="category-group-item">
+                                        <input type="checkbox" class="category-group-item-check">
+                                        Hoàn xu Xtra
+                                    </li>
+                                    <li class="category-group-item">
+                                        <input type="checkbox" class="category-group-item-check">
+                                        Đang giảm giá
+                                    </li>
+                                    <li class="category-group-item">
+                                        <input type="checkbox" class="category-group-item-check">
+                                        Miễn phí vận chuyển
+                                    </li>
+                                    <li class="category-group-item">
+                                        <input type="checkbox" class="category-group-item-check">
+                                        Gì cũng rẻ
+                                    </li>
+                                </ul>
+                            </div>
+                            <button class="btn btn--primary category-group-filter-btn category-group--margin">LÀM
+                                MỚI</button>
+                        </nav>
+                    </div>
+                    <div class="col l-10 m-12 c-12">
+                        <!-- home filter -->
+                        <div class="home-filter hide-on-mobile-tablet">
+                            <div class="home-filter-control">
+                                <p class="home-filter-title">Sắp xếp theo</p>
+                                <button class="btn btn--primary home-filter-btn">Phổ biến</button>
+                                <button class="btn home-filter-btn">Mới nhất</button>
+                                <button class="btn home-filter-btn">Bán chạy</button>
+                                <div class="btn home-filter-sort">
+                                    <p class="home-filter-sort-btn">Giá</p>
+                                    <i class='bx bx-sort'></i>
+                                    <ul class="home-filter-sort-list" id="sort-product">
+                                        <li>
+                                            <a href="#!" class="home-filter-sort-item-link" data-value="desc">
+                                                Giảm dần
+                                                <i class='bx bx-sort-down'></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#!" class="home-filter-sort-item-link" data-value="asc">
+                                                Tăng dần
+                                                <i class='bx bx-sort-up'></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="home-filter-page">
+                                <div class="home-filter-page-number">
+                                    <p class="home-filter-page-now">1</p>
+                                    /?
+                                </div>
+                                <div class="home-filter-page-control">
+                                    <a href="#" class="home-filter-page-btn home-filter-page-btn--disable">
+                                        <i class='bx bx-chevron-left'></i>
+                                    </a>
+                                    <a href="#" class="home-filter-page-btn">
+                                        <i class='bx bx-chevron-right'></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- home product -->
+                        <div class="home-product">
+                            <nav class="mobile-category">
+                                <ul class="mobile-category-list">
+                                    <li class="mobile-category-item">
+                                        <a href="#" class="mobile-category-item-link">Thiết bị mạng</a>
+                                    </li>
+                                    <li class="mobile-category-item">
+                                        <a href="#" class="mobile-category-item-link">Chuột và bàn phím</a>
+                                    </li>
+                                    <li class="mobile-category-item">
+                                        <a href="#" class="mobile-category-item-link">USB</a>
+                                    </li>
+                                    <li class="mobile-category-item">
+                                        <a href="#" class="mobile-category-item-link">Link kiện máy tính</a>
+                                    </li>
+                                    <li class="mobile-category-item">
+                                        <a href="#" class="mobile-category-item-link">Wifi</a>
+                                    </li>
+                                    <li class="mobile-category-item">
+                                        <a href="#" class="mobile-category-item-link">Ổ cứng</a>
+                                    </li>
+                                    <li class="mobile-category-item">
+                                        <a href="#" class="mobile-category-item-link">CD/DVD</a>
+                                    </li>
+                                    <li class="mobile-category-item">
+                                        <a href="#" class="mobile-category-item-link">Tai nghe</a>
+                                    </li>
+                                    <li class="mobile-category-item">
+                                        <a href="#" class="mobile-category-item-link">Lót chuột</a>
+                                    </li>
+                                    <li class="mobile-category-item">
+                                        <a href="#" class="mobile-category-item-link">Micro</a>
+                                    </li>
+                                </ul>
+                            </nav>
+
+                            <div id="list-product" class="row sm-gutter">
+                        </div>
+                    </div>
+                    <div class="typing-indicator" id="loading-product">
+                        <div class="typing-circle"></div>
+                        <div class="typing-circle"></div>
+                        <div class="typing-circle"></div>
+                        <div class="typing-shadow"></div>
+                        <div class="typing-shadow"></div>
+                        <div class="typing-shadow"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- footer -->
+        <footer class="footer">
+            <!-- main footer -->
+            <div class="main-footer">
+                <div class="grid wide">
+                    <div class="row sm-gutter main-footer-info">
+                        <div class="col l-2-4 m-4 c-6">
+                            <h3 class="footer__heading">CHĂM SÓC KHÁCH HÀNG</h3>
+                            <ul class="footer-list">
+                                <li>
+                                    <a href="#" class="footer-item-link">Trung Tâm Trợ Giúp</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="footer-item-link">Shopee Blog</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="footer-item-link">Shopee Mall</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="footer-item-link">Hướng Dẫn Mua Hàng</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="footer-item-link">Hướng Dẫn Bán Hàng</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="footer-item-link">Thanh Toán</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="footer-item-link">Shopee Xu</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="footer-item-link">Vận Chuyển</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="footer-item-link">Trả Hàng & Hoàn Tiền</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="footer-item-link">Chăm Sóc Khách Hàng</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="footer-item-link">Chính Sách Bảo Hành</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col l-2-4 m-4 c-6">
+                            <h3 class="footer__heading">VỀ SHOPEE</h3>
+                            <ul class="footer-list">
+                                <li>
+                                    <a href="#" class="footer-item-link">Giới Thiệu Về Shopee Việt Nam</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="footer-item-link">Tuyển Dụng</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="footer-item-link">Điều Khoản Shopee</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="footer-item-link">Chính Sách Bảo Mật</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="footer-item-link">Chính Hãng</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="footer-item-link">Kênh Người Bán</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="footer-item-link">Flash Sales</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="footer-item-link">Chương Trình Tiếp Thị Liên Kết Shopee</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="footer-item-link">Liên Hệ Với Truyền Thông</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col l-2-4 m-4 c-12 pay-and-ship">
+                            <div>
+                                <h3 class="footer__heading">THANH TOÁN</h3>
+                                <div class="footer-sale-ship">
+                                    <img src="./assets/images/pay/1.PNG" class="footer-item-sale-ship">
+                                    <img src="./assets/images/pay/2.PNG" class="footer-item-sale-ship">
+                                    <img src="./assets/images/pay/3.PNG" class="footer-item-sale-ship">
+                                    <img src="./assets/images/pay/4.PNG" class="footer-item-sale-ship">
+                                    <img src="./assets/images/pay/5.PNG" class="footer-item-sale-ship">
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="footer__heading">ĐƠN VỊ VẬN CHUYỂN</h3>
+                                <div class="footer-sale-ship">
+                                    <img src="./assets/images/ship/1.PNG" class="footer-item-sale-ship">
+                                    <img src="./assets/images/ship/2.PNG" class="footer-item-sale-ship">
+                                    <img src="./assets/images/ship/3.PNG" class="footer-item-sale-ship">
+                                    <img src="./assets/images/ship/4.PNG" class="footer-item-sale-ship">
+                                    <img src="./assets/images/ship/5.PNG" class="footer-item-sale-ship">
+                                    <img src="./assets/images/ship/6.PNG" class="footer-item-sale-ship">
+                                    <img src="./assets/images/ship/7.PNG" class="footer-item-sale-ship">
+                                    <img src="./assets/images/ship/8.PNG" class="footer-item-sale-ship">
+                                    <img src="./assets/images/ship/9.PNG" class="footer-item-sale-ship">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col l-2-4 m-4 c-6">
+                            <h3 class="footer__heading">THEO DÕI CHÚNG TÔI</h3>
+                            <ul class="footer-list">
+                                <li>
+                                    <a href="#" class="footer-item-link footer-item-link-fb">
+                                        <i class="footer-item-icon fab fa-facebook-square"></i>
+                                        Facebook
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="footer-item-link footer-item-link-is">
+                                        <i class="footer-item-icon fab fa-instagram-square"></i>
+                                        Instagram
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="footer-item-link footer-item-link-li">
+                                        <i class="footer-item-icon fab fa-linkedin"></i>
+                                        LinkedIn
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col l-2-4 m-8 c-6">
+                            <h3 class="footer__heading">TẢI ỨNG DỤNG SHOPEE</h3>
+                            <div class="footer-download">
+                                <a href="#" class="footer-download-link">
+                                    <img src="./assets/images/qr/qr-code.png" class="footer-download-qr">
+                                </a>
+                                <div class="footer-download-app">
+                                    <a href="#" class="footer-download-link">
+                                        <img src="./assets/images/qr/gg-play.png" class="footer-download-app-img">
+                                    </a>
+                                    <a href="#" class="footer-download-link">
+                                        <img src="./assets/images/qr/app-store.png" class="footer-download-app-img">
+                                    </a>
+                                    <a href="#" class="footer-download-link">
+                                        <img src="./assets/images/qr/app-gallery.png" class="footer-download-app-img">
+                                    </a>
+                                    <a href="#" class="footer-download-link">
+                                        <img src="./assets/images/qr/ltp-img.png" class="footer-download-app-img">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- copyright -->
+                    <div class="row">
+                        <div class="grid">
+                            <p class="copyright-title">
+                                © 2021 Shopee copyright - Công ty TNHH CRF - Product by LTP
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- other footer -->
+            <div class="other-footer">
+                <div class="grid wide">
+                    <div class="row other-footer-heading">
+                        <div class="col l-2">
+                            <a href="#" class="other-footer-link">
+                                CHÍNH SÁCH BẢO MẬT
+                            </a>
+                        </div>
+                        <div class="col l-2">
+                            <a href="#" class="other-footer-link">
+                                QUY CHẾ HOẠT ĐỘNG
+                            </a>
+                        </div>
+                        <div class="col l-2">
+                            <a href="#" class="other-footer-link">
+                                CHÍNH SÁCH VẬN CHUYỂN
+                            </a>
+                        </div>
+                        <div class="col l-2">
+                            <a href="#" class="other-footer-link">
+                                TRẢ HÀNG VÀ HOÀN TIỀN
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="grid other-footer-info">
+                            <p class="other-footer-title">Thông tin về Shoppee</p>
+                            <p class="other-footer-more">
+                                Địa chỉ: Tầng 4-5-6, Tòa nhà Capital Place, số 29 đường Liễu Giai,
+                                Phường Ngọc Khánh, Quận Ba Đình, Thành phố Hà Nội, Việt Nam.
+                                Tổng đài hỗ trợ: 19001221 - Email: cskh@hotro.shopee.vn
+                            </p>
+                            <p class="other-footer-more">
+                                Chịu Trách Nhiệm Quản Lý Nội Dung: Nguyễn Đức Trí -
+                                Điện thoại liên hệ: 024 73081221 (ext 4678)
+                            </p>
+                            <p class="other-footer-more">
+                                Mã số doanh nghiệp: 0106773786 do Sở Kế hoạch & Đầu tư
+                                TP Hà Nội cấp lần đầu ngày 10/02/2015
+                            </p>
+                            <p class="other-footer-more">
+                                Ngày sản xuất 2015 -
+                                Bản quyền gốc thuộc về Công ty TNHH Shopee
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!-- modal -->
+    <div class="modal">
+        <div class="modal__body">
+            <!-- authen signin-->
+            <div class="auth-form">
+                <div class="auth-form__container">
+                    <div class="auth-form__header">
+                        <h3 class="auth-form__heading">Đăng Ký</h3>
+                        <div class="auth-form__switch-btn">Đăng nhập</div>
+                    </div>
+                    <div class="auth-form__form">
+                        <div class="auth-form__group">
+                            <input type="text" placeholder="Số điện thoại" class="auth-form__input">
+                        </div>
+                        <div class="auth-form__group">
+                            <input type="password" placeholder="Mật khẩu" class="auth-form__input">
+                        </div>
+                        <div class="auth-form__group">
+                            <input type="password" placeholder="Nhập lại mật khẩu" class="auth-form__input">
+                        </div>
+                    </div>
+                    <div class="auth-form__policy">
+                        <p class="auth-form__policy-text">
+                            Bằng việc đăng ký, bạn đồng ý với Shoppee về
+                            <a href="#" class="auth-form__text-link">Điều khoản dịch vụ</a> &
+                            <a href="#" class="auth-form__text-link">Chính sách bảo mật</a>
+                        </p>
+                    </div>
+                    <div class="auth-form__control">
+                        <button class="btn auth-form__back">TRỞ LẠI</button>
+                        <button class="btn btn--primary">ĐĂNG KÝ</button>
+                    </div>
+                </div>
+                <div class="auth-form__signin">
+                    <a href="#" class="btn btn-signin auth-form__signin-fb">
+                        <i class="auth-form__signin-icon fab fa-facebook-square"></i>
+                        <p class="auth-form__signin-text">
+                            Kết nối với Facebook
+                        </p>
+                    </a>
+                    <a href="#" class="btn btn-signin auth-form__signin-gg">
+                        <i class="auth-form__signin-icon fab fa-google"></i>
+                        <p class="auth-form__signin-text">
+                            Kết nối với Google
+                        </p>
+                    </a>
+                </div>
+            </div>
+    
+            <!-- authen login-->
+            <div class="auth-form">
+                <div class="auth-form__container">
+                    <div class="auth-form__header">
+                        <h3 class="auth-form__heading">Đăng Nhập</h3>
+                        <div class="auth-form__switch-btn">Đăng ký</div>
+                    </div>
+                    <div class="auth-form__form">
+                        <div class="auth-form__group">
+                            <input type="text" placeholder="Số điện thoại" class="auth-form__input">
+                        </div>
+                        <div class="auth-form__group">
+                            <input type="password" placeholder="Mật khẩu" class="auth-form__input">
+                        </div>
+                    </div>
+                    <div class="auth-form__help">
+                        <a href="#" class="auth-form__help-link auth-form__help-forgot">Quên Mật Khẩu</a>
+                        <div class="auth-form__help--separate"></div>
+                        <a href="#" class="auth-form__help-link">Cần trợ giúp?</a>
+                    </div>
+                    <div class="auth-form__control">
+                        <button class="btn auth-form__back">TRỞ LẠI</button>
+                        <button class="btn btn--primary">ĐĂNG NHẬP</button>
+                    </div>
+                </div>
+    
+                <div class="auth-form__signin">
+                    <a href="#" class="btn btn-signin auth-form__signin-sms">
+                        <i class="auth-form__signin-icon fas fa-sms"></i>
+                        <p class="auth-form__signin-text">
+                            SMS
+                        </p>
+                    </a>
+                    <a href="#" class="btn btn-signin auth-form__signin-fb">
+                        <i class="auth-form__signin-icon fab fa-facebook-square"></i>
+                        <p class="auth-form__signin-text">
+                            Facebook
+                        </p>
+                    </a>
+                    <a href="#" class="btn btn-signin auth-form__signin-gg">
+                        <i class="auth-form__signin-icon fab fa-google"></i>
+                        <p class="auth-form__signin-text">
+                            Google
+                        </p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="./assets/js/index.js"></script>
+</body>
+</html>

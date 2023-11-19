@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 4</title>
+</head>
+
+<body>
+    <h1>Hàm kiểm tra số nguyên tố</h1>
+    <input type="number" id="number" placeholder="Nhập n dòng">
+    <button id="btn">Tính</button>
+    <div>
+        <span>
+            Số bạn vừa nhập:
+            <span id="kq"></span>
+        </span>
+    </div>
+    <script>
+        var btn = document.getElementById("btn");
+        var kq = document.getElementById("kq");
+        btn.addEventListener("click", () => {
+            var n = document.getElementById("number").value;
+            function KTSNT(n) {
+                if (n <= 1) {
+                    return false
+                }
+                if (n === 2 || n === 3) {
+                    return true;
+                }
+                if (n % 2 === 0 || n % 3 === 0) {
+                    return false
+                }
+                for (var i = 5; i <= Math.sqrt(n); i += 6) {
+                    if (n % i === 0 || n % (i + 2) === 0) {
+                        return false;
+                    }
+                }
+                return true
+            }
+            if (n <= Number.MAX_SAFE_INTEGER && n % 1 === 0 && n >= 0) {
+                var ketQua = KTSNT(n);
+                if (ketQua) {
+                    kq.innerText = "là số nguyên tố"
+                } else {
+                    kq.innerText = "Không phải số nguyên tố"
+                }
+            } else {
+                kq.innerText = "Vui lòng nhập số nguyên và không vượt quá giới hạn số nguyên"
+            }
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+.datepicker {
+	margin: 50px auto;
+	background: #1a1a1a;
+  border-color: #343434;
+	/* max-height: 382px; */
+  max-width: 500px;
+	color: #fff;
+	box-shadow: #0002 0 6px 14px, #0000001c 0 1px 4px;
+	padding: 10px;
+	overflow: hidden;
+	position: relative;
+	height: 340px;
+}
+.datepicker-header {
+	display: flex;
+	justify-content: space-between;
+}
+.datepicker-header__btn button {
+	background: none;
+	color: inherit;
+	font-size: inherit;
+	border: none;
+	cursor: pointer;
+	font-size: 1.5rem;
+}
+.calendar-month {
+	display: flex;
+	flex-direction: column;
+}
+.calendar-week {
+	display: grid;
+	grid-template-columns: repeat(7, 1fr);
+}
+.calendar-days {
+	text-align: center;
+	height: 40px;
+}
+
+.datepicker-body {
+	display: flex;
+	position: absolute;
+	left: 0;
+	bottom: 10px;
+}
+.calendar-month {
+	flex: 1 0 500px;
+}
+.calendar-days span {
+	vertical-align: middle;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	cursor: pointer;
+}
+.calendar-days:hover span {
+	background-color: rgba(214, 214, 214, 0.133);
+}
+.prev-month,.next-month {
+	opacity: .2;
+}

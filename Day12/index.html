@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập buổi 12</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="layer"></div>
+        <input type="radio" name="radio" id="login" checked hidden>
+        <input type="radio" name="radio" id="register" hidden>
+        <header class="header">
+            <div class="logo">
+                <img src="./image/svgexport-1.svg" alt="logo">
+            </div>
+            <h1 class="title">
+                WELCOME TO
+                <span>VIKINGER</span>
+            </h1>
+            <p class="title-text">
+                The next generation social network & community! Connect with your friends and play with our quests and
+                badges
+                gamification system!
+            </p>
+            <nav class="navbar">
+                <ul class="navbar-list">
+                    <li class="list-wrap col-6">
+                        <label class="list-item btn--login" for="login">Login</label>
+                    </li>
+                    <li class="list-wrap col-6">
+                        <label class="list-item btn--register" for="register">Register</label>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main class="main">
+            <div class="form-box form--login">
+                <img class="form-login__img" src="./image/rocket.png" alt="rocket">
+                <h2 class="form-title">Account Login</h2>
+                <form action="#!" method="post" class="form">
+                    <div class="input-box">
+                        <input class="input-text" type="text" name="username" id="user" placeholder=" "
+                            autocomplete="off" autofocus>
+                        <label class="label-text" for="user">Username or Email</label>
+                    </div>
+                    <div class="input-box">
+                        <input class="input-text" type="password" name="password" id="pass" placeholder=" "
+                            autocomplete="off">
+                        <label class="label-text" for="pass">Password</label>
+                    </div>
+                    <div class="input-box box--between">
+                        <div class="input-checkbox">
+                            <input class="checkbox" type="checkbox" name="checkbox" id="remember" checked hidden>
+                            <label class="label-checkbox" for="remember">Remember Me</label>
+                        </div>
+                        <div class="input-link">
+                            <a href="#!">Forgot Password?</a>
+                        </div>
+                    </div>
+                    <div class="btn-box">
+                        <button type="submit" class="button">
+                            Login to your Account!
+                        </button>
+                    </div>
+                </form>
+                <p class="form-txt">
+                    Login with your Social Account
+                </p>
+                <div class="form-link">
+                    <a href="#!" class="link-icon">
+                        <i class='bx bxl-facebook-square'></i>
+                    </a>
+                    <a href="#!" class="link-icon">
+                        <i class='bx bxl-twitter'></i>
+                    </a>
+                    <a href="#!" class="link-icon">
+                        <i class='bx bxl-twitch'></i>
+                    </a>
+                    <a href="#!" class="link-icon">
+                        <i class='bx bxl-youtube'></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="form-box form--register">
+                <img class="form-register__img" src="./image/rocket.png" alt="rocket">
+                <h2 class="form-title">Create your Account!</h2>
+                <form action="#!" method="post" class="form">
+                    <div class="input-box">
+                        <input class="input-text" type="email" name="email" id="email" placeholder=" "
+                            autocomplete="off" autofocus>
+                        <label class="label-text" for="email">Your Email</label>
+                    </div>
+                    <div class="input-box">
+                        <input class="input-text" type="text" name="re-username" id="username" placeholder=" "
+                            autocomplete="off">
+                        <label class="label-text" for="username">Username</label>
+                    </div>
+                    <div class="input-box">
+                        <input class="input-text" type="password" name="re-password" id="password" placeholder=" "
+                            autocomplete="off">
+                        <label class="label-text" for="password">Password</label>
+                    </div>
+                    <div class="input-box">
+                        <input class="input-text" type="password" name="re-repass" id="repassword" placeholder=" "
+                            autocomplete="off">
+                        <label class="label-text" for="repassword">Repeat Password</label>
+                    </div>
+                    <div class="input-box">
+                        <div class="input-checkbox">
+                            <input class="checkbox" type="checkbox" name="send" id="send" checked hidden>
+                            <label class="label-checkbox" for="send">Send me news and updates via email</label>
+                        </div>
+                    </div>
+                    <div class="btn-box">
+                        <button type="submit" class="button submit--register">
+                            Register Now!
+                        </button>
+                    </div>
+                </form>
+                <p class="txt-register">
+                    You'll receive a confirmation email in your inbox with a link to activate your account. If you have
+                    any problems,
+                    <a href="#!">contact us</a>
+                    !
+                </p>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

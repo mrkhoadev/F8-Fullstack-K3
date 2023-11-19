@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 8</title>
+</head>
+
+<body>
+    <h1>Tính giá trị biểu thức không dùng vòng lặp</h1>
+    <input type="number" id="number" placeholder="Nhập số nguyên n">
+    <button id="btn">Tính</button>
+    <div>
+        <span>
+            Kết quả là: <span id="kq"></span>
+        </span>
+    </div>
+    <script>
+        var btn = document.getElementById("btn");
+        var kq = document.getElementById("kq");
+        btn.addEventListener("click", () => {
+            var n = document.getElementById("number").value;
+            var bt = function (n) {
+                if (n % 1 === 0) {
+                    if (n < 1) {
+                        return false
+                    } else if (n === 1) {
+                        return 1
+                    } else {
+                        return 1 / n + bt(n - 1) 
+                    }
+                } else {
+                    return false
+                }
+            }
+            var ketQua = bt(n)
+            if (ketQua) {
+                kq.innerText = ketQua
+            } else {
+                kq.innerText = "Số nhập vào sai rồi kìa!"
+            }
+            
+        })
+    </script>
+</body>
+
+</html>

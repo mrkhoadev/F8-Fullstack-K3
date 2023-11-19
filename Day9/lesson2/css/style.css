@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
+:root {
+	--caption-font-family: "Space Grotesk", sans-serif;
+	--text-font-family: "Inter", sans-serif;
+}
+*,
+*:before,
+*:after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	outline: none;
+	border: none;
+}
+::-webkit-scrollbar {
+	width: 0;
+}
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+}
+body {
+	width: 100vw;
+	min-height: 100vh;
+	font-family: var(--text-font-family);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	font-size: 1.6rem;
+	font-weight: 500;
+	margin: 0;
+}
+a {
+	text-decoration: none;
+	color: inherit;
+}
+ul,
+ol,
+li {
+	list-style: none;
+}
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+.container {
+	max-width: 1250px;
+	margin: 20px auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	gap: 20px 15px;
+}
+article {
+	width: 400px;
+	height: 280px;
+	border: 1px solid rgba(162, 112, 90, 0.815);
+	position: relative;
+	box-sizing: border-box;
+	/* padding: 15px; */
+	overflow: hidden;
+	transition-duration: 0.3s;
+	transition-property: background-color;
+	transition-timing-function: linear;
+}
+article > img {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	opacity: 0;
+	transition-duration: 0.5s;
+	transition-property: opacity;
+	transition-timing-function: linear;
+}
+.item {
+	padding: 35px;
+	margin: 0px;
+	width: 100%;
+	height: 100%;
+	border: 1px solid transparent;
+	transition-duration: 0.3s;
+	transition-property: width, height, padding, margin, border-color;
+	transition-timing-function: linear;
+}
+.item > *:not(span) {
+	position: relative;
+	transition-duration: 0.5s;
+	transition-property: top, color;
+	transition-timing-function: ease;
+}
+.item > span {
+	font-size: 50px;
+	color: rgb(162, 111, 90);
+	position: absolute;
+}
+.item > span > i {
+	margin-bottom: 12px;
+	transition: 0.3s ease;
+}
+.item > h2 {
+	font-family: var(--caption-font-family);
+	font-weight: 800;
+	font-size: 25px;
+	top: 80px;
+	margin-bottom: 15px;
+	cursor: pointer;
+}
+.item p {
+	top: 90px;
+	transition-duration: 0.7s;
+	font-weight: 400;
+}
+.item a {
+	display: inline-block;
+	margin-top: 70px;
+	font-size: 15px;
+	font-weight: 700;
+	color: #ffffff;
+	top: 90px;
+	transition-duration: 0.7s;
+}
+.item a::after {
+	content: "\ebe6";
+	font-family: "boxicons";
+	border-radius: 50%;
+	border: 1px solid #ffffff;
+	padding: 5px;
+	font-size: 18px;
+	vertical-align: middle;
+	margin-left: 10px;
+	cursor: pointer;
+}
+
+article:hover {
+	background-color: rgba(162, 112, 90, 0.394);
+	color: #fff;
+}
+article:hover > img {
+	opacity: 1;
+}
+article:hover > .item {
+	padding: 20px;
+	margin: 15px;
+	width: calc(100% - 30px);
+	height: calc(100% - 30px);
+	border-color: rgb(212, 198, 192);
+}
+article:hover > .item > span > i {
+	transform: scale(0);
+}
+article:hover > .item h2,
+article:hover > .item p,
+article:hover > .item a {
+	top: 0px;
+}
+article > .item > a:hover::after {
+	background-color: #fff;
+	color: #000;
+}

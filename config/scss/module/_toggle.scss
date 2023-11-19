@@ -1,0 +1,167 @@
+/* Mobile & Tablet */
+@media screen and (max-width: 991px) {
+    body {
+        background-position: 23% 0;
+    }
+}
+
+/* Mobile */
+@media screen and (max-width: 575px) {
+    body {
+        background-size: 350%;
+        background-position: 25% 0%;
+    }
+    h1 {
+        font-size: 25px;
+        text-align: center;
+        margin: 20px;
+    }
+    h1 > .clear {
+        display: block;
+    }
+    h1 span {
+        display: inline-block;
+        font-size: 20px;
+    }
+    main {
+        height: 400px;
+    }
+    aside {
+        font-size: 10px;
+        width: 140px;
+        padding-top: 10px;
+    }
+    aside > ul {
+        width: 90%;
+    }
+    aside > ul > li > label {
+        transform: translateX(-15px);
+    }
+    aside > ul > li > label > .icon {
+        margin: 0 5px 0 0;
+    }
+    aside > ul > li > label > .icon i {
+        font-size: 10px;
+    }
+    section {
+        width: 250px;
+        padding: 10px;
+    }
+    section > .content {
+        top: 10px;
+    }
+    section > .content > div > h2 {
+        font-size: 13px;
+    }
+    section > .content > div > h2 > i {
+        font-size: 18px;
+        margin-right: 1px;
+    }
+    section > .content > div > ol {
+        font-size: 14px;
+    }
+    section > .content > div > ol > li > a {
+        font-size: 14px;
+    }
+}
+
+/* Tablet */
+@media screen and (min-width: 576px) and (max-width: 991px) {
+    body {
+        background-size: 280%;
+        background-position: 25% 0%;
+    }
+    h1 {
+        font-size: 45px;
+        text-align: center;
+        margin: 20px;
+    }
+    h1 > .clear {
+        display: block;
+    }
+    aside {
+        font-size: 16px;
+        width: 250px;
+    }
+    aside > ul > li > label {
+        padding: 15px 5px;
+        font-size: 17px;
+    }
+    aside > ul > li > label > .icon {
+        margin-right: 8px;
+    }
+    aside > ul > li > label > .icon i {
+        font-size: 23px;
+    }
+    main {
+        height: 800px;
+    }
+    section {
+        width: 450px;
+    }
+    section > .content > div > h2 {
+        font-size: 25px;
+        padding: 10px 15px;
+        height: 30px;
+    }
+    section > .content > div > h2 > i {
+        font-size: 30px;
+    }
+    section > .content > div > ol {
+        font-size: 23px;
+    }
+    section > .content > div > ol > li > a {
+        font-size: 23px;
+    }
+}
+
+/* Desktop */
+@media screen and (min-width: 992px) and (max-width: 1495px) {
+    body {
+        background-size: 180%;
+        background-position: 25% 0%;
+    }
+    h1 {
+        text-align: center;
+        margin: 20px;
+    }
+    h1 > .clear {
+        display: block;
+    }
+    aside {
+        font-size: 16px;
+        width: 250px;
+    }
+    aside > ul > li > label {
+        padding: 15px 5px;
+        font-size: 17px;
+    }
+    aside > ul > li > label > .icon {
+        margin-right: 8px;
+    }
+    aside > ul > li > label > .icon i {
+        font-size: 23px;
+    }
+    main {
+        height: 850px;
+    }
+    section {
+        width: 750px;
+    }
+    section > .content > div > h2 {
+        font-size: 25px;
+        padding: 15px 15px;
+        height: 30px;
+    }
+    section > .content > div > h2 > i {
+        font-size: 30px;
+    }
+    section > .content > div > ol {
+        font-size: 25px;
+    }
+    section > .content > div > ol > li > a {
+        font-size: 25px;
+    }
+}
+@media screen and (min-width: 1496px) {
+}

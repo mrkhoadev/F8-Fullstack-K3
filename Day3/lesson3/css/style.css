@@ -1,0 +1,135 @@
+
+* {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 1;
+	font-size: 20px;
+}
+
+*,
+input,
+select {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.form {
+	margin: 10px;
+}
+.text {
+	min-height: 40px;
+	width: 200px;
+}
+td {
+	padding: 10px 0;
+}
+.input-box {
+	width: 400px;
+	min-height: 40px;
+	position: relative;
+	display: flex;
+	align-items: center;
+}
+
+/*Begin input text*/
+input[type="text"],
+input[type="password"] {
+	position: absolute;
+	width: 100%;
+	height: 35px;
+	background: transparent;
+	border: 2px solid #0361f8;
+	outline: none;
+	font-size: 16px;
+	padding-right: 28px;
+	color: #000000;
+	padding: 10px;
+	border-radius: 3px;
+}
+/*End input text*/
+/*Begin select*/
+.input-box select {
+	background: transparent;
+	position: absolute;
+	outline: none;
+	width: 100%;
+	height: 35px;
+	border: 2px solid #0361f8;
+	text-align: center;
+	border-radius: 3px;
+}
+.select-box {
+	border: 1px solid #90bbff;
+	border-radius: 3px;
+	position: absolute;
+	width: 22px;
+	height: 22px;
+	right: 4px;
+	background: #3a85fc;
+	text-align: center;
+}
+/*End Select*/
+/*Begin input radio and checkbox*/
+input[type="radio"] {
+	display: none;
+}
+input[type="radio"],
+input[type="checkbox"] {
+	outline: none;
+	border: none;
+}
+input[type="checkbox"]:before,
+input[type="radio"] + label:before {
+	font-family: "FontAwesome";
+	font-size: 13px;
+	color: transparent;
+	border: 2px solid blue;
+	background: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.label-checkbox,
+.label-radio {
+	padding: 10px;
+}
+/*Begin input radio*/
+input[type="radio"] + .label-radio:before {
+	content: "\f192";
+	text-align: center;
+	float: left;
+	border-radius: 50%;
+	height: 15px;
+	width: 15px;
+}
+input[type="radio"]:checked + label:before {
+	content: "\f111";
+	color: blue;
+}
+/*End input radio*/
+/*Begin input checkbox*/
+input[type="checkbox"]:before {
+	content: "\f00c";
+	height: 15px;
+	width: 15px;
+	border-radius: 3px;
+}
+input[type="checkbox"]:checked:before {
+	color: blue;
+	height: 15px;
+	width: 15px;
+}
+/*end input checkbox*/
+/*End input radio and checkbox*/
+/*Begin button*/
+.button {
+	height: 50px;
+	width: 100%;
+	padding-left: 180px;
+	padding-top: 10px;
+}
+button {
+	border: 3px solid #90bbff;
+	padding: 5px 15px;
+	border-radius: 5px;
+}
+/*End button*/

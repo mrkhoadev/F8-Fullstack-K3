@@ -1,0 +1,62 @@
+body {
+	font-family: 'Roboto', sans-serif;
+}
+h1 {
+	font-weight: 500;
+	font-size: 40px;
+}
+.underline {
+	border-bottom: 5px solid rgb(255, 132, 0);
+	display: inline-block;
+}
+th {
+	text-align: left;
+	font-size: 25px;
+	font-weight: 10;
+}
+aside {
+	width: 300px;
+	float: left;
+}
+/*Begin table left*/
+.text {
+	width: 100%;
+	height: auto;
+	color: #595959;
+	margin-top: 30px;
+}
+i {
+	font-size: 30px;
+	float: left;
+	margin-right: 10px;
+}
+p {
+	font-size: 15px;
+}
+/*End table left*/
+/*Begin table right*/
+section {
+	float: left;
+}
+section div {
+	margin-top: 18px;
+}
+input {
+	width: 100%;
+	height: 30px;
+	margin: 0;
+	font-size: 20px;
+}
+textarea {
+	width: 100%;
+	height: 100px;
+	font-size: 20px;
+	resize: none;
+}
+section > div > button {
+	padding: 10px 25px;
+	border: none;
+	background: #00d7d7;
+	color: #fff;
+}
+/*End table left*/
