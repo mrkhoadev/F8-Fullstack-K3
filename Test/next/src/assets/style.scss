@@ -1,0 +1,9 @@
+.menu {
+    li {
+        &.active {
+            a {
+                color: #ff0000;
+            }
+        }
+    }
+}
