@@ -91,14 +91,12 @@ export default function BroadContent() {
                 const isBelowOverItem =
                     active.rect.current.translated &&
                     active.rect.current.translated.top >
-                        over.rect.top + over.rect.height / 1.8;
+                        over.rect.top + over.rect.height;
                 const modifier = isBelowOverItem ? 1 : 0;
                 newTaskIndex =
                     overTaskIndex >= 0
                         ? overTaskIndex + modifier
                         : tasks.length;
-                if (activeTaskIndex < overTaskIndex) newTaskIndex -= 1;
-
                 const newTasks = tasks.filter(
                     (task) => task._id !== activeDraggingTaskId
                 );
