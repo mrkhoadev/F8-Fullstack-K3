@@ -22,3 +22,21 @@
         background-color: #f8f8f87a;
     }
 }
+.todo-add {
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    button {
+        width: 350px;
+        background-color: #ffffff52;
+        font-size: 1.5rem;
+        padding: 7px;
+        border-radius: 10px;
+        color: #111111;
+        &:hover {
+            background-color: #fff;
+            backdrop-filter: blur(4px);
+        }
+    }
+}

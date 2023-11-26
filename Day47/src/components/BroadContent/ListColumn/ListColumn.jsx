@@ -23,6 +23,9 @@ export default function ListColumn() {
                     return <Column key={col._id} columnData={col} />;
                 })}
             </SortableContext>
+            <div className="todo-add">
+                <button type="button">+</button>
+            </div>
         </div>
     );
 }
