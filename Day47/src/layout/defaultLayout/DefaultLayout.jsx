@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getTasks } from "../../redux/middlewares/tasksMiddlewares";
 import "./DefaultLayout.scss";
-import Columns from "../../components/columns/Columns";
 import Error from '../../pages/error/Error'
 import Loading from '../../components/loading/Loading';
 import BroadContent from "../../components/BroadContent/BroadContent";
