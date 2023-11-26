@@ -2,22 +2,6 @@ import { createSlice } from "@reduxjs/toolkit";
 import { getApiKey } from "../middlewares/loginMiddlewares";
 import { client } from "../../utils/clientUtils";
 import { getTasks } from "../middlewares/tasksMiddlewares";
-const isJSON = (str) => {
-    try {
-        JSON.parse(str);
-        return true;
-    } catch (e) {
-        return false;
-    }
-};
-
-const handleCheckJSON = (str) => {
-    try {
-        return JSON.parse(str);
-    } catch (error) {
-        return null;
-    }
-};
 
 const apiKey = localStorage.getItem("apiKey") || "";
 if (apiKey) {

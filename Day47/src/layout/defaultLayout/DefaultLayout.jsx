@@ -5,6 +5,7 @@ import "./DefaultLayout.scss";
 import Columns from "../../components/columns/Columns";
 import Error from '../../pages/error/Error'
 import Loading from '../../components/loading/Loading';
+import BroadContent from "../../components/BroadContent/BroadContent";
 
 export default function DefaultLayout({ prevIsLogin }) {
     const dispatch = useDispatch();
@@ -23,9 +24,7 @@ export default function DefaultLayout({ prevIsLogin }) {
     return (
         <main>
             <div className="todo">
-                <div className="todo-wrap">
-                    <Columns />
-                </div>
+                <BroadContent />
             </div>
         </main>
     );

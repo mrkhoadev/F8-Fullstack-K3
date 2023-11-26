@@ -1,0 +1,70 @@
+.column {
+    background-color: rgb(255, 255, 255);
+    flex: 0 0 350px;
+    height: 500px;
+    border-radius: 0.75rem;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 5px 5px 5px;
+    box-shadow: 0 0 3px 0.5px #aaa;
+
+    &-title {
+        cursor: grab;
+        padding: 5px 15px 0 15px;
+        line-height: 2;
+        font-weight: 600;
+        color: #111111;
+        font-size: 1.2rem;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .icon {
+            padding: 0 2px;
+        }
+        hr {
+            width: 100%;
+            margin: 0 -2px;
+        }
+    }
+    &-content {
+        overflow: hidden auto;
+        flex: 1;
+        margin: 0 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        height: 100%;
+
+        &::-webkit-scrollbar {
+            width: 5px;
+            margin-right: 20px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: #bababa;
+            border-radius: 6px;
+        }
+
+        &::-webkit-scrollbar-track {
+            border-radius: 6px;
+            background-color: #dcdcdc7a;
+        }
+
+    }
+    button {
+        background-color: #dcdcdc7a;
+        color: #3b3c3d;
+        font-size: 1.2rem;
+        padding: 8px 0;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+        gap: 10px;
+    }
+}
