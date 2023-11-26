@@ -1,0 +1,40 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-size: 16px;
+    font-family: sans-serif;
+    font-weight: 400;
+    background-image: url('../image/background.webp');
+    background-repeat: none;
+    background-size: cover;
+}
+input:not([class^="ajs-"]),
+button:not([class^="ajs-"]) {
+    color: inherit;
+    outline: none;
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: inherit;
+}
+button {
+    outline: none;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+ul, li {
+    list-style: none;
+}
+img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+}
