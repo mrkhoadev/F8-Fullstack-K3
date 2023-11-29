@@ -2,22 +2,25 @@ import {
     SortableContext,
     verticalListSortingStrategy,
 } from "@dnd-kit/sortable";
-import React, { useRef } from "react";
+import React, { useMemo, useRef } from "react";
 import { useSelector } from "react-redux";
 import Task from "./Task/Task";
 import "./ListTasks.scss";
 
 export default function ListTask({ column }) {
     const tasks = useSelector((state) => state.todo.tasks);
-    const tasksIdRef = useRef([]);
-
-    tasksIdRef.current = tasks
-        ?.filter((task) => task.column === column)
-        ?.map((task) => task._id);
+    const tasksId = useMemo(
+        () =>
+            tasks
+                ?.filter((task) => task.column === column)
+                ?.map((task) => task._id),
+        [tasks]
+    );
+    
     return (
         <div className="tasks">
             <SortableContext
-                items={tasksIdRef.current}
+                items={tasksId}
                 strategy={verticalListSortingStrategy}
             >
                 {tasks

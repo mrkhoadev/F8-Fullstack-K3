@@ -12,7 +12,8 @@ body {
     background-size: cover;
 }
 input:not([class^="ajs-"]),
-button:not([class^="ajs-"]) {
+button:not([class^="ajs-"]),
+textarea:not([class^="ajs-"]) {
     color: inherit;
     outline: none;
     font-size: inherit;

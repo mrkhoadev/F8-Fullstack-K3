@@ -3,3 +3,6 @@ export const emailRegex = (str) => {
         str
     );
 };
+export const htmlScript = (html) => {
+    return html?.replace(/(<([^>]+)>)/gi, "");
+};

@@ -3,19 +3,24 @@ import {
     DragOverlay,
     MouseSensor,
     TouchSensor,
-    closestCenter,
     defaultDropAnimationSideEffects,
     useSensor,
     useSensors,
 } from "@dnd-kit/core";
-import React, { useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import ListColumn from "./ListColumn/ListColumn";
 import Column from "./ListColumn/Column/Column";
 import Task from "./ListColumn/Column/ListTask/Task/Task";
 import { useDispatch, useSelector } from "react-redux";
-import { sortColumnsData, sortTasksData } from "../../redux/slice/todoSlice";
+import {
+    sortColumnsData,
+    sortTasksData,
+} from "../../redux/slice/todoSlice";
 import { arrayMove } from "@dnd-kit/sortable";
-import { cloneDeep, debounce } from "lodash";
+import { debounce } from "lodash";
+import { postTodoData } from "../../redux/middlewares/tasksMiddlewares";
+import { handleChangeData } from "../../helper/chaneData";
+import isLocalStorageJSON from "../../helper/localStorage";
 
 //Dùng để kiểm tra trạng đang kéo column hay task.
 const ACTIVE_DRAG_ITEM_TYPE = {
@@ -27,8 +32,8 @@ export default function BroadContent() {
     const dispatch = useDispatch();
     const columns = useSelector((state) => state.todo.columns);
     const tasks = useSelector((state) => state.todo.tasks);
-    const [columnsState, setColumnsState] = useState(columns);
-    const [tasksState, setTasksState] = useState(tasks);
+    const isDragRef = useRef(false);
+    const oldTaskItemDataRef = useRef(null);
     //xử lý phần kéo thả trên thiết bị di động.
     const mouse = useSensor(MouseSensor, {
         activationConstraint: { distance: 10 },
@@ -41,7 +46,6 @@ export default function BroadContent() {
     const [activeDragItemId, setActiveDragItemId] = useState(null);
     const [activeDragItemType, setActiveDragItemType] = useState(null);
     const [activeDragItemData, setActiveDragItemData] = useState(null);
-    const [oldColumnDraggingTask, setOldColumnDraggingTask] = useState(null);
 
     const debouncedSortTasks = debounce((newTasks) => {
         dispatch(sortTasksData(newTasks));
@@ -55,7 +59,7 @@ export default function BroadContent() {
         );
         setActiveDragItemData(e?.active?.data?.current);
         if (e?.active?.data?.current?.isTask) {
-            setOldColumnDraggingTask(e?.active?.data?.current?.column);
+            oldTaskItemDataRef.current = e.active.data.current;
         }
     };
     const handleDragOver = (e) => {
@@ -77,52 +81,43 @@ export default function BroadContent() {
             const activeColumn = activeDraggingTaskData.column;
             const overColumn = overDraggingTaskData.column;
             if (!activeColumn || !overColumn) return;
-            if (
-                activeColumn !== overColumn ||
-                oldColumnDraggingTask !== activeColumn
-            ) {
-                const overTaskIndex = tasks.findIndex(
-                    (task) => task._id === overTaskId
-                );
-                const activeTaskIndex = tasks.findIndex(
-                    (task) => task._id === activeDraggingTaskId
-                );
-                let newTaskIndex;
-                const isBelowOverItem =
-                    active.rect.current.translated &&
-                    active.rect.current.translated.top >
-                        over.rect.top + over.rect.height;
-                const modifier = isBelowOverItem ? 1 : 0;
-                newTaskIndex =
-                    overTaskIndex >= 0
-                        ? overTaskIndex + modifier
-                        : tasks.length;
-                const newTasks = tasks.filter(
-                    (task) => task._id !== activeDraggingTaskId
-                );
-                const newObj = { ...activeDragItemData, column: overColumn };
-                delete newObj.sortable;
-                newTasks.splice(newTaskIndex, 0, newObj);
-                debouncedSortTasks(newTasks);
-            }
+            if (activeColumn === overColumn) return;
+            const newTasks = tasks.filter(
+                (task) => task._id !== activeDraggingTaskId
+            );
+            let overTaskIndex = newTasks.findIndex(
+                (task) => task._id === overTaskId
+            );
+            let newTaskIndex;
+            const isBelowOverItem =
+                active.rect.current.translated &&
+                active.rect.current.translated.top >
+                    over.rect.top + over.rect.height;
+            const modifier = isBelowOverItem ? 1 : 0;
+            newTaskIndex =
+                overTaskIndex >= 0 ? overTaskIndex + modifier : tasks.length;
+            const newObj = { ...activeDragItemData, column: overColumn };
+            delete newObj.sortable;
+            newTasks.splice(newTaskIndex, 0, newObj);
+            debouncedSortTasks(newTasks);
         }
     };
     const handleDragEnd = (e) => {
         const { active, over } = e;
-        if (!active || !over) return;
-        if (activeDragItemType === ACTIVE_DRAG_ITEM_TYPE.TASK) {
-            const {
-                id: activeDraggingTaskId,
-                data: { current: activeDraggingTaskData },
-            } = active;
-            const {
-                id: overTaskId,
-                data: { current: overDraggingTaskData },
-            } = over;
-            const activeColumn = activeDraggingTaskData.column;
-            const overColumn = overDraggingTaskData.column;
-            if (!activeColumn || !overColumn) return;
-            if (oldColumnDraggingTask === overColumn) {
+        if (!active) return;
+        if (over && activeDragItemType === ACTIVE_DRAG_ITEM_TYPE.TASK) {
+            if (active.id !== over.id) {
+                const {
+                    data: { current: activeDraggingTaskData },
+                } = active;
+                const {
+                    id: overTaskId,
+                    data: { current: overDraggingTaskData },
+                } = over;
+                const activeColumn = activeDraggingTaskData.column;
+                const overColumn = overDraggingTaskData.column;
+                if (!activeColumn || !overColumn) return;
+                if (activeColumn !== overColumn) return;
                 const oldTaskIndex = tasks?.findIndex(
                     (item) => item._id === activeDragItemId
                 );
@@ -133,8 +128,7 @@ export default function BroadContent() {
                 dispatch(sortTasksData(newTasks));
             }
         }
-        if (activeDragItemType === ACTIVE_DRAG_ITEM_TYPE.COLUMN) {
-            if (!over.data.current.isColumn) return;
+        if (over && activeDragItemType === ACTIVE_DRAG_ITEM_TYPE.COLUMN) {
             if (active.id !== over.id) {
                 const oldColumnIndex = columns.findIndex(
                     (item) => item._id === active.id
@@ -150,11 +144,22 @@ export default function BroadContent() {
                 dispatch(sortColumnsData(newColumns));
             }
         }
-
+        if (isDragRef.current && active.data.current.isTask) {
+            if (
+                over &&
+                active.id === over.id &&
+                active.data.current.column === oldTaskItemDataRef.current.column
+            ) {
+                return;
+            }
+            const newTasks = handleChangeData(isLocalStorageJSON("tasks"));
+            dispatch(postTodoData(newTasks));
+            isDragRef.current = false;
+        }
         setActiveDragItemId(null);
         setActiveDragItemType(null);
         setActiveDragItemData(null);
-        setOldColumnDraggingTask(null);
+        oldTaskItemDataRef.current = null;
     };
     const dropAnimation = {
         sideEffects: defaultDropAnimationSideEffects({
@@ -165,9 +170,11 @@ export default function BroadContent() {
             },
         }),
     };
+    useEffect(() => {
+        isDragRef.current = true;
+    },[tasks])
     return (
         <DndContext
-            collisionDetection={closestCenter}
             onDragStart={handleDragStart}
             onDragOver={handleDragOver}
             onDragEnd={handleDragEnd}

@@ -1,9 +1,22 @@
+main {
+    height: 100vh;
+    padding: 2rem 1.2rem;
+}
 .todo {
     display: flex;
     justify-content: center;
-    align-items: flex-start;
-    padding: 0 37px 37px 37px;
-    height: 100vh;
+    align-items: center;
+    padding: 3.5rem 1rem;
+    height: 100%;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    height: clamp(370px, 100%, 100%);
+}
+.alert {
+    position: fixed;
+    bottom: 10px;
+    right: 20px;
+    font-size: 1.3rem;
 }
 // &-wrap {
 //     width: 100%;

@@ -1,7 +1,8 @@
 .column {
     background-color: rgb(255, 255, 255);
     flex: 0 0 350px;
-    height: 500px;
+    max-width: 350px;
+    height: clamp(300px, 100%, 500px);
     border-radius: 0.75rem;
     scroll-snap-align: start;
     display: flex;
@@ -13,7 +14,7 @@
     &-title {
         cursor: grab;
         padding: 5px 15px 0 15px;
-        line-height: 2;
+        line-height: 1;
         font-weight: 600;
         color: #111111;
         font-size: 1.2rem;
@@ -21,9 +22,29 @@
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
+        min-height: 40px;
+        
+        .input {
+            max-width: 280px;
+            width: 280px;
+            border: none;
+            padding: 8px 0;
+        }
+        p {
+            word-wrap: break-word;
+            max-width: 280px;
+            display: -webkit-box;
+            overflow: hidden;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            overflow: hidden;
+            margin: 9.5px 0px;
+        }
 
         .icon {
             padding: 0 2px;
+            display: flex;
+            align-items: center;
         }
         hr {
             width: 100%;
@@ -33,7 +54,7 @@
     &-content {
         overflow: hidden auto;
         flex: 1;
-        margin: 0 5px;
+        margin: 0 2px;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -53,7 +74,6 @@
             border-radius: 6px;
             background-color: #dcdcdc7a;
         }
-
     }
     button {
         background-color: #dcdcdc7a;
