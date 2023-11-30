@@ -28,7 +28,7 @@ export default function ListColumn() {
         if (addColumnsRef.current) {
             addColumnsRef.current.scrollIntoView({ behavior: "smooth" });
         }
-    }, [])
+    }, []);
     return (
         <div className="todo-list">
             {columns.length > 0 && (
@@ -41,8 +41,14 @@ export default function ListColumn() {
                     })}
                 </SortableContext>
             )}
-            <div className="todo-add" onClick={handleAddColumn} ref={addColumnsRef}>
-                <button type="button">+</button>
+            <div className="todo-add">
+                <button
+                    type="button"
+                    onClick={handleAddColumn}
+                    ref={addColumnsRef}
+                >
+                    +
+                </button>
             </div>
         </div>
     );
