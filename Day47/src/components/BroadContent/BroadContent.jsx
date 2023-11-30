@@ -12,10 +12,7 @@ import ListColumn from "./ListColumn/ListColumn";
 import Column from "./ListColumn/Column/Column";
 import Task from "./ListColumn/Column/ListTask/Task/Task";
 import { useDispatch, useSelector } from "react-redux";
-import {
-    sortColumnsData,
-    sortTasksData,
-} from "../../redux/slice/todoSlice";
+import { sortColumnsData, sortTasksData } from "../../redux/slice/todoSlice";
 import { arrayMove } from "@dnd-kit/sortable";
 import { debounce } from "lodash";
 import { postTodoData } from "../../redux/middlewares/tasksMiddlewares";
@@ -50,6 +47,32 @@ export default function BroadContent() {
     const debouncedSortTasks = debounce((newTasks) => {
         dispatch(sortTasksData(newTasks));
     }, 10);
+    const handleSortData = (tasks) => {
+        const columnMap = {};
+        columns.forEach((col, index) => {
+            columnMap[col.column] = index;
+        });
+        const newTasks = tasks
+            .map((t) => {
+                const find = columns.find((c) => c.column === t.column);
+                if (find && find.column === t.column) {
+                    return {
+                        column: t.column,
+                        columnName: find.columnName,
+                        content: t.content,
+                    };
+                }
+                return null;
+            })
+            .filter((t) => t);
+        newTasks.sort((taskA, taskB) => {
+            const positionA = columnMap[taskA.column];
+            const positionB = columnMap[taskB.column];
+
+            return positionA - positionB;
+        });
+        dispatch(postTodoData(newTasks));
+    };
     const handleDragStart = (e) => {
         setActiveDragItemId(e?.active?.id);
         setActiveDragItemType(
@@ -144,17 +167,25 @@ export default function BroadContent() {
                 dispatch(sortColumnsData(newColumns));
             }
         }
-        if (isDragRef.current && active.data.current.isTask) {
-            if (
-                over &&
-                active.id === over.id &&
-                active.data.current.column === oldTaskItemDataRef.current.column
-            ) {
-                return;
+        if (isDragRef.current) {
+            if (active.data.current.isTask) {
+                if (
+                    over &&
+                    active.id === over.id &&
+                    active.data.current.column ===
+                        oldTaskItemDataRef.current.column
+                ) {
+                    return;
+                }
+                const newTasks = handleChangeData(isLocalStorageJSON("tasks"));
+                handleSortData(newTasks);
+                isDragRef.current = false;
             }
-            const newTasks = handleChangeData(isLocalStorageJSON("tasks"));
-            dispatch(postTodoData(newTasks));
-            isDragRef.current = false;
+            if (active.data.current.isColumn && over) {
+                if (over.id !== active.id) {
+                    handleSortData(tasks);
+                }
+            }
         }
         setActiveDragItemId(null);
         setActiveDragItemType(null);
@@ -172,7 +203,8 @@ export default function BroadContent() {
     };
     useEffect(() => {
         isDragRef.current = true;
-    },[tasks])
+    }, [tasks]);
+
     return (
         <DndContext
             onDragStart={handleDragStart}

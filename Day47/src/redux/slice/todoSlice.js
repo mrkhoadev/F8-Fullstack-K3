@@ -124,6 +124,10 @@ export const todoSlice = createSlice({
                 } else if (action.payload.code > 300) {
                     alertify.error("Đã xảy ra lỗi, hãy thử lại!");
                 }
+                // localStorage.setItem(
+                //     "columns",
+                //     JSON.stringify(action.payload?.data?.columns)
+                // );
                 state.status = "success";
             })
             .addCase(postTodoData.pending, (state, action) => {
