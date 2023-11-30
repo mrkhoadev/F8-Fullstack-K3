@@ -1,4 +1,10 @@
-import React, { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
+import React, {
+    useEffect,
+    useLayoutEffect,
+    useMemo,
+    useRef,
+    useState,
+} from "react";
 import "./Column.scss";
 import { useSortable } from "@dnd-kit/sortable";
 import { CSS } from "@dnd-kit/utilities";
@@ -7,6 +13,7 @@ import { useDispatch, useSelector } from "react-redux";
 import {
     deleteColumn,
     sortColumnsData,
+    sortTasksData,
 } from "../../../../redux/slice/todoSlice";
 import {
     deleteTodoData,
@@ -44,6 +51,7 @@ export default function Column({ columnData }) {
     const [editMouse, setEditMouse] = useState(false);
     const listTaskRef = useRef(null);
     const isClickRef = useRef(false);
+    const status = useSelector((state) => state.todo.status);
     const handleDeleteColumn = (column) => {
         alertify
             .confirm(
@@ -96,6 +104,7 @@ export default function Column({ columnData }) {
         }
     };
     const handleAddTask = (e) => {
+        e.target.disabled = true;
         const tasksColumnLen = tasks.length;
         const newTask = {
             columnName: columnData.columnName,
@@ -103,10 +112,18 @@ export default function Column({ columnData }) {
             column: columnData.column,
         };
         let newTasks = handleChangeData(tasks);
+        dispatch(
+            sortTasksData(
+                tasks.toSpliced(tasks.length, 0, {
+                    ...newTask,
+                    _id: `taskId-${tasks.length + 1}`,
+                })
+            )
+        );
         newTasks = newTasks.toSpliced(newTasks.length, 0, newTask);
         dispatch(editTodoData(newTasks));
         isClickRef.current = true;
-        listTaskRef.current = e?.target?.previousElementSibling;
+        listTaskRef.current = e?.target;
     };
     useEffect(() => {
         if (isDeleteColumn && columnRef.current !== "") {
@@ -123,17 +140,26 @@ export default function Column({ columnData }) {
             inputRef.current.value = columnData.columnName;
         }
     }, [editMouse]);
-    useMemo(() => {
+    useLayoutEffect(() => {
         if (isClickRef.current && listTaskRef.current) {
             const lastElement =
-                listTaskRef.current?.children[0]?.children[
-                    listTaskRef.current?.children[0]?.children.length - 1
+                listTaskRef.current?.previousElementSibling?.children[0]
+                    ?.children[
+                    listTaskRef.current?.previousElementSibling?.children[0]
+                        ?.children.length - 1
                 ];
             lastElement?.scrollIntoView({ behavior: "smooth" });
-            listTaskRef.current = null;
+
             isClickRef.current = null;
         }
     }, [isClickRef.current, tasks]);
+    useEffect(() => {
+        if (status === "success" && listTaskRef.current) {
+            listTaskRef.current.disabled = false;
+            listTaskRef.current = null;
+        }
+    }, [status]);
+
     return (
         <div className="column" style={style} ref={setNodeRef} {...attributes}>
             <div
