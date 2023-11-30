@@ -89,6 +89,7 @@ export const todoSlice = createSlice({
                                 );
                             })
                         );
+                        columnsData = columnsData.filter((c) => c);
                     } else {
                         columnsData = columns;
                     }
