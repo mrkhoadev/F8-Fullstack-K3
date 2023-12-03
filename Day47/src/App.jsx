@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
 import "./assets/scss/style.scss";
-import './assets/css/alertify.css'
+import "./assets/css/alertify.css";
 import Login from "./layout/AuthLayout/Login";
 import DefaultLayout from "./layout/defaultLayout/DefaultLayout";
 import { useLayoutEffect, useState } from "react";
@@ -9,7 +9,7 @@ function App() {
     const [prevIsLogin, setPrevIsLogin] = useState();
     useLayoutEffect(() => {
         if (isLogin) {
-            setPrevIsLogin(isLogin)
+            setPrevIsLogin(isLogin);
         }
     }, [isLogin]);
     return (
