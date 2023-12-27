@@ -31,6 +31,10 @@ const handleFileFunction = function () {
         if (i === 41) {
             i = i + 1;
         }
+        if (i === 51) {
+            textListHTML = "Projects (Nextjs)";
+            i = i + 1;
+        }
         menuItem.innerHTML = `<label class="label-${i}" for="Day-${i}" tabindex="${i}">
                 <span class="icon">
                     <i class="bx bxs-send" ></i>
